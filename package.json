@@ -1,0 +1,19 @@
+{
+  "name": "docs.stockinlab.com",
+  "version": "0.0.1",
+  "description": "Documentation for StockInLab LIMS",
+  "author": {
+    "name": "StockInLab",
+    "email": "support@stockinlab.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vuepress": "^1.2.0"
+  }
+}
