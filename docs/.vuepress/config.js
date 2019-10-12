@@ -23,20 +23,94 @@ module.exports = {
         searchPlaceholder: 'Search...',
         lastUpdated: 'Last Updated',
         sidebar: [
-            // {
-            //     title: 'LIMS',
-            //     path: '/lims',
-            //     collapsable: false,
-            //     children: [
-            //         {
-            //             title: 'Dashboard',
-            //             path: '/lims/dashboard/',
-            //             children: [
-            //                 '/lims/dashboard/category'
-            //             ]
-            //         }
-            //     ]
-            // }
-        ]
-    }
+            '',
+            {
+                title: 'Account',
+                path: '/account',
+                collapsable: false,
+                children: [
+                    '/account/settings',
+                    '/account/preferences',
+                    '/account/security',
+                ],
+            },
+            {
+                title: 'LIMS',
+                path: '/lims',
+                collapsable: false,
+                children: [
+                    {
+                        title: 'Dashboard',
+                        path: '/lims/dashboard/',
+                        children: [
+                            '/lims/dashboard/categories',
+                            '/lims/dashboard/locations',
+                            '/lims/dashboard/parameters',
+                            '/lims/dashboard/import-workspace',
+                            '/lims/dashboard/audit-trail',
+                            '/lims/dashboard/user-management',
+                        ],
+                    },
+                    'lims/history/',
+                    // {
+                    //     title: 'History',
+                    //     path: '/lims/history',
+                    // },
+                    {
+                        title: 'Items',
+                        path: '/lims/items',
+                        children: [
+                            '/lims/items/add',
+                            '/lims/items/edit',
+                            '/lims/items/label',
+                            '/lims/items/link',
+                            '/lims/items/remove',
+                            '/lims/items/reserve',
+                            '/lims/items/search',
+                            '/lims/items/view',
+                        ],
+                    },
+                    {
+                        title: 'Stock',
+                        path: '/lims/stock',
+                        children: [
+                            '/lims/stock/sample-consumption',
+                            '/lims/stock/view',
+                        ],
+                    },
+                    {
+                        title: 'Storage',
+                        path: '/lims/storage',
+                        children: [
+                            '/lims/storage/capacity',
+                            '/lims/storage/overview',
+                        ],
+                    },
+                ],
+            },
+            {
+                title: 'Tools',
+                path: '/tools',
+                collapsable: false,
+                children: [
+                    '/tools/serial-dilution-calculator',
+                ],
+            },
+            {
+                title: 'Super-administrator',
+                path: '/super-administrator',
+                collapsable: false,
+                children: [
+                    '/super-administrator/add-super-administrator',
+                    '/super-administrator/audit-trail',
+                    '/super-administrator/backups',
+                    '/super-administrator/group-management',
+                    '/super-administrator/inventories',
+                    '/super-administrator/parameters',
+                    '/super-administrator/server-configuration',
+                    '/super-administrator/user-management',
+                ],
+            },
+        ],
+    },
 };
