@@ -23,10 +23,15 @@ module.exports = {
         searchPlaceholder: 'Search...',
         lastUpdated: 'Last Updated',
         sidebar: [
-            '',
+            {
+                title: 'Guide',
+                collapsable: false,
+                children: [
+                    '',
+                ],
+            },
             {
                 title: 'Account',
-                path: '/account',
                 collapsable: false,
                 children: [
                     '/account/settings',
@@ -39,58 +44,16 @@ module.exports = {
                 path: '/lims',
                 collapsable: false,
                 children: [
-                    {
-                        title: 'Dashboard',
-                        path: '/lims/dashboard/',
-                        children: [
-                            '/lims/dashboard/categories',
-                            '/lims/dashboard/locations',
-                            '/lims/dashboard/parameters',
-                            '/lims/dashboard/import-workspace',
-                            '/lims/dashboard/audit-trail',
-                            '/lims/dashboard/user-management',
-                        ],
-                    },
-                    'lims/history/',
-                    // {
-                    //     title: 'History',
-                    //     path: '/lims/history',
-                    // },
-                    {
-                        title: 'Items',
-                        path: '/lims/items',
-                        children: [
-                            '/lims/items/add',
-                            '/lims/items/edit',
-                            '/lims/items/label',
-                            '/lims/items/link',
-                            '/lims/items/remove',
-                            '/lims/items/reserve',
-                            '/lims/items/search',
-                            '/lims/items/view',
-                        ],
-                    },
-                    {
-                        title: 'Stock',
-                        path: '/lims/stock',
-                        children: [
-                            '/lims/stock/sample-consumption',
-                            '/lims/stock/view',
-                        ],
-                    },
-                    {
-                        title: 'Storage',
-                        path: '/lims/storage',
-                        children: [
-                            '/lims/storage/capacity',
-                            '/lims/storage/overview',
-                        ],
-                    },
+                    '/lims/dashboard',
+                    '/lims/items',
+                    '/lims/history',
+                    '/lims/storage',
+                    '/lims/track-sample-consumption',
+                    '/lims/view-stock',
                 ],
             },
             {
                 title: 'Tools',
-                path: '/tools',
                 collapsable: false,
                 children: [
                     '/tools/serial-dilution-calculator',
@@ -113,4 +76,5 @@ module.exports = {
             },
         ],
     },
+    plugins: ['@vuepress/medium-zoom'],
 };
