@@ -25,14 +25,16 @@ module.exports = {
         sidebar: [
             {
                 title: 'Guide',
+                path: '',
                 collapsable: false,
                 children: [
-                    '',
+                    '/',
                 ],
             },
             {
                 title: 'Account',
-                collapsable: false,
+                path: '/account',
+                collapsable: true,
                 children: [
                     '/account/settings',
                     '/account/preferences',
@@ -41,20 +43,29 @@ module.exports = {
             },
             {
                 title: 'LIMS',
-                path: '/lims',
-                collapsable: false,
+                path: '/laboratory-information-management-system',
+                collapsable: true,
                 children: [
-                    '/lims/dashboard',
-                    '/lims/items',
-                    '/lims/history',
-                    '/lims/storage',
-                    '/lims/track-sample-consumption',
-                    '/lims/view-stock',
+                    '/laboratory-information-management-system/dashboard',
+                    '/laboratory-information-management-system/items',
+                    '/laboratory-information-management-system/history',
+                    '/laboratory-information-management-system/storage',
+                    '/laboratory-information-management-system/track-sample-consumption',
+                    '/laboratory-information-management-system/view-stock',
+                ],
+            },
+            {
+                title: 'ELN',
+                path: '/electronic-lab-notebook',
+                collapsable: true,
+                children: [
+                    '/electronic-lab-notebook/protocols',
                 ],
             },
             {
                 title: 'Tools',
-                collapsable: false,
+                path: '/tools',
+                collapsable: true,
                 children: [
                     '/tools/serial-dilution-calculator',
                 ],
@@ -62,7 +73,7 @@ module.exports = {
             {
                 title: 'Super-administrator',
                 path: '/super-administrator',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/super-administrator/add-super-administrator',
                     '/super-administrator/audit-trail',
@@ -76,5 +87,15 @@ module.exports = {
             },
         ],
     },
-    plugins: ['@vuepress/medium-zoom'],
+    plugins: [
+        '@vuepress/medium-zoom',
+        // [
+        //     'vuepress-plugin-clean-urls',
+        //     {
+        //         normalSuffix: '',
+        //         indexSuffix: '',
+        //         notFoundPath: '/404.html',
+        //     },
+        // ],
+    ],
 };
