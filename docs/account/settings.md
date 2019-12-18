@@ -2,10 +2,10 @@
 
 ## Name / Display name
 
-Click `Settings` under your name on top right. Choose `Profile` into the left menu. You can change your new name and display name.
+Click `Settings` under your name on top right. Choose `Profile` into the left menu. You can update your name and display name.
 
 ::: warning
-If your server use LDAP authentication, you cannot change your name. Only your display name can be changed.
+If your server use LDAP authentication, you cannot change your name but you can still change your display name.
 :::
 
 ## Avatar

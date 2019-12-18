@@ -90,7 +90,7 @@ From the Listing click (-) on the right of the item to remove it. Choose the typ
 Otherwise, you can remove item from the overview (loupe) by clicking (-) in the top icons bar.
 
 ### Date of removal
-When you remove an item, you have to specify the date of the removal. You can choose any date, even a older date in case you are updating the inventory a posteriori.
+When you remove an item, you have to specify the date of the removal. You can choose any date, even an older date in case you are updating the inventory a posteriori.
 
 ### Remove multiple items
 From the Listing select the items you want to remove by ticking the boxes on the left. In the dropdown menu Actions that appeared on the top, select Remove. For each item, select the type of removal (What are the different kind of removal?), the spot(s)/quantity to remove, the date of removal and a comment if any.
@@ -129,9 +129,9 @@ Use the dropdown menu Parameters in table to see the other details of your items
 From the Listing use the dropdown menu Parameters to search and select as many as parameters you want for your search. enter the value(s) you want to search in the fields that just appear. All the items corresponding to the value(s) entered appear in the table.
 
 ### Search by QR/bar code
-If you have used the label editing from StockInLab, a QR_bar code was automatically printed in the label. The QR_bar code allow you to simply access to the details of your item.
+If you have used the label editing from StockInLab, a QRbar code was automatically printed in the label. The QRbar code allow you to simply access to the details of your item.
 From the Home page or directly from one of your Inventory you can access the function search QR/bar code. Then you have 2 options:
-Enter the ID printed under the QR_bar code in the field Enter the QR_bar code and click Search
+Enter the ID printed under the QRbar code in the field Enter the QRbar code and click Search
 or
 Click Open camera  and scan the QR code by using your webcam (you might need to allow StockInLab to access your camera). Or use your bar code reader device to scan a bar code.
 
@@ -160,6 +160,7 @@ Use the dropdown menu Team and Categories to filter the results as well.
 ### See item details
 From the Listing use the dropdown menu Parameters in table and select your parameters of interest to make appear directly in the table.
 Otherwise, click (loupe) on the line of one item to access the overview with all details of this item.
+
 ### See location of the item
 From the Listing click (loupe) on the right of the item you want to see the location. Under the Location panel you can see all the locations of your item (with the spot number if it is stored in a box).
 
