@@ -3,15 +3,15 @@
 ## Add item 
 
 ### Add new item
-Before you start to add items, make sure your workspace is ready. You may need to create additional [_parameters_] (./dashboard.md#parameters) and [/locations/] (./dashboard.md#locations) in the [**Dashboard**] (./dashboard.md) (restricted to administrator). 
+::: tip
+Before you start to add items, make sure your workspace is ready. You may need to create additional [*parameters*](./dashboard.md#parameters) and [*locations*](./dashboard.md#locations) in the [**Dashboard**](./dashboard.md) (restricted to group's administrators). 
+:::
 
 Creation of categories is not mandatory. However, when you add a new item you have to assign a category and/or a name.
 
 Two different methods are available to add new item(s). Under **ADD/UPDATE** in the left panel:
-
 * Simple add: You can enter the details of an individual item, choose the location and click Add. If your items are stored in a box, select the spot(s) where your item is located. If it is not a box, simply add the quantity in the field provided.If you don’t know the location yet, you can save as draft. In the Extras panel, you can add comment to your item and attach files.
-
-* Add with import: See the [_procedure_] (./#use-an-excel-file-to-import-items) to use an Excel file.
+* Add with import: See the [*procedure*](./#use-an-excel-file-to-import-items) to use an Excel file.
 
 ### Use an Excel file to import items
 Use these option if you have a bulk of items to enter into the inventory. Tick the categories in which you need to enter your new items. Click Download template and open the file. One sheet per category is created. Fill all the fields (the location cannot be enter in the file, you have to allocate after the import).
