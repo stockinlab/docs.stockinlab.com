@@ -4,25 +4,38 @@
 
 ### Add new item
 ::: tip
-Before you start to add items, make sure your workspace is ready. You may need to create additional [parameters](./dashboard.md#parameters) and [locations](./dashboard.md#locations) in the [Dashboard](./dashboard.md) (restricted to group's administrators).
+Before you start adding items, make sure your workspace is ready. You may need to create additional [parameters](./dashboard.md#parameters) and [locations](./dashboard.md#locations) in the [dashboard](./dashboard.md) (access is restricted to the group's administrators).
 :::
 
 Creation of categories is not mandatory. However, when you add a new item you have to assign a category and/or a name.
 
-Two different methods are available to add new item(s). Under `ADD/UPDATE` in the left panel:
-* Simple add: You can enter the details of an individual item, choose the location and click Add. If your items are stored in a box, select the spot(s) where your item is located. If it is not a box, simply add the quantity in the field provided.If you don’t know the location yet, you can save as draft. In the Extras panel, you can add comment to your item and attach files.
-* Add with import: See the [procedure](./#use-an-excel-file-to-import-items) to use an Excel file.
+To add new item(s):
+1. From your `Groupe page` select the `Inventory` where you want to add the item(s).
+
+::: tip
+the button `Add` is also available directly from the `Group page`. If you click it from this page, you will be prompted to select in which inventory you want to add th new item(s).
+:::
+2. Select (add icon) on top right of the page.
+3. Two options are available:
+    1. `Simple add` if you want to add on or several items with the same parameters.
+    2. `Add with import` if you want to add a bulk of items with different parameters. This [procedure](/laboratory-information-management-system/items.html#use-an-excel-file-to-import-items) require to fill an Excel file.  
+The following steps refer to `Simple add`.   
+4. Set your item as [public or private](/laboratory-information-management-system/items.html#private-public-items). 
+5. Fill all the [mandatory parameters](/laboratory-information-management-system/dashboard.html#mandatory-parameters) (if any). Additional parameters you might want to enter for this item can be selected from the left panel.
+6. Enter the location. If the location is a box you need to select the spot(s). If it is not a box, simply add the quantity in the field provided. If you don’t know the location yet, you can save as draft. 
+7. [Optional] Add comment and/or attach files in `Extra`.
+
 
 ### Use an Excel file to import items
 Use these option if you have a bulk of items to enter into the inventory.
-From the `Inventory` page or from any `Listing`, select `Add with import` in the left panel:
+From the `Inventory` page or from any `Listing`, click (add icon) on top right of the page and select `Add with import`:
 1. Tick the inventorie(s) in which you need to enter your new items.
 2. Click Download template.
 3. Open the file: one sheet per inventory is created.
 4. Fill all the fields (the location cannot be enter in the file, you have to allocate after the import). The mandatory parameters appear in red.
 
 ::: warning
-Make sure you enter the good value for the parameter set as “Select” in your workspace. To make the process easier, the ID of the options are referenced in a separate sheet. If you parameter is a “Select” type just enter the ID of the option (and note the name of the option).
+Make sure you enter the good value for the parameter set as “Select” in your workspace. To make the process easier, the ID of the options are referenced in a separate sheet. If your parameter is a “Select” type just enter the ID of the option (and note the name of the option).
 :::
 
 When your file is ready, go back to `Add with import`, select the file to import in `Choose file` and click `Import`.
@@ -32,13 +45,13 @@ In case of error, the details of the error appear. It can be a missing mandatory
 :::
 
 Select the location for each new imported item.
-All imported items without location go into [Draft items](./#draft-item) in your `Listing`. You can still edit their location later:
+All imported items without location go into [Draft items](/laboratory-information-management-system/items.html#draft-items) in your `Listing`. You can still edit their location later:
 1. Click (loupe icon).
 2. Select (edit location icon).
 3. Choose the location of your item and save.
 
 ### Private/Public items
-Private items can be seen by your team only. If you switch for Public, your items are visible in the Public Items listing (Global inventory/Public) by all the teams. The details of the item are visible for all but the location remains hidden. Users from other teams can contact you if they are interested by your item.
+Private items can be seen by your team only. If you switch for Public, your items are visible in the Public Items listing (Global inventory/Public) by all the teams. The details of the item are visible for all but the location remains hidden. Users from other teams can contact you if they are interested in your item.
 
 ::: tip
 Your items are automatically set as private. You can switch to public when you enter a new item in the menu `Simple add`: Switch the button from private to public under `Status`.
@@ -49,19 +62,19 @@ When you add a new item from the menu `Simple add` Simply select the location in
 * If your items are stored in a box, select the spot(s) where your item are located.
 * If it is not a box, simply add the quantity in the field provided.
 * If you items are in multiple locations, select the additional location(s) from the dropdown menu.
-* If you don’t know the location yet, you can [save as draft](./draft-item).
+* If you don’t know the location yet, you can [save as draft](./draft-items).
 
 When you add items from the menu `Add with import`, the locations are allocated after the import on the same principle.
 
 ### Add attachment(s)
 You can attach document(s) in several formats (pdf, xlsx, docx, pptx, images…)
-When you add a new item from the menu `Simple add`, attach the documents in the panel `Extras`. Click into the box to find into your computer the documents to attach
+When you add a new item from the menu `Simple add`, attach the documents in the panel `Extras`. Click into the box to find into your computer the documents to attach.
 
 ::: tip
 You can also simply drag and drop into the box to attach your document.
 :::
 
-Other documents can be attached later to your item by clicking (attachement item icon) into the overview (loupe icon) of the item.
+Other documents can be attached later to your item by clicking (attachement item icon) into the overview (view icon) of the item.
 
 ### Save as draft
 In the case you don’t know the location of your item yet, don’t fill the location panel and click Save as draft.
@@ -74,7 +87,7 @@ To edit the location of your item:
 You item will be automatically transferred from the Draft items to the Listing.
 
 ### Mandatory fields
-If mandatory parameters are not filled, the button Add remains disabled. Mandatory parameters can be set from the [Dashboard](./dashboard.md).
+If mandatory parameters are not filled, the button Add remains disabled. [Mandatory parameters](/laboratory-information-management-system/dashboard.html#mandatory-parameters) can be set from the [Dashboard](./dashboard.md).
 
 ::: tip
 When you add a new item from the menu `Simple add`, you can add more optional parameters directly from the panel `Parameters`
@@ -99,8 +112,8 @@ Only the quantity received can be stored, you will get a error message if you ar
 ## Edit item
 
 ### Edit one item
-From  `Listing` :
-1. Click (loupe icon) to see the details of your item. 
+From Inventory `Listing` :
+1. Click (view icon) to see the details of your item. 
 2. Select `Edit` in the left panel. You have the choice between: `Edit parameters` and `Edit location`.
 3. Edit the information and save.
 

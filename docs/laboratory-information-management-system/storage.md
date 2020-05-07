@@ -1,10 +1,16 @@
 # Storage
+The storage menu is accessible from your `Group page`.  
+[Stock](/laboratory-information-management-system/storage.html#stock) gives a quick look on how many items are recorded. Your items need to be stored into a category to be counted in this listing.  
+[Overview](/laboratory-information-management-system/storage.html#overview) gives a look into the content of a selected location.  
+[Capacity](/laboratory-information-management-system/storage.html#storage-capacity) allows you to check in which location you have free space.
+
+## Stock
 
 ## Overview
 
 ### Items contained in one location
 
-From your Group homepage click Storage/Overview at the bottom of the page. Select the location you want to look at in the dropdown menu.
+From your `Group page` click Storage/Overview at the bottom of the page. Select the location you want to look at in the dropdown menu.
 If the location is a box, you can see the details of item (How to see information of the item in one specific spot?) contained into the spot.
             If the location is not a box, you get a list of the items contained. Click (loupe) to see the details of the item.
 Each color correspond to an Inventory

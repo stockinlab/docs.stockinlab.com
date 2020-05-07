@@ -1,13 +1,16 @@
 # History
-
+The `History` is inventory specific. Select the inventory where you want to consult the history. 
 ## Group history
 
-From the Listing click History in the left panel to access the history of the removed items. Here are listed all the items removed. you can use the same kind of filters than those available in the general Listing (Category, Members, Parameters in table). Use the dropdown menu Type to filter by type of removal (What are the different kind of removal?)
+From the `Inventory Listing`:
+1. Select `History` in the top banner. Here is the list of items removed by anyone in your group.
+2. Use the same kind of [filters](/laboratory-information-management-system/items.html#filters) than those available in `Listing`. 
+3. Use the dropdown menu `Type` to filter by [type of removal](/laboratory-information-management-system/items.html#different-type-of-removal).
 
 ## Personal history
 
-From the Listing tick the box My history on the top to see only the items you personally removed.
+From the `Listing` tick the box My history on the top to see only the items you personally removed.
 
 ## Item history
 
-From the Overview (loupe) you can see the removal history of the item in the panel Remove from stock.
+In the item overview (view icon) you can see the removal history of the item in the panel `Remove from stock`.
