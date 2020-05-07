@@ -15,77 +15,161 @@ module.exports = {
         ['meta', {name: 'twitter:image', content: 'https://www.stockinlab.com/images/og-image.png'}],
         ['meta', {name: 'theme-color', content: '#3EBD93'}]
     ],
+    locales: {
+        '/': {
+            lang: 'en-US',
+            title: 'StockInLab Documentation',
+            description: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry',
+        },
+        '/fr/': {
+            lang: 'fr-FR',
+            title: 'StockInLab Documentation',
+            description: 'StockInLab Documentation - LIMS & ELN pour faciliter vos recherches académiques ou industrielles',
+        },
+    },
     themeConfig: {
         logo: '/assets/images/small_logo.svg',
         docsRepo: 'stockinlab/docs.stockinlab.com',
         docsDir: 'docs',
         editLinks: true,
-        searchPlaceholder: 'Search...',
-        lastUpdated: 'Last Updated',
-        sidebar: [
-            {
-                title: 'Guide',
-                path: '',
-                collapsable: false,
-                children: [
-                    '/',
+        locales: {
+            '/': {
+                searchPlaceholder: 'Search...',
+                lastUpdated: 'Last Updated',
+                sidebar: [
+                    {
+                        title: 'Guide',
+                        path: '',
+                        collapsable: false,
+                        children: [
+                            '/',
+                        ],
+                    },
+                    {
+                        title: 'Account',
+                        path: '/account',
+                        collapsable: true,
+                        children: [
+                            '/account/settings',
+                            '/account/preferences',
+                            '/account/security',
+                        ],
+                    },
+                    {
+                        title: 'LIMS',
+                        path: '/laboratory-information-management-system',
+                        collapsable: true,
+                        children: [
+                            '/laboratory-information-management-system/dashboard',
+                            '/laboratory-information-management-system/items',
+                            '/laboratory-information-management-system/history',
+                            '/laboratory-information-management-system/storage',
+                            '/laboratory-information-management-system/track-sample-consumption',
+                            '/laboratory-information-management-system/view-stock',
+                        ],
+                    },
+                    {
+                        title: 'ELN',
+                        path: '/electronic-lab-notebook',
+                        collapsable: true,
+                        children: [
+                            '/electronic-lab-notebook/protocols',
+                        ],
+                    },
+                    {
+                        title: 'Tools',
+                        path: '/tools',
+                        collapsable: true,
+                        children: [
+                            '/tools/serial-dilution-calculator',
+                        ],
+                    },
+                    {
+                        title: 'Super-administrator',
+                        path: '/super-administrator',
+                        collapsable: true,
+                        children: [
+                            '/super-administrator/super-administrator-management',
+                            '/super-administrator/audit-trail',
+                            '/super-administrator/backups',
+                            '/super-administrator/group-management',
+                            '/super-administrator/inventories',
+                            '/super-administrator/parameters',
+                            '/super-administrator/server-configuration',
+                            '/super-administrator/user-management',
+                        ],
+                    },
                 ],
             },
-            {
-                title: 'Account',
-                path: '/account',
-                collapsable: true,
-                children: [
-                    '/account/settings',
-                    '/account/preferences',
-                    '/account/security',
+            '/fr/': {
+                searchPlaceholder: 'Rechercher...',
+                lastUpdated: 'Dernière mise à jour',
+                sidebar: [
+                    {
+                        title: 'Guide',
+                        path: '',
+                        collapsable: false,
+                        children: [
+                            '/',
+                        ],
+                    },
+                    {
+                        title: 'Compte',
+                        path: '/fr/compte',
+                        collapsable: true,
+                        children: [
+                            '/fr/compte/parametres',
+                            '/fr/compte/preferences',
+                            '/fr/compte/securite',
+                        ],
+                    },
+                    {
+                        title: 'LIMS',
+                        path: '/fr/laboratory-information-management-system',
+                        collapsable: true,
+                        children: [
+                            '/fr/laboratory-information-management-system/tableau-de-bord',
+                            '/fr/laboratory-information-management-system/items',
+                            '/fr/laboratory-information-management-system/historique',
+                            '/fr/laboratory-information-management-system/espace-de-rangement',
+                            '/fr/laboratory-information-management-system/suivi-consommation-',
+                            '/fr/laboratory-information-management-system/voir-stock',
+                        ],
+                    },
+                    {
+                        title: 'ELN',
+                        path: '/fr/electronic-lab-notebook',
+                        collapsable: true,
+                        children: [
+                            '/fr/electronic-lab-notebook/protocoles',
+                        ],
+                    },
+                    {
+                        title: 'Outils',
+                        path: '/fr/outils',
+                        collapsable: true,
+                        children: [
+                            '/fr/outils/serial-dilution-calculator',
+                        ],
+                    },
+                    {
+                        title: 'Super-administration',
+                        path: '/fr/super-administration',
+                        collapsable: true,
+                        children: [
+                            '/fr/super-administration/gestion-des-super-administrateurs',
+                            '/fr/super-administration/audit-trail',
+                            '/fr/super-administration/sauvegardes',
+                            '/fr/super-administration/gestion-des-groupes',
+                            '/fr/super-administration/inventaires',
+                            '/fr/super-administration/parameteres',
+                            '/fr/super-administration/server-configuration',
+                            '/fr/super-administration/gestion-des-utilisateurs',
+                        ],
+                    },
                 ],
             },
-            {
-                title: 'LIMS',
-                path: '/laboratory-information-management-system',
-                collapsable: true,
-                children: [
-                    '/laboratory-information-management-system/dashboard',
-                    '/laboratory-information-management-system/items',
-                    '/laboratory-information-management-system/history',
-                    '/laboratory-information-management-system/storage',
-                    '/laboratory-information-management-system/track-sample-consumption',
-                    '/laboratory-information-management-system/view-stock',
-                ],
-            },
-            {
-                title: 'ELN',
-                path: '/electronic-lab-notebook',
-                collapsable: true,
-                children: [
-                    '/electronic-lab-notebook/protocols',
-                ],
-            },
-            {
-                title: 'Tools',
-                path: '/tools',
-                collapsable: true,
-                children: [
-                    '/tools/serial-dilution-calculator',
-                ],
-            },
-            {
-                title: 'Super-administrator',
-                path: '/super-administrator',
-                collapsable: true,
-                children: [
-                    '/super-administrator/add-super-administrator',
-                    '/super-administrator/audit-trail',
-                    '/super-administrator/backups',
-                    '/super-administrator/group-management',
-                    '/super-administrator/inventories',
-                    '/super-administrator/parameters',
-                    '/super-administrator/server-configuration',
-                    '/super-administrator/user-management',
-                ],
-            },
-        ],
+        },
     },
     plugins: [
         '@vuepress/medium-zoom',
