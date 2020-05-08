@@ -84,10 +84,8 @@
                         </div>
 
                         <div class="hidden text-sm px-8 lg:block lg:w-1/3 xl:w-1/4">
-                            <div class="flex flex-col justify-between overflow-y-auto sticky top-16 max-h-(screen-16) pt-12 pb-4 -mt-12">
-                                <div class="mb-8">
-                                    <content-table/>
-                                </div>
+                            <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
+                                <content-table class="mb-8"/>
                             </div>
                         </div>
                     </main>

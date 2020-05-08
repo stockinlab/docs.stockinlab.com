@@ -6,8 +6,8 @@ body {
     @apply bg-gray-50;
 }
 
-.top-16 {
-    top: 4rem !important;
+.top-8 {
+    top: 2rem;
 }
 
 .documentation-content {
@@ -47,34 +47,71 @@ body {
     }
 
     h2 {
-        @apply text-xl;
+        @apply text-xl mt-6;
+    }
+
+    h3 {
+        @apply text-lg mt-4;
     }
 
     p {
-        @apply text-gray-700 mt-2;
+        @apply text-gray-700 mt-4;
     }
 
     code {
         @apply bg-cool-gray-100 font-sans px-1 rounded text-gray-800;
+    }
+
+    ol, ul {
+        @apply text-gray-700 mt-2 list-inside ml-2;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    ul {
+        @apply list-disc;
     }
 }
 
 .custom-block.tip,
 .custom-block.warning,
 .custom-block.danger {
-    @apply px-4 py-2 border-l-4 rounded-lg bg-gray-200;
+    @apply px-6 py-4 border-l-4 rounded-r-lg mt-4 mb-4;
+
+    .custom-block-title {
+        @apply mt-0 mb-2 font-bold;
+    }
 }
 
 .custom-block.tip {
-    @apply border-green-500;
+    @apply border-green-500 bg-green-50;
+
+    p {
+        @apply text-green-700;
+    }
+
+    .custom-block-title:before {
+        content: '';
+        background-image: url('/assets/images/icons.svg#toc');
+    }
 }
 
 .custom-block.warning {
-    @apply border-orange-500;
+    @apply border-orange-500 bg-orange-50;
+
+    p {
+        @apply text-orange-700;
+    }
 }
 
 .custom-block.danger {
-    @apply border-red-500;
+    @apply border-red-500 bg-red-50 text-red-500;
+
+    p {
+        @apply text-red-700;
+    }
 }
 
 @import "tailwindcss/utilities";
