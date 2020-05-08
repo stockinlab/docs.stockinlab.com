@@ -1,0 +1,80 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+body {
+    @apply bg-gray-50;
+}
+
+.top-16 {
+    top: 4rem !important;
+}
+
+.documentation-content {
+    @apply mx-auto;
+    max-width: 650px;
+
+    a.header-anchor {
+        font-size: 0.85em;
+        float: left;
+        margin-left: -0.87em;
+        padding-right: 0.23em;
+        margin-top: 0.125em;
+        opacity: 0;
+    }
+
+    a {
+        @apply text-teal-500;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1:hover .header-anchor,
+    h2:hover .header-anchor,
+    h3:hover .header-anchor,
+    h4:hover .header-anchor,
+    h5:hover .header-anchor,
+    h6:hover .header-anchor {
+        opacity: 1;
+    }
+
+    h1 {
+        @apply text-3xl font-semibold;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    p {
+        @apply text-gray-700 mt-2;
+    }
+
+    code {
+        @apply bg-cool-gray-100 font-sans px-1 rounded text-gray-800;
+    }
+}
+
+.custom-block.tip,
+.custom-block.warning,
+.custom-block.danger {
+    @apply px-4 py-2 border-l-4 rounded-lg bg-gray-200;
+}
+
+.custom-block.tip {
+    @apply border-green-500;
+}
+
+.custom-block.warning {
+    @apply border-orange-500;
+}
+
+.custom-block.danger {
+    @apply border-red-500;
+}
+
+@import "tailwindcss/utilities";
