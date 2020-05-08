@@ -7,3 +7,5 @@ From your Group homepage click Storage/Capacity at the bottom of the page. You c
  ## Stock at an earlier date
   
   From your Group homepage click Storage/Capacity at the bottom of the page. Choose an earlier date by using the calendar on the top and see the state of your stock at this particular date.
+
+
