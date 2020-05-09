@@ -1,1 +1,1 @@
-# Inventories
+# Inventaires

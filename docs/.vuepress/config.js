@@ -42,146 +42,35 @@ module.exports = {
         editLinks: true,
         locales: {
             '/': {
+                label: 'English',
                 searchPlaceholder: 'Search...',
+                selectText: 'Languages',
+                ariaLabel: 'Select language',
+                editLinkText: 'Edit this page on GitHub',
                 lastUpdated: 'Last Updated',
                 sidebar: [
-                    {
-                        title: 'Guide',
-                        path: '',
-                        collapsable: false,
-                        children: [
-                            '/',
-                        ],
-                    },
-                    {
-                        title: 'Account',
-                        path: '/account',
-                        collapsable: true,
-                        children: [
-                            '/account/settings',
-                            '/account/preferences',
-                            '/account/security',
-                        ],
-                    },
-                    {
-                        title: 'LIMS',
-                        path: '/laboratory-information-management-system',
-                        collapsable: true,
-                        children: [
-                            '/laboratory-information-management-system/dashboard',
-                            '/laboratory-information-management-system/add-item',
-                            '/laboratory-information-management-system/remove-item',
-                            '/laboratory-information-management-system/link-items',
-                            '/laboratory-information-management-system/label',
-                            '/laboratory-information-management-system/edit-item',
-                            '/laboratory-information-management-system/reserve-item',
-                            '/laboratory-information-management-system/search-item',
-                            '/laboratory-information-management-system/view-item',
-                            '/laboratory-information-management-system/history',
-                            '/laboratory-information-management-system/storage',
-                            '/laboratory-information-management-system/track-sample-consumption',
-                            '/laboratory-information-management-system/view-stock',
-                        ],
-                    },
-                    {
-                        title: 'ELN',
-                        path: '/electronic-lab-notebook',
-                        collapsable: true,
-                        children: [
-                            '/electronic-lab-notebook/protocols',
-                        ],
-                    },
-                    {
-                        title: 'Tools',
-                        path: '/tools',
-                        collapsable: true,
-                        children: [
-                            '/tools/serial-dilution-calculator',
-                        ],
-                    },
-                    {
-                        title: 'Super-administrator',
-                        path: '/super-administrator',
-                        collapsable: true,
-                        children: [
-                            '/super-administrator/super-administrator-management',
-                            '/super-administrator/audit-trail',
-                            '/super-administrator/backups',
-                            '/super-administrator/group-management',
-                            '/super-administrator/inventories',
-                            '/super-administrator/parameters',
-                            '/super-administrator/server-configuration',
-                            '/super-administrator/user-management',
-                        ],
-                    },
+                    ...getGuideSidebar('Guide'),
+                    ...getAccountSidebar('Account'),
+                    ...getLIMSSidebar('LIMS'),
+                    ...getELNSidebar('ELN'),
+                    ...getToolsSidebar('Tools'),
+                    ...getSuperAdministrationSidebar('Super-administration'),
                 ],
             },
             '/fr/': {
+                label: 'English',
                 searchPlaceholder: 'Rechercher...',
+                selectText: 'Langues',
+                ariaLabel: 'Sélectionner la langue',
+                editLinkText: 'Modifier la page sur GitHub',
                 lastUpdated: 'Dernière mise à jour',
                 sidebar: [
-                    {
-                        title: 'Guide',
-                        path: '',
-                        collapsable: false,
-                        children: [
-                            '/',
-                        ],
-                    },
-                    {
-                        title: 'Compte',
-                        path: '/fr/compte',
-                        collapsable: true,
-                        children: [
-                            '/fr/compte/parametres',
-                            '/fr/compte/preferences',
-                            '/fr/compte/securite',
-                        ],
-                    },
-                    {
-                        title: 'LIMS',
-                        path: '/fr/laboratory-information-management-system',
-                        collapsable: true,
-                        children: [
-                            '/fr/laboratory-information-management-system/tableau-de-bord',
-                            '/fr/laboratory-information-management-system/items',
-                            '/fr/laboratory-information-management-system/historique',
-                            '/fr/laboratory-information-management-system/espace-de-rangement',
-                            '/fr/laboratory-information-management-system/suivi-consommation-',
-                            '/fr/laboratory-information-management-system/voir-stock',
-                        ],
-                    },
-                    {
-                        title: 'ELN',
-                        path: '/fr/electronic-lab-notebook',
-                        collapsable: true,
-                        children: [
-                            '/fr/electronic-lab-notebook/protocoles',
-                        ],
-                    },
-                    {
-                        title: 'Outils',
-                        path: '/fr/outils',
-                        collapsable: true,
-                        children: [
-                            '/fr/outils/serial-dilution-calculator',
-                        ],
-                    },
-                    {
-                        title: 'Super-administration',
-                        path: '/fr/super-administration',
-                        collapsable: true,
-                        children: [
-                            '/fr/super-administration/gestion-des-super-administrateurs',
-                            '/fr/super-administration/audit-trail',
-                            '/fr/super-administration/sauvegardes',
-                            '/fr/super-administration/gestion-des-groupes',
-                            '/fr/super-administration/inventaires',
-                            '/fr/super-administration/parameteres',
-                            '/fr/super-administration/server-configuration',
-                            '/fr/super-administration/gestion-des-utilisateurs',
-                        ],
-                    },
+                    ...getGuideSidebar('Guide', '/fr'),
+                    ...getAccountSidebar('Compte', '/fr'),
+                    ...getLIMSSidebar('LIMS', '/fr'),
+                    ...getELNSidebar('ELN', '/fr'),
+                    ...getToolsSidebar('Outils', '/fr'),
+                    ...getSuperAdministrationSidebar('Super-administration', '/fr'),
                 ],
             },
         },
@@ -205,3 +94,96 @@ module.exports = {
         // ],
     ],
 };
+
+function getGuideSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                prefix,
+            ],
+        },
+    ];
+}
+
+function getAccountSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                `${prefix}/account/settings`,
+                `${prefix}/account/preferences`,
+                `${prefix}/account/security`,
+            ],
+        },
+    ];
+}
+
+function getLIMSSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                `${prefix}/laboratory-information-management-system/dashboard`,
+                `${prefix}/laboratory-information-management-system/add-item`,
+                `${prefix}/laboratory-information-management-system/remove-item`,
+                `${prefix}/laboratory-information-management-system/link-items`,
+                `${prefix}/laboratory-information-management-system/label`,
+                `${prefix}/laboratory-information-management-system/edit-item`,
+                `${prefix}/laboratory-information-management-system/reserve-item`,
+                `${prefix}/laboratory-information-management-system/search-item`,
+                `${prefix}/laboratory-information-management-system/view-item`,
+                `${prefix}/laboratory-information-management-system/history`,
+                `${prefix}/laboratory-information-management-system/storage`,
+                `${prefix}/laboratory-information-management-system/track-sample-consumption`,
+                `${prefix}/laboratory-information-management-system/view-stock`,
+            ],
+        },
+    ];
+}
+
+function getELNSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                `${prefix}/electronic-lab-notebook/protocols`,
+            ],
+        },
+    ];
+}
+
+function getToolsSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                `${prefix}/tools/serial-dilution-calculator`,
+            ],
+        },
+    ];
+}
+
+function getSuperAdministrationSidebar(title, prefix = '') {
+    return [
+        {
+            title,
+            collapsable: false,
+            children: [
+                `${prefix}/super-administration/super-administrator-management`,
+                `${prefix}/super-administration/audit-trail`,
+                `${prefix}/super-administration/backups`,
+                `${prefix}/super-administration/group-management`,
+                `${prefix}/super-administration/inventories`,
+                `${prefix}/super-administration/parameters`,
+                `${prefix}/super-administration/server-configuration`,
+                `${prefix}/super-administration/user-management`,
+            ],
+        },
+    ];
+}

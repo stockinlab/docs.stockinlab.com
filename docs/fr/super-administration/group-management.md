@@ -1,1 +1,1 @@
-# Group management
+# Gestion des groupes

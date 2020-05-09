@@ -1,1 +1,0 @@
-# Laboratory Information Management System
