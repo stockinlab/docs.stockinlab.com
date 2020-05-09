@@ -2,18 +2,32 @@
 
 @import "tailwindcss/components";
 
-body {
-    @apply bg-gray-50;
-}
-
 .top-8 {
     top: 2rem;
 }
 
-.documentation-content {
+.sidebar-open {
+    .full-content {
+        @apply relative;
+    }
+
+    .documentation-block {
+        @apply hidden;
+    }
+
+    .sidebar {
+        @apply absolute block left-0 right-0 pt-8 px-4;
+        top: 2px;
+    }
+}
+
+.documentation-block {
     @apply mx-auto;
     max-width: 650px;
+    width: 650px;
+}
 
+.documentation-content {
     a.header-anchor {
         font-size: 0.85em;
         float: left;
@@ -24,13 +38,12 @@ body {
     }
 
     a {
-        @apply text-teal-500;
-        font-weight: 500;
-        text-decoration: none;
+        @apply text-teal-500 font-medium no-underline;
     }
 
-    a:hover {
-        text-decoration: underline;
+    a:hover,
+    a:focus {
+        @apply underline;
     }
 
     h1:hover .header-anchor,
@@ -47,15 +60,17 @@ body {
     }
 
     h2 {
-        @apply text-xl mt-6;
+        @apply text-xl mt-12;
     }
 
     h3 {
-        @apply text-lg mt-4;
+        @apply text-lg mt-6;
     }
 
     p {
-        @apply text-gray-700 mt-4;
+        //@apply text-gray-700 mt-4 leading-relaxed;
+        @apply text-gray-700 mt-4 leading-7;
+        //@apply text-gray-700 mt-4 leading-relaxed text-sm;
     }
 
     code {
@@ -63,7 +78,9 @@ body {
     }
 
     ol, ul {
-        @apply text-gray-700 mt-2 list-inside ml-2;
+        //@apply text-gray-700 mt-2 mb-2 list-inside ml-2 leading-relaxed;
+        @apply text-gray-700 mt-2 mb-2 list-inside ml-2 leading-7;
+        //@apply text-gray-700 mt-2 mb-2 list-inside ml-2 leading-relaxed text-sm;
     }
 
     ol {
@@ -80,26 +97,33 @@ body {
 .custom-block.danger {
     @apply px-6 py-4 border-l-4 rounded-r-lg mt-4 mb-4;
 
+    p {
+        @apply mt-0;
+    }
+
     .custom-block-title {
-        @apply mt-0 mb-2 font-bold;
+        @apply mt-0 mb-2 font-bold flex items-center;
     }
 }
 
 .custom-block.tip {
     @apply border-green-500 bg-green-50;
 
-    p {
-        @apply text-green-700;
+    .custom-block-title {
+        @apply text-green-800;
     }
 
-    .custom-block-title:before {
-        content: '';
-        background-image: url('/assets/images/icons.svg#toc');
+    p {
+        @apply text-green-700;
     }
 }
 
 .custom-block.warning {
     @apply border-orange-500 bg-orange-50;
+
+    .custom-block-title {
+        @apply text-orange-800;
+    }
 
     p {
         @apply text-orange-700;
@@ -107,7 +131,11 @@ body {
 }
 
 .custom-block.danger {
-    @apply border-red-500 bg-red-50 text-red-500;
+    @apply border-red-500 bg-red-50;
+
+    .custom-block-title {
+        @apply text-red-800;
+    }
 
     p {
         @apply text-red-700;

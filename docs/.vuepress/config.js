@@ -58,7 +58,7 @@ module.exports = {
                 ],
             },
             '/fr/': {
-                label: 'English',
+                label: 'Français',
                 searchPlaceholder: 'Rechercher...',
                 selectText: 'Langues',
                 ariaLabel: 'Sélectionner la langue',
@@ -79,7 +79,7 @@ module.exports = {
         plugins: [
             require('tailwindcss')('./tailwind.config.js'),
             require('autoprefixer'),
-            ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
+            // ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
         ]
     },
     plugins: [
@@ -101,7 +101,7 @@ function getGuideSidebar(title, prefix = '') {
             title,
             collapsable: false,
             children: [
-                prefix,
+                `${prefix}/`,
             ],
         },
     ];

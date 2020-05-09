@@ -10,36 +10,36 @@
                 <img src="/assets/images/logo.svg" class="h-10" alt="StockInLab logo">
             </RouterLink>
 
-<!--            <div-->
-<!--                class="links"-->
-<!--                :style="linksWrapMaxWidth ? {-->
-<!--        'max-width': linksWrapMaxWidth + 'px'-->
-<!--      } : {}"-->
-<!--            >-->
-                <!--      <AlgoliaSearchBox-->
-                <!--        v-if="isAlgoliaSearch"-->
-                <!--        :options="algolia"-->
-                <!--      />-->
-                <!--                      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />-->
-                <!--      <NavLinks class="can-hide" />-->
-<!--            </div>-->
+            <!--            <div-->
+            <!--                class="links"-->
+            <!--                :style="linksWrapMaxWidth ? {-->
+            <!--        'max-width': linksWrapMaxWidth + 'px'-->
+            <!--      } : {}"-->
+            <!--            >-->
+            <!--      <AlgoliaSearchBox-->
+            <!--        v-if="isAlgoliaSearch"-->
+            <!--        :options="algolia"-->
+            <!--      />-->
+            <!--                      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />-->
+            <NavLinks class="can-hide"/>
+            <!--            </div>-->
         </div>
     </header>
 </template>
 
 <script>
 // import AlgoliaSearchBox from '@AlgoliaSearchBox'
-// import NavLinks from '@theme/components/NavLinks.vue'
 // import SearchBox from '@SearchBox';
-import SidebarButton from '@theme/components/SidebarButton.vue';
+import NavLinks from '@theme/components/NavLinks';
+import SidebarButton from '@theme/components/SidebarButton';
 
 export default {
     name: 'Navbar',
 
     components: {
         // AlgoliaSearchBox
-        // NavLinks,
         // SearchBox,
+        NavLinks,
         SidebarButton,
     },
 
