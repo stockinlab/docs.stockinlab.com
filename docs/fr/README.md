@@ -1,3 +1,1 @@
-# Introduction
-
-## What is StockInLab?
+# Présentation
