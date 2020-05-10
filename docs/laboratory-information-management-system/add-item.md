@@ -2,7 +2,7 @@
 
 ## Add new item
 ::: tip
-Before you start adding items, make sure your workspace is ready. You may need to create additional [parameters](./dashboard.md#parameters) and [locations](./dashboard.md#locations) in the [dashboard](./dashboard.md) (access is restricted to the group's administrators).
+Before you start adding items, make sure your workspace is ready. You may need to create additional [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) and [locations](/laboratory-information-management-system/dashboard-locations.html#create-location) in the `Dashboard`. Access to the `Dashboard` is restricted to the [administrator](/laboratory-information-management-system/dashboard-users-management.html#users-management)).
 :::
 
 Creation of categories is not mandatory. However, when you add a new item you have to assign a category and/or a name.
@@ -16,10 +16,10 @@ the button `Add` is also available directly from the `Group page`. If you click 
 2. Select (add icon) on top right of the page.
 3. Two options are available:
     - `Simple add` if you want to add on or several items with the same parameters.
-    - `Add with import` if you want to add a bulk of items with different parameters. This [procedure](/laboratory-information-management-system/items.html#use-an-excel-file-to-import-items) require to fill an Excel file.  
+    - `Add with import` if you want to add a bulk of items with different parameters. This [procedure](/laboratory-information-management-system/add-item.html#use-an-excel-file-to-import-items) require to fill an Excel file.  
 The following steps refer to `Simple add`.   
-4. Set your item as [public or private](/laboratory-information-management-system/items.html#private-public-items). 
-5. Fill all the [mandatory parameters](/laboratory-information-management-system/dashboard.html#mandatory-parameters) (if any). Additional parameters you might want to enter for this item can be selected from the left panel.
+4. Set your item as [public or private](/laboratory-information-management-system/add-item.html#private-public-items). 
+5. Fill all the [mandatory parameters](/laboratory-information-management-system/dashboard-parameters.html#mandatory-parameters) (if any). Additional parameters you might want to enter for this item can be selected from the left panel.
 6. Enter the location. If the location is a box you need to select the spot(s). If it is not a box, simply add the quantity in the field provided. If you don’t know the location yet, you can save as draft. 
 7. [Optional] Add comment and/or attach files in `Extra`.
 
@@ -43,7 +43,7 @@ In case of error, the details of the error appear. It can be a missing mandatory
 :::
 
 Select the location for each new imported item.
-All imported items without location go into [Draft items](/laboratory-information-management-system/items.html#draft-items) in your `Listing`. You can still edit their location later:
+All imported items without location go into [Draft items](/laboratory-information-management-system/search-item.html#draft-items) in your `Listing`. You can still edit their location later:
 1. Click (loupe icon).
 2. Select (edit location icon).
 3. Choose the location of your item and save.
@@ -60,7 +60,7 @@ When you add a new item from the menu `Simple add` Simply select the location in
 * If your items are stored in a box, select the spot(s) where your item are located.
 * If it is not a box, simply add the quantity in the field provided.
 * If you items are in multiple locations, select the additional location(s) from the dropdown menu.
-* If you don’t know the location yet, you can [save as draft](./draft-items).
+* If you don’t know the location yet, you can [save as draft](/laboratory-information-management-system/search-item.html#draft-items).
 
 When you add items from the menu `Add with import`, the locations are allocated after the import on the same principle.
 
@@ -85,7 +85,7 @@ To edit the location of your item:
 You item will be automatically transferred from the Draft items to the Listing.
 
 ## Mandatory fields
-If mandatory parameters are not filled, the button Add remains disabled. [Mandatory parameters](/laboratory-information-management-system/dashboard.html#mandatory-parameters) can be set from the [Dashboard](./dashboard.md).
+If mandatory parameters are not filled, the button Add remains disabled. [Mandatory parameters](/laboratory-information-management-system/dashboard-parameters.html#mandatory-parameters) can be set from the `Dashboard`.
 
 ::: tip
 When you add a new item from the menu `Simple add`, you can add more optional parameters directly from the panel `Parameters`

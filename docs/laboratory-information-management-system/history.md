@@ -4,8 +4,8 @@ The `History` is inventory specific. Select the inventory where you want to cons
 
 From the `Inventory Listing`:
 1. Select `History` in the top banner. Here is the list of items removed by anyone in your group.
-2. Use the same kind of [filters](/laboratory-information-management-system/items.html#filters) than those available in `Listing`. 
-3. Use the dropdown menu `Type` to filter by [type of removal](/laboratory-information-management-system/items.html#different-type-of-removal).
+2. Use the same kind of [filters](/laboratory-information-management-system/search-item.html#filters) than those available in `Listing`. 
+3. Use the dropdown menu `Type` to filter by [type of removal](/laboratory-information-management-system/remove-item.html#different-type-of-removal).
 
 ## Personal history
 

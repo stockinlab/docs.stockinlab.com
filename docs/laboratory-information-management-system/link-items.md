@@ -11,7 +11,7 @@ Into the panel `Linked items` click (loupe icon) on the left of the linked item 
 ## Add link item
 In the overview of the item (loupe icon), you have a menu `Link item` in the left panel:
 1. Select the inventory in which you want to enter a new linked item.
-2. Enter the details of the linked item as explained in the part [Add item](#add-item).
+2. Enter the details of the linked item as explained in the part [Add item](/laboratory-information-management-system/add-item.html#add-item).
 3. Save the item.
 
 ## Link existing items

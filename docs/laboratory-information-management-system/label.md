@@ -11,3 +11,10 @@ From the overview of the item (loupe icon):
 ::: tip
 To create label for multiple items, select your items from the `Listing` and click `Create label` in the left panel.
 :::
+
+## Search with label
+You can use the QRcode or the code below to find your item into te system.
+1. From your `Group homepage` select (search icon) on top right
+2. Select `Search by QRcode` and scan the code or type the code in the box.
+
+ 

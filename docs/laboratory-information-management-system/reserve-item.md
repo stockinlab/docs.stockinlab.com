@@ -28,5 +28,5 @@ Contact the person who reserved the item before using it.
 From  `Listing` tick the box `My reservation` on the top to see all your reserved items. 
 
 ## Cancel or withdraw reservation
-From `Listing` or in the overview of the item (loupe icon) click on the red locket to withdraw/cancel [your reservation](#manage-reservations).
+From `Listing` or in the overview of the item (loupe icon) click on the red locket to withdraw/cancel [your reservation](/laboratory-information-management-system/reserve-item.html#manage-reservations).
 If you have multiple items to cancel the reservation, select the items in `Listing` by ticking the boxes on the left and select `Cancel reservation` (cancel icon) in the left panel.

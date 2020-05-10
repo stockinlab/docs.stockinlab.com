@@ -5,7 +5,7 @@ Under the menu `Dashboard`:
 1. Select `Members`.
 2. Click `Manage` on top right.
 3. Type the name of the member(s) to add to your group in the input `Choose members` or select him/her in the list.
-4. Select his/her [role](#different-roles).
+4. Select his/her [role](/laboratory-information-management-system/dashboard-users-management.html#different-roles).
 5. Click `Update members`.
 
 ## Different roles
@@ -17,4 +17,4 @@ Under the menu `Dashboard`:
 Under the menu `Dashboard` 
 1. Select `Members`. 
 2. Click (pen icon) on the right of the user you want to change the permission.
-3. Select the new [role](#different-roles) and save.
+3. Select the new [role](/laboratory-information-management-system/dashboard-users-management.html#different-roles) and save.

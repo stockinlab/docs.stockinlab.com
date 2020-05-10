@@ -10,7 +10,7 @@ There are 4 types of removal:
 ## Remove item from the listing
 From `Listing`:
 1. Click (remove icon) on the left of the item to remove it. 
-2. Choose the [type of removal](#different-type-of-removal), the spot(s)/quantity to remove, the date of removal and a comment if any
+2. Choose the [type of removal](/laboratory-information-management-system/remove-item.html#different-type-of-removal), the spot(s)/quantity to remove, the date of removal and a comment if any
 3. Click `Remove`.
 
 ::: tip
@@ -24,7 +24,7 @@ When you remove an item, you have to specify the date of the removal. You can ch
 From `Listing`:
 1. Select the items you want to remove by ticking the boxes on the left.
 2. Click (remove item icon) in the left panel.
-3. Select the [type of removal](#different-type-of-removal)and the date (same for all the selected items).
+3. Select the [type of removal](/laboratory-information-management-system/remove-item.html#different-type-of-removal)and the date (same for all the selected items).
 4. Choose the spot(s)/quantity to remove for each item.
 5. Click `Remove`.
 
@@ -34,5 +34,5 @@ In the overview of the item (loupe icon):
 2. Click (backup icon) on the right of the item to backup.
 
 ::: warning
-The item will go back into the stock, however all the actions are recorded and the [Administrator](./dashboard.md#audit-trail) can see all the activities into the system.
+The item will go back into the stock, however all the actions are recorded and the [Administrator](/laboratory-information-management-system/dashboard-audit-trail.html#audit-trail) can see all the activities into the system.
 :::
