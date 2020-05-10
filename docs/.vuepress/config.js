@@ -68,7 +68,7 @@ module.exports = {
                 ],
                 sidebar: {
                     '/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/laboratory-information-management-system/': getLIMSSidebar('LIMS'),
+                    '/laboratory-information-management-system/': getLIMSSidebar('Items', 'Storage', 'Dashboard', 'Super-administration'),
                     '/electronic-lab-notebook/': getELNSidebar('ELN'),
                     '/tools/': getToolsSidebar('Tools'),
                 },
@@ -143,8 +143,6 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
                 'super-administration/audit-trail',
                 'super-administration/backups',
                 'super-administration/group-management',
-                'super-administration/inventories',
-                'super-administration/parameters',
                 'super-administration/server-configuration',
                 'super-administration/user-management',
             ],
@@ -152,13 +150,12 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
     ];
 }
 
-function getLIMSSidebar(titleA) {
+function getLIMSSidebar(itemsTitle, storageTitle, dashboardTitle, superAdministrationTitle) {
     return [
         {
-            title: titleA,
+            title: itemsTitle,
             collapsable: false,
             children: [
-                'dashboard',
                 'add-item',
                 'remove-item',
                 'link-items',
@@ -168,9 +165,36 @@ function getLIMSSidebar(titleA) {
                 'search-item',
                 'view-item',
                 'history',
-                'storage',
                 'track-sample-consumption',
-                'view-stock',
+            ],
+        },
+        {
+            title: storageTitle,
+            collapsable: false,
+            children: [
+                'stock',
+                'storage-overview',
+                'storage-capacity',
+            ],
+        },
+        {
+            title: dashboardTitle,
+            collapsable: false,
+            children: [
+                'dashboard-parameters',
+                'dashboard-categories',
+                'dashboard-locations',
+                'import-workspace',
+                'dashboard-users-management',
+                'dashboard-audit-trail',
+            ],
+        },
+        {
+            title: superAdministrationTitle,
+            collapsable: false,
+            children: [
+                `super-administration-inventories`,
+                'super-administration-parameters',
             ],
         },
     ];
