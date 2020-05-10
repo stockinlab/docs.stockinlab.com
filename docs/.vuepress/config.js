@@ -1,6 +1,6 @@
-const purgecss = require("@fullhuman/postcss-purgecss")({
+const purgecss = require('@fullhuman/postcss-purgecss')({
     // Specify the paths to all of the template files in your project
-    content: ["./.vuepress/theme/**/*.*", "./!(node_modules)/**/*.md", "./*.md"],
+    content: ['./.vuepress/theme/**/*.*', './!(node_modules)/**/*.md', './*.md'],
 
     // Include any special characters you're using in this regular expression
     defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
@@ -48,14 +48,30 @@ module.exports = {
                 ariaLabel: 'Select language',
                 editLinkText: 'Edit this page on GitHub',
                 lastUpdated: 'Last Updated',
-                sidebar: [
-                    ...getGuideSidebar('Guide'),
-                    ...getAccountSidebar('Account'),
-                    ...getLIMSSidebar('LIMS'),
-                    ...getELNSidebar('ELN'),
-                    ...getToolsSidebar('Tools'),
-                    ...getSuperAdministrationSidebar('Super-administration'),
+                nav: [
+                    {
+                        text: 'General',
+                        link: '/general/',
+                    },
+                    {
+                        text: 'LIMS',
+                        link: '/laboratory-information-management-system/',
+                    },
+                    {
+                        text: 'ELN',
+                        link: '/electronic-lab-notebook/',
+                    },
+                    {
+                        text: 'Tools',
+                        link: '/tools/',
+                    },
                 ],
+                sidebar: {
+                    '/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
+                    '/laboratory-information-management-system/': getLIMSSidebar('LIMS'),
+                    '/electronic-lab-notebook/': getELNSidebar('ELN'),
+                    '/tools/': getToolsSidebar('Tools'),
+                },
             },
             '/fr/': {
                 label: 'Français',
@@ -64,14 +80,30 @@ module.exports = {
                 ariaLabel: 'Sélectionner la langue',
                 editLinkText: 'Modifier la page sur GitHub',
                 lastUpdated: 'Dernière mise à jour',
-                sidebar: [
-                    ...getGuideSidebar('Guide', '/fr'),
-                    ...getAccountSidebar('Compte', '/fr'),
-                    ...getLIMSSidebar('LIMS', '/fr'),
-                    ...getELNSidebar('ELN', '/fr'),
-                    ...getToolsSidebar('Outils', '/fr'),
-                    ...getSuperAdministrationSidebar('Super-administration', '/fr'),
+                nav: [
+                    {
+                        text: 'General',
+                        link: '/fr/general/',
+                    },
+                    {
+                        text: 'LIMS',
+                        link: '/fr/laboratory-information-management-system/',
+                    },
+                    {
+                        text: 'ELN',
+                        link: '/fr/electronic-lab-notebook/',
+                    },
+                    {
+                        text: 'Tools',
+                        link: '/fr/tools/',
+                    },
                 ],
+                sidebar: {
+                    '/fr/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
+                    '/fr/laboratory-information-management-system/': getLIMSSidebar('LIMS'),
+                    '/fr/electronic-lab-notebook/': getELNSidebar('ELN'),
+                    '/fr/tools/': getToolsSidebar('Tools'),
+                },
             },
         },
     },
@@ -82,107 +114,87 @@ module.exports = {
             // ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
         ]
     },
-    plugins: [
-        // '@vuepress/medium-zoom',
-        // [
-        //     'vuepress-plugin-clean-urls',
-        //     {
-        //         normalSuffix: '',
-        //         indexSuffix: '',
-        //         notFoundPath: '/404.html',
-        //     },
-        // ],
-    ],
+    plugins: [],
 };
 
-function getGuideSidebar(title, prefix = '') {
+function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
     return [
         {
-            title,
+            title: guideTitle,
             collapsable: false,
             children: [
-                `${prefix}/`,
+                '',
+            ],
+        },
+        {
+            title: accountTitle,
+            collapsable: false,
+            children: [
+                'account/settings',
+                'account/preferences',
+                'account/security',
+            ],
+        },
+        {
+            title: superAdministrationTitle,
+            collapsable: false,
+            children: [
+                'super-administration/super-administrator-management',
+                'super-administration/audit-trail',
+                'super-administration/backups',
+                'super-administration/group-management',
+                'super-administration/inventories',
+                'super-administration/parameters',
+                'super-administration/server-configuration',
+                'super-administration/user-management',
             ],
         },
     ];
 }
 
-function getAccountSidebar(title, prefix = '') {
+function getLIMSSidebar(titleA) {
     return [
         {
-            title,
+            title: titleA,
             collapsable: false,
             children: [
-                `${prefix}/account/settings`,
-                `${prefix}/account/preferences`,
-                `${prefix}/account/security`,
+                'dashboard',
+                'add-item',
+                'remove-item',
+                'link-items',
+                'label',
+                'edit-item',
+                'reserve-item',
+                'search-item',
+                'view-item',
+                'history',
+                'storage',
+                'track-sample-consumption',
+                'view-stock',
             ],
         },
     ];
 }
 
-function getLIMSSidebar(title, prefix = '') {
+function getELNSidebar(title) {
     return [
         {
             title,
             collapsable: false,
             children: [
-                `${prefix}/laboratory-information-management-system/dashboard`,
-                `${prefix}/laboratory-information-management-system/add-item`,
-                `${prefix}/laboratory-information-management-system/remove-item`,
-                `${prefix}/laboratory-information-management-system/link-items`,
-                `${prefix}/laboratory-information-management-system/label`,
-                `${prefix}/laboratory-information-management-system/edit-item`,
-                `${prefix}/laboratory-information-management-system/reserve-item`,
-                `${prefix}/laboratory-information-management-system/search-item`,
-                `${prefix}/laboratory-information-management-system/view-item`,
-                `${prefix}/laboratory-information-management-system/history`,
-                `${prefix}/laboratory-information-management-system/storage`,
-                `${prefix}/laboratory-information-management-system/track-sample-consumption`,
-                `${prefix}/laboratory-information-management-system/view-stock`,
+                'protocols',
             ],
         },
     ];
 }
 
-function getELNSidebar(title, prefix = '') {
+function getToolsSidebar(title) {
     return [
         {
             title,
             collapsable: false,
             children: [
-                `${prefix}/electronic-lab-notebook/protocols`,
-            ],
-        },
-    ];
-}
-
-function getToolsSidebar(title, prefix = '') {
-    return [
-        {
-            title,
-            collapsable: false,
-            children: [
-                `${prefix}/tools/serial-dilution-calculator`,
-            ],
-        },
-    ];
-}
-
-function getSuperAdministrationSidebar(title, prefix = '') {
-    return [
-        {
-            title,
-            collapsable: false,
-            children: [
-                `${prefix}/super-administration/super-administrator-management`,
-                `${prefix}/super-administration/audit-trail`,
-                `${prefix}/super-administration/backups`,
-                `${prefix}/super-administration/group-management`,
-                `${prefix}/super-administration/inventories`,
-                `${prefix}/super-administration/parameters`,
-                `${prefix}/super-administration/server-configuration`,
-                `${prefix}/super-administration/user-management`,
+                'serial-dilution-calculator',
             ],
         },
     ];
