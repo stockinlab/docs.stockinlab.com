@@ -1,5 +1,5 @@
 <template>
-    <header class="navbar bg-white shadow h-20">
+    <header class="navbar bg-white shadow h-16">
         <div class="container flex items-center max-w-8xl mx-auto px-6 md:px-8 py-4 h-full">
             <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
@@ -73,6 +73,7 @@ export default {
         };
 
         handleLinksWrapWidth();
+
         window.addEventListener('resize', handleLinksWrapWidth, false);
     },
 };

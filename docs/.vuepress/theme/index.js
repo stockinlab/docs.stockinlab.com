@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = (options, ctx) => {
-    const { themeConfig, siteConfig } = ctx;
+    const {themeConfig, siteConfig} = ctx;
 
     const isAlgoliaSearch = (
         themeConfig.algolia
@@ -18,6 +18,19 @@ module.exports = (options, ctx) => {
             '@vuepress/search',
             '@vuepress/plugin-nprogress',
             '@vuepress/medium-zoom',
+            // ['@vuepress/pwa', {
+            //     serviceWorker: true,
+            //     updatePopup: {
+            //         '/': {
+            //             message: 'New content is available.',
+            //             buttonText: 'Refresh',
+            //         },
+            //         '/fr/': {
+            //             message: 'Nouveau contenu disponible.',
+            //             buttonText: 'Actualiser',
+            //         }
+            //     },
+            // }],
             ['container', {
                 type: 'tip',
                 defaultTitle: {

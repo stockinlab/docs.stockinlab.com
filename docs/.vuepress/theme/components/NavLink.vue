@@ -1,7 +1,8 @@
 <template>
     <RouterLink
         v-if="isInternal"
-        class="nav-link"
+        class="block rounded px-4 py-1 truncate focus:outline-none focus:shadow-outline-teal"
+        :class="classes"
         :to="link"
         :exact="exact"
         @focusout.native="focusoutAction"
@@ -22,66 +23,86 @@
 </template>
 
 <script>
-import {ensureExt, isExternal, isMailto, isTel} from '@theme/util';
+import {ensureExt, isExternal, isMailto, isTel, normalize} from '@theme/util';
 
 export default {
     name: 'NavLink',
 
     props: {
         item: {
-            required: true
-        }
+            required: true,
+        },
     },
 
     computed: {
         link() {
-            return ensureExt(this.item.link)
+            return ensureExt(this.item.link);
+        },
+
+        active() {
+            const routePath = normalize(this.$route.path);
+            const pagePath = normalize(this.item.link);
+
+            return routePath.startsWith(pagePath);
         },
 
         exact() {
             if (this.$site.locales) {
-                return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
+                return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link);
             }
-            return this.link === '/'
+
+            return this.link === '/';
         },
 
         isNonHttpURI() {
-            return isMailto(this.link) || isTel(this.link)
+            return isMailto(this.link) || isTel(this.link);
         },
 
         isBlankTarget() {
-            return this.target === '_blank'
+            return this.target === '_blank';
         },
 
         isInternal() {
-            return !isExternal(this.link) && !this.isBlankTarget
+            return !isExternal(this.link) && !this.isBlankTarget;
         },
 
         target() {
             if (this.isNonHttpURI) {
-                return null
+                return null;
             }
+
             if (this.item.target) {
-                return this.item.target
+                return this.item.target;
             }
-            return isExternal(this.link) ? '_blank' : ''
+
+            return isExternal(this.link) ? '_blank' : '';
         },
 
         rel() {
             if (this.isNonHttpURI) {
-                return null
+                return null;
             }
+
             if (this.item.rel) {
-                return this.item.rel
+                return this.item.rel;
             }
-            return this.isBlankTarget ? 'noopener noreferrer' : ''
-        }
+
+            return this.isBlankTarget ? 'noopener noreferrer' : '';
+        },
+
+        classes() {
+            return [
+                this.active
+                    ? 'font-semibold bg-teal-500 text-white'
+                    : 'text-gray-600 font-light hover:bg-gray-100 focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500'
+            ];
+        },
     },
 
     methods: {
         focusoutAction() {
-            this.$emit('focusout')
-        }
-    }
-}
+            this.$emit('focusout');
+        },
+    },
+};
 </script>

@@ -1,7 +1,7 @@
 {
     "name": "docs.stockinlab.com",
     "version": "0.0.1",
-    "description": "Documentation for StockInLab LIMS",
+    "description": "Documentation for StockInLab LIMS & ELN",
     "author": {
         "name": "StockInLab",
         "email": "support@stockinlab.com"
@@ -12,8 +12,9 @@
         "build": "vuepress build docs"
     },
     "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^2.2.0",
+        "@kawarimidoll/vuepress-plugin-tailwind": "^0.1.5",
         "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+        "@vuepress/plugin-pwa": "^1.4.1",
         "eslint": "^7.0.0",
         "eslint-config-vuepress": "^2.2.0",
         "eslint-loader": "^4.0.2",

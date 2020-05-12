@@ -41,7 +41,7 @@
     <!--            </template>-->
     <!--        </Page>-->
     <!--    </div>-->
-    <div class="" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
+    <div :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
         <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
 
         <div class="sidebar-mask" @click="toggleSidebar(false)"/>
@@ -60,7 +60,7 @@
                             <PageNav v-bind="{ sidebarItems }"/>
                         </div>
 
-                        <div class="hidden text-sm lg:block lg:w-1/3 xl:w-1/4 ml-4">
+                        <div class="hidden text-sm lg:block lg:w-1/3 xl:w-1/4 ml-8">
                             <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
                                 <ContentTable class="mb-8"/>
                             </div>

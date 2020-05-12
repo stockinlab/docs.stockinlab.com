@@ -1,5 +1,5 @@
 <template>
-    <nav v-if="userLinks.length || repoLink" class="flex items-center nav-links">
+    <nav v-if="userLinks.length || repoLink" class="hidden sm:flex flex-1 items-center justify-end nav-links">
         <div v-for="item in userLinks" :key="item.link" class="nav-item">
             <DropdownLink v-if="item.type === 'links'" :item="item"/>
             <NavLink v-else :item="item"/>
@@ -37,35 +37,35 @@ export default {
         },
 
         nav() {
-            const {locales} = this.$site;
-
-            if (locales && Object.keys(locales).length > 1) {
-                const currentLink = this.$page.path;
-                const routes = this.$router.options.routes;
-                const themeLocales = this.$site.themeConfig.locales || {};
-                const languageDropdown = {
-                    text: this.$themeLocaleConfig.selectText || 'Languages',
-                    ariaLabel: this.$themeLocaleConfig.ariaLabel || 'Select language',
-                    items: Object.keys(locales).map(path => {
-                        const locale = locales[path];
-                        const text = themeLocales[path] && themeLocales[path].label || locale.lang;
-                        let link;
-
-                        if (locale.lang === this.$lang) {
-                            link = currentLink;
-                        } else {
-                            link = currentLink.replace(this.$localeConfig.path, path);
-                            if (!routes.some(route => route.path === link)) {
-                                link = path;
-                            }
-                        }
-
-                        return {text, link};
-                    })
-                }
-
-                return [...this.userNav, languageDropdown];
-            }
+            // const {locales} = this.$site;
+            //
+            // if (locales && Object.keys(locales).length > 1) {
+            //     const currentLink = this.$page.path;
+            //     const routes = this.$router.options.routes;
+            //     const themeLocales = this.$site.themeConfig.locales || {};
+            //     const languageDropdown = {
+            //         text: this.$themeLocaleConfig.selectText || 'Languages',
+            //         ariaLabel: this.$themeLocaleConfig.ariaLabel || 'Select language',
+            //         items: Object.keys(locales).map(path => {
+            //             const locale = locales[path];
+            //             const text = themeLocales[path] && themeLocales[path].label || locale.lang;
+            //             let link;
+            //
+            //             if (locale.lang === this.$lang) {
+            //                 link = currentLink;
+            //             } else {
+            //                 link = currentLink.replace(this.$localeConfig.path, path);
+            //                 if (!routes.some(route => route.path === link)) {
+            //                     link = path;
+            //                 }
+            //             }
+            //
+            //             return {text, link};
+            //         })
+            //     };
+            //
+            //     return [...this.userNav, languageDropdown];
+            // }
 
             return this.userNav;
         },
@@ -117,53 +117,19 @@ export default {
 </script>
 
 <style lang="scss">
-.nav-links {
-    display: inline-block;
+.nav-links .nav-item {
+    @apply relative inline-block;
 
-    a {
-        line-height: 1.4rem;
-        color: inherit;
-
-        &:hover, &.router-link-active {
-            color: green;
-        }
-    }
-
-    .nav-item {
-        position: relative;
-        display: inline-block;
-        margin-left: 1.5rem;
-        line-height: 2rem;
-
-        &:first-child {
-            margin-left: 0;
-        }
-    }
-
-    .repo-link {
-        margin-left: 1.5rem;
+    &:first-child {
+        @apply ml-0;
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 640px) {
     .nav-links {
-        .nav-item, .repo-link {
-            margin-left: 0;
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    .nav-links a {
-        &:hover, &.router-link-active {
-            color: red;
-        }
-    }
-
-    .nav-item > a:not(.external) {
-        &:hover, &.router-link-active {
-            margin-bottom: -2px;
-            border-bottom: 2px solid lighten(green, 8%);
+        .nav-item,
+        .repo-link {
+            @apply ml-2;
         }
     }
 }

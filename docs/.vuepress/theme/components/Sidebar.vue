@@ -1,8 +1,10 @@
 <template>
-    <aside class="hidden bg-white z-10 lg:block lg:w-56 lg:mr-4 sidebar">
-<!--        <NavLinks/>-->
+    <aside class="hidden bg-white z-10 lg:block lg:w-56 lg:mr-8 sidebar">
+        <div class="sm:hidden pb-8 border-b border-gray-200">
+            <NavLink v-for="item in userNav" :key="item.link" :item="item"/>
+        </div>
 
-        <nav>
+        <nav class="pt-8 sm:pt-0">
             <div v-for="(item, index) in items" :key="index" class="mb-6">
                 <h3 class="text-gray-900 text-uppercase font-bold text-sm px-4 mb-2">{{ item.title }}</h3>
 
@@ -17,7 +19,7 @@
 </template>
 
 <script>
-import NavLinks from '@theme/components/NavLinks';
+import NavLink from '@theme/components/NavLink';
 import SidebarLink from '@theme/components/SidebarLink';
 
 export default {
@@ -25,10 +27,16 @@ export default {
 
     components: {
         SidebarLink,
-        NavLinks,
+        NavLink,
     },
 
     props: ['items'],
+
+    computed:{
+        userNav() {
+            return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
+        },
+    },
 };
 </script>
 

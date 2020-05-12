@@ -6,6 +6,14 @@
     top: 2rem;
 }
 
+.shadow-outline-teal {
+    box-shadow: 0 0 0 3px rgba(126, 220, 226, .45);
+}
+
+.focus\:shadow-outline-teal:focus {
+    @apply shadow-outline-teal;
+}
+
 .sidebar-open {
     .full-content {
         @apply relative;
@@ -60,7 +68,12 @@
     }
 
     h2 {
-        @apply text-xl mt-12;
+        @apply text-xl mt-8;
+
+        &:before {
+            @apply block border-t border-gray-200 mb-4;
+            content: '';
+        }
     }
 
     h3 {
@@ -97,7 +110,9 @@
 .custom-block.danger {
     @apply px-6 py-4 border-l-4 rounded-r-lg mt-4 mb-4;
 
-    p {
+    p,
+    ol,
+    ul, {
         @apply mt-0;
     }
 
@@ -113,7 +128,9 @@
         @apply text-green-800;
     }
 
-    p {
+    p,
+    ol,
+    ul, {
         @apply text-green-700;
     }
 }
@@ -125,7 +142,9 @@
         @apply text-orange-800;
     }
 
-    p {
+    p,
+    ol,
+    ul, {
         @apply text-orange-700;
     }
 }
@@ -137,7 +156,9 @@
         @apply text-red-800;
     }
 
-    p {
+    p,
+    ol,
+    ul, {
         @apply text-red-700;
     }
 }

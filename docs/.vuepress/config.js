@@ -1,16 +1,9 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
-    // Specify the paths to all of the template files in your project
-    content: ['./.vuepress/theme/**/*.*', './!(node_modules)/**/*.md', './*.md'],
-
-    // Include any special characters you're using in this regular expression
-    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-});
-
 module.exports = {
     base: '/',
     title: 'StockInLab',
     description: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry',
     head: [
+        ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1'}],
         ['link', {rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://www.stockinlab.com/favicon-32.png'}],
         ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://www.stockinlab.com/favicon-16.png'}],
         ['meta', {name: 'og:type', content: 'website'}],
@@ -40,6 +33,7 @@ module.exports = {
         docsRepo: 'stockinlab/docs.stockinlab.com',
         docsDir: 'docs',
         editLinks: true,
+        shouldPrefetch: false,
         locales: {
             '/': {
                 label: 'English',
@@ -82,7 +76,7 @@ module.exports = {
                 lastUpdated: 'Dernière mise à jour',
                 nav: [
                     {
-                        text: 'General',
+                        text: 'Général',
                         link: '/fr/general/',
                     },
                     {
@@ -94,13 +88,13 @@ module.exports = {
                         link: '/fr/electronic-lab-notebook/',
                     },
                     {
-                        text: 'Tools',
+                        text: 'Outils',
                         link: '/fr/tools/',
                     },
                 ],
                 sidebar: {
                     '/fr/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/fr/laboratory-information-management-system/': getLIMSSidebar('LIMS'),
+                    '/fr/laboratory-information-management-system/': getLIMSSidebar('Éléments', 'Stockage', 'Tableau de bord', 'Super-administration'),
                     '/fr/electronic-lab-notebook/': getELNSidebar('ELN'),
                     '/fr/tools/': getToolsSidebar('Tools'),
                 },
@@ -111,10 +105,11 @@ module.exports = {
         plugins: [
             require('tailwindcss')('./tailwind.config.js'),
             require('autoprefixer'),
-            // ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
-        ]
+        ],
     },
-    plugins: [],
+    plugins: [
+        '@kawarimidoll/tailwind',
+    ],
 };
 
 function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
@@ -130,21 +125,21 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
             title: accountTitle,
             collapsable: false,
             children: [
-                'account/settings',
-                'account/preferences',
-                'account/security',
+                'account-settings',
+                'account-preferences',
+                'account-security',
             ],
         },
         {
             title: superAdministrationTitle,
             collapsable: false,
             children: [
-                'super-administration/super-administrator-management',
-                'super-administration/audit-trail',
-                'super-administration/backups',
-                'super-administration/group-management',
-                'super-administration/server-configuration',
-                'super-administration/user-management',
+                'super-administration-super-administrator-management',
+                'super-administration-audit-trail',
+                'super-administration-backups',
+                'super-administration-group-management',
+                'super-administration-server-configuration',
+                'super-administration-user-management',
             ],
         },
     ];
@@ -193,7 +188,7 @@ function getLIMSSidebar(itemsTitle, storageTitle, dashboardTitle, superAdministr
             title: superAdministrationTitle,
             collapsable: false,
             children: [
-                `super-administration-inventories`,
+                'super-administration-inventories',
                 'super-administration-parameters',
             ],
         },

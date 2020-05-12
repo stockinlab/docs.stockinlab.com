@@ -1,6 +1,6 @@
 <template>
-    <div v-if="prev || next" class="flex flex-wrap justify-between py-4 border-t border-gray-200">
-        <div>
+    <div v-if="prev || next" class="py-4 border-t border-gray-200">
+        <div class="float-left mr-4">
             <p v-if="prev">
                 ←
                 <a v-if="prev.type === 'external'" class="prev" :href="prev.path" target="_blank" rel="noopener noreferrer">
@@ -14,7 +14,7 @@
             </p>
         </div>
 
-        <div>
+        <div class="float-right">
             <p v-if="next" class="next">
                 <a v-if="next.type === 'external'" :href="next.path" target="_blank" rel="noopener noreferrer">
                   {{ next.title || next.path }}
