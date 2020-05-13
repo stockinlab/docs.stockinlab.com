@@ -3,43 +3,32 @@
         <div class="container flex items-center max-w-8xl mx-auto px-6 md:px-8 py-4 h-full">
             <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
-            <RouterLink :to="$localePath" class="block lg:hidden lg:w-64 mr-8 home-link">
+            <RouterLink :to="$localePath" class="block lg:hidden lg:w-56 mr-8 home-link">
                 <img src="/assets/images/small_logo.svg" class="h-10" alt="StockInLab small logo">
             </RouterLink>
-            <RouterLink :to="$localePath" class="hidden lg:block lg:w-64 mr-8 home-link">
+            <RouterLink :to="$localePath" class="hidden lg:block lg:w-56 mr-8 home-link">
                 <img src="/assets/images/logo.svg" class="h-10" alt="StockInLab logo">
             </RouterLink>
 
-            <!--            <div-->
-            <!--                class="links"-->
-            <!--                :style="linksWrapMaxWidth ? {-->
-            <!--        'max-width': linksWrapMaxWidth + 'px'-->
-            <!--      } : {}"-->
-            <!--            >-->
-            <!--      <AlgoliaSearchBox-->
-            <!--        v-if="isAlgoliaSearch"-->
-            <!--        :options="algolia"-->
-            <!--      />-->
-            <!--                      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />-->
-            <NavLinks class="can-hide"/>
-            <!--            </div>-->
+            <div class="flex flex-1 items-center">
+                <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
+                <NavLinks class="can-hide"/>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
-// import AlgoliaSearchBox from '@AlgoliaSearchBox'
-// import SearchBox from '@SearchBox';
 import NavLinks from '@theme/components/NavLinks';
+import SearchBox from '@theme/components/SearchBox';
 import SidebarButton from '@theme/components/SidebarButton';
 
 export default {
     name: 'Navbar',
 
     components: {
-        // AlgoliaSearchBox
-        // SearchBox,
         NavLinks,
+        SearchBox,
         SidebarButton,
     },
 
@@ -47,16 +36,6 @@ export default {
         return {
             linksWrapMaxWidth: null,
         };
-    },
-
-    computed: {
-        algolia() {
-            return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {};
-        },
-
-        isAlgoliaSearch() {
-            return this.algolia && this.algolia.apiKey && this.algolia.indexName;
-        },
     },
 
     mounted() {
