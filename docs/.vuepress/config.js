@@ -128,18 +128,19 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
                 'account-settings',
                 'account-preferences',
                 'account-security',
+                'account-groups-management',
             ],
         },
         {
             title: superAdministrationTitle,
             collapsable: false,
             children: [
+                'super-administration-server-configuration',
+                'super-administration-groups-management',
+                'super-administration-users-management',
                 'super-administration-super-administrator-management',
                 'super-administration-audit-trail',
                 'super-administration-backups',
-                'super-administration-group-management',
-                'super-administration-server-configuration',
-                'super-administration-user-management',
             ],
         },
     ];
