@@ -1,4 +1,4 @@
-# Inventories
+# Inventories management
 
 ## Add new inventory
 From `Homepage`: 

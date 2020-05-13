@@ -1,4 +1,4 @@
-# Search record
+# Search
 
 ## Search unique parameter
  From `Listing`:

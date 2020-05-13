@@ -1,4 +1,4 @@
-# Locations
+# Locations management
 
 ## Create location
 Under the `Dashboard` menu:

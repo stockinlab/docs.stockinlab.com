@@ -62,8 +62,8 @@ module.exports = {
                 ],
                 sidebar: {
                     '/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/laboratory-information-management-system/': getLIMSSidebar('Records', 'Storage', 'Dashboard', 'Super-administration'),
-                    '/electronic-lab-notebook/': getELNSidebar('ELN'),
+                    '/laboratory-information-management-system/': getLIMSSidebar('LIMS', 'Records', 'Storage', 'Dashboard', 'Super-administration'),
+                    '/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocols', 'Projects'),
                     '/tools/': getToolsSidebar('Tools'),
                 },
             },
@@ -94,8 +94,8 @@ module.exports = {
                 ],
                 sidebar: {
                     '/fr/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/fr/laboratory-information-management-system/': getLIMSSidebar('Éléments', 'Stockage', 'Tableau de bord', 'Super-administration'),
-                    '/fr/electronic-lab-notebook/': getELNSidebar('ELN'),
+                    '/fr/laboratory-information-management-system/': getLIMSSidebar('LIMS', 'Éléments', 'Stockage', 'Tableau de bord', 'Super-administration'),
+                    '/fr/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocoles', 'Projects'),
                     '/fr/tools/': getToolsSidebar('Tools'),
                 },
             },
@@ -125,84 +125,105 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
             title: accountTitle,
             collapsable: false,
             children: [
-                'account-settings',
-                'account-preferences',
-                'account-security',
-                'account-groups-management',
+                'account/settings',
+                'account/preferences',
+                'account/security',
+                'account/groups-management',
             ],
         },
         {
             title: superAdministrationTitle,
             collapsable: false,
             children: [
-                'super-administration-server-configuration',
-                'super-administration-groups-management',
-                'super-administration-users-management',
-                'super-administration-super-administrator-management',
-                'super-administration-audit-trail',
-                'super-administration-backups',
+                'super-administration/server-configuration',
+                'super-administration/groups-management',
+                'super-administration/users-management',
+                'super-administration/super-administrator-management',
+                'super-administration/audit-trail',
+                'super-administration/backups',
             ],
         },
     ];
 }
 
-function getLIMSSidebar(recordsTitle, storageTitle, dashboardTitle, superAdministrationTitle) {
+function getLIMSSidebar(limsTitle, recordsTitle, storageTitle, dashboardTitle, superAdministrationTitle) {
     return [
+        {
+            title: limsTitle,
+            collapsable: false,
+            children: [
+                '',
+            ],
+        },
         {
             title: recordsTitle,
             collapsable: false,
             children: [
-                'add-record',
-                'remove-record',
-                'link-records',
-                'label',
-                'edit-record',
-                'reserve-record',
-                'search-record',
-                'view-record',
-                'history',
-                'track-sample-consumption',
+                'records/add-record',
+                'records/remove-record',
+                'records/link-records',
+                'records/label',
+                'records/edit-record',
+                'records/reserve-record',
+                'records/search',
+                'records/view-record',
+                'records/history',
+                'records/track-sample-consumption',
             ],
         },
         {
             title: storageTitle,
             collapsable: false,
             children: [
-                'stock',
-                'storage-overview',
-                'storage-capacity',
+                'storage/stock',
+                'storage/overview',
+                'storage/capacity',
             ],
         },
         {
             title: dashboardTitle,
             collapsable: false,
             children: [
-                'dashboard-parameters',
-                'dashboard-categories',
-                'dashboard-locations',
-                'dashboard-import-workspace',
-                'dashboard-users-management',
-                'dashboard-audit-trail',
+                'dashboard/parameters-management',
+                'dashboard/locations-management',
+                'dashboard/categories-management',
+                'dashboard/users-management',
+                'dashboard/import-workspace',
+                'dashboard/audit-trail',
             ],
         },
         {
             title: superAdministrationTitle,
             collapsable: false,
             children: [
-                'super-administration-inventories',
-                'super-administration-parameters',
+                'super-administration/inventories-management',
+                'super-administration/global-parameters-management',
             ],
         },
     ];
 }
 
-function getELNSidebar(title) {
+function getELNSidebar(elnTitle, protocolsTitle, projectsTitle) {
     return [
         {
-            title,
+            title: elnTitle,
             collapsable: false,
             children: [
-                'protocols',
+                '',
+            ],
+        },
+        {
+            title: protocolsTitle,
+            collapsable: false,
+            children: [
+                'protocols/',
+            ],
+        },
+        {
+            title: projectsTitle,
+            collapsable: false,
+            children: [
+                'projects/',
             ],
         },
     ];

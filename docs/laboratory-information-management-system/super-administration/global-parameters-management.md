@@ -1,4 +1,5 @@
-# Global parameters 
+# Global parameters management
+
 Global parameters will apply for every groups. Each groups can then add their own [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) in their `Dashboard`.
 
 ## Add global parameter

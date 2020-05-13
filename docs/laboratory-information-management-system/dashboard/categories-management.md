@@ -1,4 +1,4 @@
-# Categories
+# Categories management
 
 ## Create category
 Under the `Dashboard` menu:

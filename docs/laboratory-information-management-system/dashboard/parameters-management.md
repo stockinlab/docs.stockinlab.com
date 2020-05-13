@@ -1,4 +1,4 @@
-# Parameters
+# Parameters management
 
 ## Create parameter
 Under the `Dashboard` menu:
