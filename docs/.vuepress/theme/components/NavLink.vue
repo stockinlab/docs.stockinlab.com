@@ -1,9 +1,9 @@
 <template>
     <RouterLink
         v-if="isInternal"
-        class="block rounded px-4 py-1 truncate focus:outline-none focus:shadow-outline-teal"
-        :class="classes"
         :to="link"
+        class="block rounded px-4 py-1 truncate"
+        :class="classes"
         :exact="exact"
         @focusout.native="focusoutAction"
     >
@@ -91,11 +91,11 @@ export default {
         },
 
         classes() {
-            return [
-                this.active
-                    ? 'font-semibold bg-teal-500 text-white'
-                    : 'text-gray-600 font-light hover:bg-gray-100 focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500'
-            ];
+            return {
+                'focus:outline-none': true,
+                'font-semibold bg-teal-500 text-white focus:shadow-outline-teal': this.active,
+                'text-gray-600 font-light hover:bg-gray-100 focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500': !this.active,
+            };
         },
     },
 

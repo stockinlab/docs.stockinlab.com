@@ -63,8 +63,8 @@ function renderLink(h, to, text, active, level) {
         },
         class: {
             active,
-            'block text-sm rounded px-4 py-1 truncate focus:outline-none focus:shadow-outline-teal': true,
-            'font-semibold bg-teal-500 text-white': active,
+            'block text-sm rounded px-4 py-1 truncate focus:outline-none': true,
+            'font-semibold bg-teal-500 text-white focus:shadow-outline-teal': active,
             'text-gray-600 font-light hover:bg-gray-100 focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500': !active,
         },
     };
