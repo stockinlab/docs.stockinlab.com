@@ -27,7 +27,7 @@ From `Locations`, you can edit pr edit a location by clicking (action icon) on t
 Select (pen icon) to edit the location. Select (trash icon) to delete the location.
 
 ::: danger
-If the location already contains items it is impossible to delete it.
+If the location already contains records it is impossible to delete it.
 :::
 
 ## Create or edit box

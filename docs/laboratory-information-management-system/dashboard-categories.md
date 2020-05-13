@@ -22,5 +22,5 @@ From `Categories`, you can edit or delete a category by clicking (action icon) o
 Select (pen icon) to edit the category. Select (trash icon) to delete the category.
 
 ::: danger
-If the category already contains items it is impossible to delete it.
+If the category already contains records it is impossible to delete it.
 :::

@@ -6,7 +6,7 @@ The administrator can see the activities from his group in the menu `Dashboard >
 
 ::: tip
 * Use the Filter `Member` to see the activities from a selected member.
-* Activities relative to the same item are referenced together and can be shown by clicking (loupe icon).
+* Activities relative to the same record are referenced together and can be shown by clicking (loupe icon).
 :::
 
 ## Audit trail access

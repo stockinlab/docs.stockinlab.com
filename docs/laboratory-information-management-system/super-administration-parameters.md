@@ -17,7 +17,7 @@ From `Homepage`:
 3. Click (delete icon) for the parameter to delete.
 
 ::: danger
-If the parameter is already filled for one item it is impossible to delete it.
+If the parameter is already filled for one record it is impossible to delete it.
 :::
 
 ## Edit global parameter

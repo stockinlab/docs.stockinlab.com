@@ -62,7 +62,7 @@ module.exports = {
                 ],
                 sidebar: {
                     '/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/laboratory-information-management-system/': getLIMSSidebar('Items', 'Storage', 'Dashboard', 'Super-administration'),
+                    '/laboratory-information-management-system/': getLIMSSidebar('Records', 'Storage', 'Dashboard', 'Super-administration'),
                     '/electronic-lab-notebook/': getELNSidebar('ELN'),
                     '/tools/': getToolsSidebar('Tools'),
                 },
@@ -146,20 +146,20 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
     ];
 }
 
-function getLIMSSidebar(itemsTitle, storageTitle, dashboardTitle, superAdministrationTitle) {
+function getLIMSSidebar(recordsTitle, storageTitle, dashboardTitle, superAdministrationTitle) {
     return [
         {
-            title: itemsTitle,
+            title: recordsTitle,
             collapsable: false,
             children: [
-                'add-item',
-                'remove-item',
-                'link-items',
+                'add-record',
+                'remove-record',
+                'link-records',
                 'label',
-                'edit-item',
-                'reserve-item',
-                'search-item',
-                'view-item',
+                'edit-record',
+                'reserve-record',
+                'search-record',
+                'view-record',
                 'history',
                 'track-sample-consumption',
             ],
@@ -180,7 +180,7 @@ function getLIMSSidebar(itemsTitle, storageTitle, dashboardTitle, superAdministr
                 'dashboard-parameters',
                 'dashboard-categories',
                 'dashboard-locations',
-                'import-workspace',
+                'dashboard-import-workspace',
                 'dashboard-users-management',
                 'dashboard-audit-trail',
             ],

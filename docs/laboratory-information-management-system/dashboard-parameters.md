@@ -16,16 +16,16 @@ From `Parameters`, you can edit or delete a parameter by clicking (action icon) 
 Select (pen icon) to edit the parameter. Select (trash icon) to delete the parameter. 
 
 ::: danger
-If the parameter is already filled for one item it is impossible to delete it.
+If the parameter is already filled for one record it is impossible to delete it.
 :::
 
 ## Global parameters
-`Global parameters` are created by the super-administrator of your server and are common to every group. Global parameters are useful to search into [Public items](/laboratory-information-management-system/search-item.html#search-into-public-items). 
+`Global parameters` are created by the super-administrator of your server and are common to every group. Global parameters are useful to search into [Public records](/laboratory-information-management-system/search-record.html#search-into-public-records). 
 
 ## Expiry date parameter
 If you want your parameter to be an expiry date, select `Expiry date` under `Type` when you create the parameter.  
-When you add an item into the inventory, specify the day of expiry. You will get a notification when the date of this item is expired.  
-Check the expired items by using the [filter](/laboratory-information-management-system/search-item.html#filters) `Expired` in `Listing`.
+When you add an record into the inventory, specify the day of expiry. You will get a notification when the date of this record is expired.  
+Check the expired records by using the [filter](/laboratory-information-management-system/search-record.html#filters) `Expired` in `Listing`.
 
 ## Mandatory parameters
 Mandatory parameters can only be associated to a [Category](/laboratory-information-management-system/dashboard-categories.html#create-category). 

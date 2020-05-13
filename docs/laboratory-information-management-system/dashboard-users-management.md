@@ -9,7 +9,7 @@ Under the menu `Dashboard`:
 5. Click `Update members`.
 
 ## Different roles
-* `Member`can access to all the inventories/listings and add/edit items.
+* `Member`can access to all the inventories/listings and add/edit records.
 * `Administrator` has the same permission as Member and can also access to the dashboard and audit trail of his/her group.
 * `Ex-Member` has no access anymore to the system. All actions he/she made into StockInLab remained visible for the other users.
 

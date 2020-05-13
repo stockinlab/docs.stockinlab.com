@@ -1,7 +1,7 @@
 # Label
 
 ##  Create label
-From the overview of the item (loupe icon):
+From the overview of the record (loupe icon):
 1. Click (create label icon) in the left panel.
 2. Choose the size of your label and the font size. 
 3. Select the parameters to print on the label (you can manually change the value as well).
@@ -9,11 +9,11 @@ From the overview of the item (loupe icon):
 5. Import the picture in your usual software to print the labels.
 
 ::: tip
-To create label for multiple items, select your items from the `Listing` and click `Create label` in the left panel.
+To create label for multiple records, select your records from the `Listing` and click `Create label` in the left panel.
 :::
 
 ## Search with label
-You can use the QRcode or the code below to find your item into te system.
+You can use the QRcode or the code below to find your record into te system.
 1. From your `Group homepage` select (search icon) on top right
 2. Select `Search by QRcode` and scan the code or type the code in the box.
 
