@@ -4,27 +4,25 @@
 
         <div class="sidebar-mask" @click="toggleSidebar(false)"/>
 
-        <div class="w-full flex-auto py-8 full-content">
-            <div class="container max-w-8xl mx-auto px-6 md:px-8 py-4">
-                <div class="flex flex-col lg:flex-row">
-                    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar"/>
+        <div class="relative container max-w-8xl mx-auto px-6 md:px-8 py-12">
+            <div class="flex flex-col lg:flex-row">
+                <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar"/>
 
-                    <main class="flex-1 flex">
-                        <div class="lg:w-2/3 xl:w-3/4 documentation-block">
-                            <Content class="documentation-content pb-8"/>
+                <main class="flex-1 flex">
+                    <div class="lg:w-2/3 xl:w-3/4 documentation-block">
+                        <Content class="documentation-content pb-8"/>
 
-                            <PageEdit/>
+                        <PageEdit/>
 
-                            <PageNav v-bind="{ sidebarItems }"/>
+                        <PageNav v-bind="{ sidebarItems }"/>
+                    </div>
+
+                    <div class="hidden text-sm lg:block lg:w-1/3 xl:w-1/4 ml-8">
+                        <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
+                            <ContentTable class="mb-8"/>
                         </div>
-
-                        <div class="hidden text-sm lg:block lg:w-1/3 xl:w-1/4 ml-8">
-                            <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
-                                <ContentTable class="mb-8"/>
-                            </div>
-                        </div>
-                    </main>
-                </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>

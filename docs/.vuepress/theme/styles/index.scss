@@ -19,16 +19,12 @@
 }
 
 .sidebar-open {
-    .full-content {
-        @apply relative;
-    }
-
     .documentation-block {
         @apply hidden;
     }
 
     .sidebar {
-        @apply absolute block left-0 right-0 pt-8 px-4;
+        @apply absolute block left-0 right-0 px-6 py-8;
         top: 2px;
     }
 }
@@ -37,6 +33,28 @@
     @apply mx-auto;
     max-width: 650px;
     width: 650px;
+}
+
+@media (min-width: 768px) {
+    .sidebar-open .sidebar {
+        @apply px-8;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar-open {
+        .documentation-block {
+            @apply block;
+        }
+
+        .sidebar {
+            @apply w-56 px-0 py-0;
+            position: initial;
+            top: initial;
+            right: initial;
+            left: initial;
+        }
+    }
 }
 
 .documentation-content {

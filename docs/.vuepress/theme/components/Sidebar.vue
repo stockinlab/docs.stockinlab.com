@@ -1,10 +1,10 @@
 <template>
     <aside class="hidden bg-white z-10 lg:block lg:w-56 lg:mr-8 sidebar">
-        <div class="sm:hidden pb-8 border-b border-gray-200">
+        <div class="md:hidden pb-8 border-b border-gray-200">
             <NavLink v-for="item in userNav" :key="item.link" :item="item"/>
         </div>
 
-        <nav class="pt-8 sm:pt-0">
+        <nav class="pt-8 md:pt-0">
             <div v-for="(item, index) in items" :key="index" class="mb-6">
                     <h3 v-if="item.children.length > 0" class="text-gray-900 text-uppercase font-bold text-sm px-4 mb-2">{{ item.title }}</h3>
 
