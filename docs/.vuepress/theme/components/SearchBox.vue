@@ -1,6 +1,6 @@
 <template>
-    <div class="flex-1 search-box">
-        <div class="w-full">
+    <div class="flex-1 md:relative search-box">
+        <div class="w-full relative">
             <div class="pointer-events-none absolute inset-y-0 left-0 pl-4 flex items-center">
                 <svg class="fill-current pointer-events-none text-gray-700 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
@@ -24,7 +24,7 @@
             >
         </div>
 
-        <ul v-if="showSuggestions" class="absolute max-w-full w-full bg-white z-20 top-12 border border-gray-100 rounded shadow" :class="{ 'align-right': alignRight }" @mouseleave="unfocus">
+        <ul v-if="showSuggestions" class="absolute bg-white z-20 border border-gray-100 rounded shadow suggestions" :class="{ 'align-right': alignRight }" @mouseleave="unfocus">
             <li
                 v-for="(s, i) in suggestions"
                 :key="i"
@@ -226,8 +226,6 @@ export default {
 
 <style lang="scss">
 .search-box {
-    @apply relative;
-
     .suggestion {
         &.focused {
             a {
@@ -259,6 +257,21 @@ export default {
         a:hover .has-arrow:after {
             @apply bg-teal-400;
         }
+    }
+
+    .suggestions {
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 59px;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-box .suggestions {
+        left: 0;
+        right: 0;
+        min-width: 25rem;
+        top: 48px;
     }
 }
 </style>
