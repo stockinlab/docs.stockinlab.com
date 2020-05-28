@@ -3,7 +3,6 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                /* Use TailwindUI color */
                 gray: {
                     50: '#f9fafb',
                     100: '#f4f5f7',
@@ -136,7 +135,6 @@ module.exports = {
                     800: '#27303f',
                     900: '#1a202e',
                 },
-                /* End TailwindUI colors */
             },
             maxWidth: {
                 '8xl': '88rem',

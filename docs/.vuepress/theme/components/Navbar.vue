@@ -1,19 +1,19 @@
 <template>
     <header class="navbar bg-white shadow h-16">
         <div class="container flex items-center max-w-8xl mx-auto px-6 md:px-8 py-4 h-full">
-            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
-            <RouterLink :to="$localePath" class="block lg:hidden lg:w-56 mr-8 home-link">
-                <img src="/assets/images/small_logo.svg" class="h-10" alt="StockInLab small logo">
-            </RouterLink>
-            <RouterLink :to="$localePath" class="hidden lg:block lg:w-56 mr-8 home-link">
-                <img src="/assets/images/logo.svg" class="h-10" alt="StockInLab logo">
-            </RouterLink>
+            <div class="flex lg:w-56 mr-4 lg:mr-8">
+                <RouterLink :to="$localePath" aria-label="StockInLab" class="inline-flex items-center text-gray-800 duration-200 focus:outline-none focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500 text-2xl rounded-md home-link">
+                    <img src="/assets/images/logo.svg" class="h-10 rounded-md" alt="">
+                    <span class="hidden lg:block px-2">StockInLab</span>
+                </RouterLink>
+            </div>
 
             <div class="flex flex-1 items-center">
                 <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
                 <NavLinks class="can-hide"/>
             </div>
+
+            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
         </div>
     </header>
 </template>

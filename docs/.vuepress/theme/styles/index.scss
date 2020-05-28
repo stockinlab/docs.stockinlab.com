@@ -29,6 +29,16 @@
     }
 }
 
+.home-link:focus img {
+    @apply shadow-outline-teal;
+}
+
+@media (min-width: 1024px) {
+    .home-link:focus img {
+        box-shadow: none;
+    }
+}
+
 .documentation-block {
     @apply mx-auto;
     max-width: 650px;
@@ -59,6 +69,7 @@
 
 .documentation-content {
     a.header-anchor {
+        @apply hidden;
         font-size: 0.85em;
         float: left;
         margin-left: -0.87em;
@@ -76,13 +87,14 @@
         @apply underline;
     }
 
-    h1:hover .header-anchor,
-    h2:hover .header-anchor,
-    h3:hover .header-anchor,
-    h4:hover .header-anchor,
-    h5:hover .header-anchor,
-    h6:hover .header-anchor {
+    h1:hover a.header-anchor,
+    h2:hover a.header-anchor,
+    h3:hover a.header-anchor,
+    h4:hover a.header-anchor,
+    h5:hover a.header-anchor,
+    h6:hover a.header-anchor {
         opacity: 1;
+        display: block;
     }
 
     h1 {

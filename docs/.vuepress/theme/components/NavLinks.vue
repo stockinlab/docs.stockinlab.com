@@ -1,5 +1,5 @@
 <template>
-    <nav v-if="userLinks.length || repoLink" class="hidden md:flex md:ml-8 items-center justify-end nav-links">
+    <nav v-if="userLinks.length || repoLink" class="hidden md:flex md:ml-4 lg:ml-8 items-center justify-end nav-links">
         <div v-for="item in userLinks" :key="item.link" class="nav-item">
             <DropdownLink v-if="item.type === 'links'" :item="item"/>
             <NavLink v-else :item="item"/>

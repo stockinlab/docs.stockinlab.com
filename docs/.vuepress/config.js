@@ -4,17 +4,17 @@ module.exports = {
     description: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry',
     head: [
         ['meta', {name: 'viewport', content: 'width=device-width, initial-scale=1'}],
-        ['link', {rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://www.stockinlab.com/favicon-32.png'}],
-        ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://www.stockinlab.com/favicon-16.png'}],
+        ['link', {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png'}],
+        ['link', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16.png'}],
         ['meta', {name: 'og:type', content: 'website'}],
         ['meta', {name: 'og:title', content: 'StockInLab Documentation'}],
         ['meta', {name: 'og:description', content: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry'}],
-        ['meta', {name: 'og:image', content: 'https://www.stockinlab.com/images/og-image.png'}],
+        ['meta', {name: 'og:image', content: '/assets/images/og-image.png'}],
         ['meta', {name: 'twitter:card', content: 'summary_large_image'}],
         ['meta', {name: 'twitter:title', content: 'StockInLab Documentation'}],
         ['meta', {name: 'twitter:description', content: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry'}],
-        ['meta', {name: 'twitter:image', content: 'https://www.stockinlab.com/images/og-image.png'}],
-        ['meta', {name: 'theme-color', content: '#3EBD93'}]
+        ['meta', {name: 'twitter:image', content: '/assets/images/og-image.png'}],
+        ['meta', {name: 'theme-color', content: '#0694a2'}]
     ],
     locales: {
         '/': {

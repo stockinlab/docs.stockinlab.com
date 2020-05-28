@@ -6,13 +6,13 @@
 
         <nav class="pt-8 md:pt-0">
             <div v-for="(item, index) in items" :key="index" class="mb-6">
-                    <h3 v-if="item.children.length > 0" class="text-gray-900 text-uppercase font-bold text-sm px-4 mb-2">{{ item.title }}</h3>
+                <h3 v-if="item.children.length > 0" class="text-gray-900 text-uppercase font-bold text-sm px-4 mb-2">{{ item.title }}</h3>
 
-                    <ul>
-                        <li v-for="(child, indexChild) in item.children" :key="`${index}${indexChild}`">
-                            <SidebarLink :item="child"/>
-                        </li>
-                    </ul>
+                <ul>
+                    <li v-for="(child, indexChild) in item.children" :key="`${index}${indexChild}`">
+                        <SidebarLink :item="child"/>
+                    </li>
+                </ul>
             </div>
         </nav>
     </aside>
