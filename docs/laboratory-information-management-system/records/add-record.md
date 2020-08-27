@@ -8,10 +8,10 @@ Before you start adding records, make sure your workspace is ready. You may need
 Creation of categories is not mandatory. However, when you add a new record you have to assign a category and/or a name.
 
 To add new record(s):
-1. From your `Groupe page` select the `Inventory` where you want to add the record(s).
+1. From your `Team homepage` select the `Inventory` where you want to add the record(s).
 
 ::: tip
-the button `Add` is also available directly from the `Group page`. If you click it from this page, you will be prompted to select in which inventory you want to add th new record(s).
+the button `Add` is also available directly from the `Team homepage`. If you click it from this page, you will be prompted to select in which inventory you want to add th new record(s).
 :::
 2. Select (add icon) on top right of the page.
 3. Two options are available:
@@ -95,8 +95,8 @@ When you add a new record from the menu `Simple add`, you can add more optional 
 
 When you add records from the menu `Add with import`, the mandatory parameters appear in red in the table.
 
-## Receive record from another group
-When you received records transferred from another group, a notification appears into the left panel of your `Group homepage`.
+## Receive record from another team
+When you received records transferred from another team, a notification appears into the left panel of your `Team homepage`.
 All the records received are listed:
 1. Click `Recover` to add the record into your inventory.
 2. Select the Inventory where you want to store the received record.

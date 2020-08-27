@@ -40,10 +40,10 @@
  3. Enter the location and save.
  
  ## Search into public records
- - See the records from your group set as public by ticking the filter `Public records` in the `Listing`. You can search an record by following the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter)or [Search multiple parameters](laboratory-information-management-system/search-record.html#search-multiple-parameters) 
- - See Public records from the other group from the `Homepage`. Click `Public`
- under the menu `Global inventory` in the left panel. Use the filters on the top to facilitate the search among the public records (i.e. search per `Group`)
+ - See the records from your team set as public by ticking the filter `Public records` in the `Listing`. You can search an record by following the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter)or [Search multiple parameters](laboratory-information-management-system/search-record.html#search-multiple-parameters) 
+ - See Public records from the other team from the `Homepage`. Click `Public`
+ under the menu `Global inventory` in the left panel. Use the filters on the top to facilitate the search among the public records (i.e. search per `Team`)
  
  ::: warning
- Only the [global parameters](/laboratory-information-management-system/super-administration-parameters.html#global-parameters) can be used for the search into the public records from other groups.
+ Only the [global parameters](/laboratory-information-management-system/super-administration-parameters.html#global-parameters) can be used for the search into the public records from other teams.
  :::

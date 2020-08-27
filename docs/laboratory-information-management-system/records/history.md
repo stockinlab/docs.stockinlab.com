@@ -1,9 +1,9 @@
 # History
 The `History` is inventory specific. Select the inventory where you want to consult the history. 
-## Group history
+## Team history
 
 From the `Inventory Listing`:
-1. Select `History` in the top banner. Here is the list of records removed by anyone in your group.
+1. Select `History` in the top banner. Here is the list of records removed by anyone in your team.
 2. Use the same kind of [filters](/laboratory-information-management-system/search-record.html#filters) than those available in `Listing`. 
 3. Use the dropdown menu `Type` to filter by [type of removal](/laboratory-information-management-system/remove-record.html#different-type-of-removal).
 

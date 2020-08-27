@@ -3,9 +3,9 @@
 ## Create parameter
 Under the `Dashboard` menu:
 Select  `Parameters`.
-Check the list of [Global parameters](/laboratory-information-management-system/super-administration-parameters.html#global-parameters) (which are listed below your group parameters) before adding a parameter. The new parameter(s) created apply only to your group.  
+Check the list of [Global parameters](/laboratory-information-management-system/super-administration-parameters.html#global-parameters) (which are listed below your team parameters) before adding a parameter. The new parameter(s) created apply only to your team.  
 
-If you want to add a new parameter for your group:
+If you want to add a new parameter for your team:
 1. Click `Add` on top right.  
 2. Enter the `Name` of your new parameter and add a description (optional)
 3. Select the `Type` of your parameters among the list provided.
@@ -20,7 +20,7 @@ If the parameter is already filled for one record it is impossible to delete it.
 :::
 
 ## Global parameters
-`Global parameters` are created by the super-administrator of your server and are common to every group. Global parameters are useful to search into [Public records](/laboratory-information-management-system/search-record.html#search-into-public-records). 
+`Global parameters` are created by the super-administrator of your server and are common to every team. Global parameters are useful to search into [Public records](/laboratory-information-management-system/search-record.html#search-into-public-records). 
 
 ## Expiry date parameter
 If you want your parameter to be an expiry date, select `Expiry date` under `Type` when you create the parameter.  

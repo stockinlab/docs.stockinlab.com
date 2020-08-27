@@ -1,6 +1,6 @@
 # Capacity
 
-From your `Group page` select `Capacity` in the menu `Storage`.  
+From your `Team homepage` select `Capacity` in the menu `Storage`.  
 For all the locations set as a box (or location containing boxes) you can see the capacity (spot available/total spots in the box) and a progress bar to get a quick look to the capacity of your boxes.  
 ::: tip
 - Use the box at the top to type the name of your location.  

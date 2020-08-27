@@ -13,8 +13,8 @@ To create label for multiple records, select your records from the `Listing` and
 :::
 
 ## Search with label
-You can use the QRcode or the code below to find your record into te system.
-1. From your `Group homepage` select (search icon) on top right
+You can use the QRCode or the code below to find your record into te system.
+1. From your `Team homepage` select (search icon) on top right
 2. Select `Search by QRcode` and scan the code or type the code in the box.
 
  

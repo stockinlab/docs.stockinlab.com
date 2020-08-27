@@ -71,7 +71,6 @@ export default {
 
     methods: {
         setOpen(value) {
-            console.log('called');
             this.open = value;
         },
 

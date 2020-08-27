@@ -19,8 +19,8 @@ Select `View records` (view icon) in the left panel to see all the records selec
 ## Public records
 When you add an record you have the possibility to set the record as [Public](/laboratory-information-management-system/add-record.html#private-public-records) instead of Private. 
 
-* See the records from your group set as public by ticking the filter `Public records` in the `Listing`.
-* See Public records from the other group from the `Homepage`. Click `Public`
+* See the records from your team set as public by ticking the filter `Public records` in the `Listing`.
+* See Public records from the other team from the `Homepage`. Click `Public`
 under the menu `Global inventory` in the left panel.
 
 You can perform a [search into the public records](/laboratory-information-management-system/search-record.html#search-into-public-records).

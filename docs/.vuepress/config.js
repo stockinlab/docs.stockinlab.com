@@ -128,7 +128,7 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
                 'account/settings',
                 'account/preferences',
                 'account/security',
-                'account/groups-management',
+                'account/teams-management',
             ],
         },
         {
@@ -136,7 +136,7 @@ function getGeneralSidebar(guideTitle, accountTitle, superAdministrationTitle) {
             collapsable: false,
             children: [
                 'super-administration/server-configuration',
-                'super-administration/groups-management',
+                'super-administration/teams-management',
                 'super-administration/users-management',
                 'super-administration/super-administrator-management',
                 'super-administration/audit-trail',
