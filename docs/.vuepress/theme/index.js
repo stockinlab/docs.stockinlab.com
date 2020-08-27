@@ -23,7 +23,7 @@ module.exports = (options, ctx) => {
                     '/': 'TIP',
                     '/fr/': 'ASTUCE',
                 },
-                before: info => `<div class="custom-block tip"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-green-400"><use href="/assets/images/icons.svg#bulb"/></svg>${info}</div>\n`,
+                before: info => `<div class="custom-block tip"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-green-300"><use href="/assets/images/icons.svg#bulb"/></svg>${info}</div>\n`,
                 after: () => '</div>\n',
             }],
             ['container', {
@@ -32,7 +32,7 @@ module.exports = (options, ctx) => {
                     '/': 'WARNING',
                     '/fr/': 'ATTENTION',
                 },
-                before: info => `<div class="custom-block warning"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-orange-400"><use href="/assets/images/icons.svg#warning"/></svg>${info}</div>\n`,
+                before: info => `<div class="custom-block warning"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-orange-300"><use href="/assets/images/icons.svg#warning"/></svg>${info}</div>\n`,
                 after: () => '</div>\n',
             }],
             ['container', {
@@ -41,7 +41,7 @@ module.exports = (options, ctx) => {
                     '/': 'WARNING',
                     '/fr/': 'ATTENTION',
                 },
-                before: info => `<div class="custom-block danger"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-red-400"><use href="/assets/images/icons.svg#error"/></svg>${info}</div>\n`,
+                before: info => `<div class="custom-block danger"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-red-300"><use href="/assets/images/icons.svg#error"/></svg>${info}</div>\n`,
                 after: () => '</div>\n',
             }],
             'smooth-scroll',

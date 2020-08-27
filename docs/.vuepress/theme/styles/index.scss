@@ -142,7 +142,7 @@
 .custom-block.tip,
 .custom-block.warning,
 .custom-block.danger {
-    @apply px-6 py-4 border-l-4 rounded-r-lg mt-4 mb-4;
+    @apply px-6 py-4 border-l-4 rounded-r-md mt-4 mb-4;
 
     p,
     ol,
@@ -159,13 +159,13 @@
     @apply border-green-500 bg-green-50;
 
     .custom-block-title {
-        @apply text-green-800;
+        @apply text-green-900;
     }
 
     p,
     ol,
     ul, {
-        @apply text-green-700;
+        @apply text-green-800;
     }
 }
 
@@ -173,13 +173,13 @@
     @apply border-orange-500 bg-orange-50;
 
     .custom-block-title {
-        @apply text-orange-800;
+        @apply text-orange-900;
     }
 
     p,
     ol,
     ul, {
-        @apply text-orange-700;
+        @apply text-orange-800;
     }
 }
 
@@ -187,13 +187,13 @@
     @apply border-red-500 bg-red-50;
 
     .custom-block-title {
-        @apply text-red-800;
+        @apply text-red-900;
     }
 
     p,
     ol,
     ul, {
-        @apply text-red-700;
+        @apply text-red-800;
     }
 }
 

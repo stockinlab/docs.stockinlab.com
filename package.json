@@ -22,7 +22,7 @@
         "eslint-loader": "^4.0.2",
         "eslint-plugin-vue": "^6.2.2",
         "node-sass": "^4.12.0",
-        "sass-loader": "^8.0.0",
+        "sass-loader": "^9.0.0",
         "tailwindcss": "^1.4.5",
         "vuepress": "^1.2.0",
         "vuepress-plugin-clean-urls": "^1.1.1",
@@ -30,5 +30,7 @@
         "vuepress-plugin-nprogress": "^1.1.6",
         "vuepress-plugin-smooth-scroll": "^0.0.9"
     },
-    "dependencies": {}
+    "dependencies": {
+        "lodash": "^4.17.20"
+    }
 }

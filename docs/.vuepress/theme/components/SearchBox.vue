@@ -137,10 +137,10 @@ export default {
         alignRight() {
             return false;
 
-            const navCount = (this.$site.themeConfig.nav || []).length;
-            const repo = this.$site.repo ? 1 : 0;
-
-            return navCount + repo <= 2;
+            // const navCount = (this.$site.themeConfig.nav || []).length;
+            // const repo = this.$site.repo ? 1 : 0;
+            //
+            // return navCount + repo <= 2;
         },
     },
 

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import isNil from 'lodash/isNil'
+import isNil from 'lodash/isNil';
 import {endingSlashRE, outboundRE} from '@theme/util';
 
 export default {
@@ -65,7 +65,7 @@ export default {
             return (
                 this.$themeLocaleConfig.editLinkText
                 || this.$site.themeConfig.editLinkText
-                || `Edit this page`
+                || 'Edit this page'
             );
         },
     },
@@ -79,7 +79,7 @@ export default {
 
                 return (
                     base.replace(endingSlashRE, '')
-                    + `/src`
+                    + '/src'
                     + `/${docsBranch}/`
                     + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
                     + path
@@ -93,7 +93,7 @@ export default {
 
             return (
                 base.replace(endingSlashRE, '')
-                + `/edit`
+                + '/edit.'
                 + `/${docsBranch}/`
                 + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
                 + path
