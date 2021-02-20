@@ -232,7 +232,7 @@ export default {
                 @apply bg-gray-100 text-teal-500;
 
                 .has-arrow:after {
-                    @apply bg-teal-400;
+                    @apply bg-teal-300;
                 }
             }
         }
@@ -241,21 +241,17 @@ export default {
             @apply inline-flex items-center;
 
             &:after {
-                @apply bg-gray-400;
-                display: inline-block;
+                @apply inline-block bg-cool-gray-200 h-5 w-5 ml-1;
                 content: '';
-                -webkit-mask: url(/assets/images/arrow_right.svg) no-repeat 50% 50%;
-                mask: url(/assets/images/arrow_right.svg) no-repeat 50% 50%;
+                -webkit-mask: url(/assets/images/arrow-right.svg) no-repeat 50% 50%;
+                mask: url(/assets/images/arrow-right.svg) no-repeat 50% 50%;
                 -webkit-mask-size: cover;
                 mask-size: cover;
-                width: 18px;
-                height: 18px;
-                margin-left: .2rem;
             }
         }
 
         a:hover .has-arrow:after {
-            @apply bg-teal-400;
+            @apply bg-teal-300;
         }
     }
 

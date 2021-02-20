@@ -1,3 +1,3 @@
-export default ({}) => {
+export default () => {
     require('./styles/index.scss');
 };

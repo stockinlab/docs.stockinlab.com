@@ -124,6 +124,11 @@
         @apply bg-cool-gray-100 font-sans px-1 rounded text-gray-800;
     }
 
+    mark {
+        @apply bg-teal-50 rounded text-teal-800;
+        padding: .125rem .25rem;
+    }
+
     ol, ul {
         //@apply text-gray-700 mt-2 mb-2 list-inside ml-2 leading-relaxed;
         @apply text-gray-700 mt-2 mb-2 list-inside ml-2 leading-7;
@@ -139,61 +144,59 @@
     }
 }
 
-.custom-block.tip,
-.custom-block.warning,
-.custom-block.danger {
-    @apply px-6 py-4 border-l-4 rounded-r-md mt-4 mb-4;
+.alert {
+    @apply p-6 border-b-4 border-cool-gray-500 rounded my-4 bg-cool-gray-50 text-cool-gray-800 shadow items-start;
+
+    .alert-title {
+        @apply mt-0 font-bold flex items-center mb-2;
+    }
+
+    .alert-content {
+        @apply w-full;
+    }
 
     p,
     ol,
     ul, {
         @apply mt-0;
     }
+}
 
-    .custom-block-title {
-        @apply mt-0 mb-2 font-bold flex items-center;
+@screen sm {
+    .alert {
+        @apply flex -mx-2;
+    }
+
+    .alert .alert-title {
+        @apply mb-0 px-2;
+    }
+
+    .alert .alert-content {
+        @apply flex-1 px-2;
     }
 }
 
-.custom-block.tip {
-    @apply border-green-500 bg-green-50;
+.alert.alert-tip {
+    @apply border-green-500;
 
-    .custom-block-title {
+    .alert-title {
         @apply text-green-900;
     }
-
-    p,
-    ol,
-    ul, {
-        @apply text-green-800;
-    }
 }
 
-.custom-block.warning {
-    @apply border-orange-500 bg-orange-50;
+.alert.alert-warning {
+    @apply border-orange-500;
 
-    .custom-block-title {
+    .alert-title {
         @apply text-orange-900;
     }
-
-    p,
-    ol,
-    ul, {
-        @apply text-orange-800;
-    }
 }
 
-.custom-block.danger {
-    @apply border-red-500 bg-red-50;
+.alert.alert-danger {
+    @apply border-red-500;
 
-    .custom-block-title {
+    .alert-title {
         @apply text-red-900;
-    }
-
-    p,
-    ol,
-    ul, {
-        @apply text-red-800;
     }
 }
 

@@ -1,4 +1,4 @@
-module.exports = (options, ctx) => {
+module.exports = (options) => {
     return {
         plugins: [
             ['@vuepress/active-header-links', options.activeHeaderLinks],
@@ -23,8 +23,8 @@ module.exports = (options, ctx) => {
                     '/': 'TIP',
                     '/fr/': 'ASTUCE',
                 },
-                before: info => `<div class="custom-block tip"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-green-300"><use href="/assets/images/icons.svg#bulb"/></svg>${info}</div>\n`,
-                after: () => '</div>\n',
+                before: () => '<div class="px-2"><div class="alert alert-tip"><div class="alert-title"><svg class="h-8 w-8 text-green-500"><use href="/assets/images/icons.svg#bulb"/></svg></div><div class="alert-content">\n',
+                after: () => '</div></div></div>\n',
             }],
             ['container', {
                 type: 'warning',
@@ -32,8 +32,8 @@ module.exports = (options, ctx) => {
                     '/': 'WARNING',
                     '/fr/': 'ATTENTION',
                 },
-                before: info => `<div class="custom-block warning"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-orange-300"><use href="/assets/images/icons.svg#warning"/></svg>${info}</div>\n`,
-                after: () => '</div>\n',
+                before: () => '<div class="px-2"><div class="alert alert-warning"><div class="alert-title"><svg class="h-8 w-8 text-orange-500"><use href="/assets/images/icons.svg#warning"/></svg></div><div class="alert-content">\n',
+                after: () => '</div></div></div>\n',
             }],
             ['container', {
                 type: 'danger',
@@ -41,8 +41,8 @@ module.exports = (options, ctx) => {
                     '/': 'WARNING',
                     '/fr/': 'ATTENTION',
                 },
-                before: info => `<div class="custom-block danger"><div class="custom-block-title"><svg class="inline-flex h-5 w-5 mr-2 text-red-300"><use href="/assets/images/icons.svg#error"/></svg>${info}</div>\n`,
-                after: () => '</div>\n',
+                before: () => '<div class="px-2"><div class="alert alert-danger"><div class="alert-title"><svg class="h-8 w-8 text-red-500"><use href="/assets/images/icons.svg#error"/></svg></div><div class="alert-content">\n',
+                after: () => '</div></div></div>\n',
             }],
             'smooth-scroll',
         ],
