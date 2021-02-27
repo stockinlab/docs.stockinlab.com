@@ -1,25 +1,34 @@
 # Categories management
 
-## Create category
-Under the <mark>Dashboard</mark> menu:
-1. Select <mark>Categories</mark>.
-2. Click <mark>Add</mark> on top right and choose in which inventory you want to create the new category.
-3. If the new category depends on another category, select the parent category first under <mark>Dependence</mark>. If not, go directly to step 4.
-4. Enter the name of your new category.
+Administrator can access the categories management in Team > Dashboard > Categories
 
-Optional steps:
-* <mark>Description</mark> to enter more details about the category.
-* <mark>Status</mark> to hide the category in the inventory.
-* <mark>IRB reference</mark> and <mark>IRB expiry date</mark>: i.e. for human samples (patient cohort).
-* List of <mark>Mandatory parameters</mark>.
+## Create category
+1. Click Add button
+2. Choose the inventory to assigne the catagory
+3. Enter the name of the category
+4. Choose the dependency if any
+5. If your category is related to clinical samples you may want to enter IRB refernce and expiry (optional)
+6. Switch the required parameters for the category
+7. Click Create button 
 
 ::: tip
-Add a sub-category directly from the overview of <mark>Categories</mark>. Click (+ icon) on the right of the category.
+Add a sub-category directly from the overview of <mark>Categories</mark>
+1. Click Action button on the right of the catagory
+2. Select Add
+3. The dependency is pre-filled
+4. Enter the information as stated above
+5. Click Create button
 :::
 
 ## Edit category
-From <mark>Categories</mark>: you can edit or delete a category by clicking (action icon) on the right.
-Select (pen icon) to edit the category. Select (trash icon) to delete the category.
+1. Click Action button on the right of the catagory
+2. Select Edit
+3. Update the wanted field(s)
+4. Click Update button
+
+## Inactivate category
+Inactivation will hide all the records contained into this category to users. The catagory can be re-ctivate anytime.
+1. Click Action button on the right of the 
 
 ::: danger
 If the category already contains records it is impossible to delete it.

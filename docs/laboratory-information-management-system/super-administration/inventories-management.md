@@ -1,30 +1,30 @@
 # Inventories management
 
+Access the inventories management in Home > Super-administration Dashboard > LIMS > Inventories
+
 ## Add new inventory
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Inventories</mark>.
-3. Click <mark>Add</mark> on top right.
-4. Enter the name of your inventory, choose a code and a color to easily identify the inventory and select the [parameters](/laboratory-information-management-system/dashboard-parameters.html#parameters) to associate. 
+
+1. Click Add button 
+2. Enter the name of your inventory
+3. Enter a Code for short identification of your inventory
+4. Choose a color 
+5. Switch the required parameters [parameters](/laboratory-information-management-system/dashboard-parameters.html#parameters) for the inventory. 
 
 ::: tip
 The parameters can also be added from the <mark>Dashboard</mark> to an existing inventory.
 :::
 
-## Delete inventory
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Inventories</mark>.
-3. Click (delete icon) for the inventory you want to delete.
+## Edit inventor
 
-::: warning
-Only empty inventories can be deleted.
-Only the inventory  you have added to the system can be deleted. Basic inventories cannot be deleted. You have the possibility to [edit](/laboratory-information-management-system/super-administration-inventories.html#edit-inventory) the inventory to <mark>Inactive</mark> to not display for the users.
-:::
+1. Click Edit button on the right of the inventory
+2. Edit the name, the code, the color and/or the parameter required
+3. Click Update button
+   
+## Inactivate inventory
 
-## Edit inventory
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Inventories</mark>.
-3. Click (edit icon) for the inventory you want to edit.
-4. Edit the wanted value(s) and click <mark>Update inventory</mark>.
+1. Click Edit button on the right of the inventory
+2. Switch the Activate/Inactivate button
+3. Click Update button
+
+
+

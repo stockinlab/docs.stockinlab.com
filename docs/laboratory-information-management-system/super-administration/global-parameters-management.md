@@ -1,32 +1,32 @@
 # Global parameters management
 
-Global parameters will apply for every teams. Each teams can then add their own [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) in their <mark>Dashboard</mark>.
+Manage the global parameters in Home > Super-administration Dashboard > LIMS > Global parameters
+
+Global parameters will apply for every teams in the server. 
+Each teams can also add their own [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) in Team > Dashboard > Parameters
 
 ## Add global parameter
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Global parameters</mark>.
-3. Click <mark>Add</mark> on top right.
-4. Enter the <mark>Name</mark> of the parameter and add a description (optional).
-5. Select the <mark>Type</mark> of the parameter among the list provided.
-6. Allocate the parameter to one or several [inventory(ies)](/laboratory-information-management-system/super-administration-inventories.html#inventories).
+1. Click Add Button
+2. Enter the name of the global parameter
+3. Select the type of parameters in the dropdown
+4. Select one or more inventories for which you want to allocate the parameter
+5. Click Create button 
+
+## Edit global parameter 
+1. Click Action button on the right of the global parameter
+2. Select Edit
+3. Update the fields
+4. Click Update button
 
 ## Delete global parameter
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Global parameters</mark>.
-3. Click (delete icon) for the parameter to delete.
+1. Click Action button on the right of the global parameter 
+2. Selecte Delete
 
 ::: danger
-If the parameter is already filled for one record it is impossible to delete it.
+If the parameter is already filled for one record, the deletion is impossible.
 :::
 
-## Edit global parameter
-From <mark>Homepage</mark>: 
-1. Click <mark>Super-admin Dashboard</mark> on top right. 
-2. Select <mark>Global parameters</mark>.
-3. Click (edit icon) for the parameter to edit.
-4. Update the wanted value(s) and click <mark>Update parameter</mark> to save.
+
 
 
 
