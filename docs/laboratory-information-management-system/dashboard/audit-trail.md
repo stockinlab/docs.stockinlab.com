@@ -2,7 +2,7 @@
 
 ## Description
 All activities from every users (included the administrator) in your team are logged.
-The administrator can see the activities from his team in the menu <mark>Dashboard > Audit trail`. 
+The administrator can see the activities from his team in the menu <mark>Dashboard > Audit trail</mark>.
 
 ::: tip
 * Use the Filter <mark>Member</mark> to see the activities from a selected member.

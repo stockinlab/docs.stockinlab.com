@@ -8,7 +8,7 @@ In the overview (loupe icon) click (locket icon) in the left panel to reserve th
 :::
 
 ## Reserve multiple records
-From <mark>Listing`:
+From <mark>Listing</mark>:
 Select all the records you want to reserve by ticking the boxes on the left.
 Click <mark>Reserve records</mark> (reserve icon) in the left panel.
 

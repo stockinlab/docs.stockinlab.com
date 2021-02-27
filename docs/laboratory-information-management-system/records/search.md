@@ -1,8 +1,8 @@
 # Search
 
 ## Search unique parameter
- From <mark>Listing`:
- 1. Select the parameter to search in the dropdown menu <mark>Parameters to search`.
+ From <mark>Listing</mark>:
+ 1. Select the parameter to search in the dropdown menu <mark>Parameters to search</mark>.
  2. Enter the value of the parameter or select it into the list.
  3. Click <mark>Search</mark> to obtain the results.
  
@@ -11,12 +11,12 @@
  :::
  
  ## Search multiple parameters
- Follow the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter) and select multiple parameters from the dropdown menu <mark>Parameters to search`.
+ Follow the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter) and select multiple parameters from the dropdown menu <mark>Parameters to search</mark>.
  
  ## Search by QR/bar code
  If you have used the [label editing](/laboratory-information-management-system/label.html#create-label) from StockInLab, a QR/bar code was automatically printed in the label. The QR/bar code allow you to simply access to the details of your record.
  From <mark>Homepage</mark> select <mark>Search QR/bar code</mark> in the left panelor from <mark>Listing</mark> click <mark>Search code</mark> on the top right:
- * Enter the ID printed under the QRbar code in the field <mark>Enter the QR/bar code</mark> and click <mark>Search`.
+ * Enter the ID printed under the QRbar code in the field <mark>Enter the QR/bar code</mark> and click <mark>Search</mark>.
  **Or**
  * Click <mark>Open camera</mark> and scan the QR code by using your webcam (you might need to allow StockInLab to access your camera). You can also use your bar code reader device to scan a bar code.
  
@@ -40,9 +40,9 @@
  3. Enter the location and save.
  
  ## Search into public records
- - See the records from your team set as public by ticking the filter <mark>Public records</mark> in the <mark>Listing`. You can search an record by following the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter)or [Search multiple parameters](laboratory-information-management-system/search-record.html#search-multiple-parameters) 
- - See Public records from the other team from the <mark>Homepage`. Click <mark>Public`
- under the menu <mark>Global inventory</mark> in the left panel. Use the filters on the top to facilitate the search among the public records (i.e. search per <mark>Team`)
+ - See the records from your team set as public by ticking the filter <mark>Public records</mark> in the <mark>Listing</mark>. You can search a record by following the instruction from [Search unique parameter](/laboratory-information-management-system/search-record.html#search-unique-parameter)or [Search multiple parameters](laboratory-information-management-system/search-record.html#search-multiple-parameters) 
+ - See Public records from the other team from the <mark>Homepage</mark>. Click <mark>Public</mark>
+ under the menu <mark>Global inventory</mark> in the left panel. Use the filters on the top to facilitate the search among the public records (i.e. search per <mark>Team</mark>)
  
  ::: warning
  Only the [global parameters](/laboratory-information-management-system/super-administration-parameters.html#global-parameters) can be used for the search into the public records from other teams.

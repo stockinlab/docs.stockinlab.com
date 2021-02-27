@@ -2,7 +2,7 @@
 
 ## records contained in one location
 
-From your <mark>Team homepage</mark> select <mark>Overview</mark> in the menu <mark>Storage`.   
+From your <mark>Team homepage</mark> select <mark>Overview</mark> in the menu <mark>Storage</mark>:   
 1. Select the location you want to look at in the dropdown menu. You can select any level of storage (room, fridge, rack...) or even a box directly. 
 2. If the location contain boxes, you get an overview of all boxes. Select the box you are interested in to look at the [spot details](/laboratory-information-management-system/storage-overview.html#details-of-a-spot).
 3. If the location has no box (or if some of the itesm are not contained into box), you get a list of the records (each color correspond to an inventory). Click (view icon) to see the details of the record.

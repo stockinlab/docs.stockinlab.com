@@ -2,7 +2,7 @@
 
 ## Add new record
 ::: tip
-Before you start adding records, make sure your workspace is ready. You may need to create additional [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) and [locations](/laboratory-information-management-system/dashboard-locations.html#create-location) in the <mark>Dashboard`. Access to the <mark>Dashboard</mark> is restricted to the [administrator](/laboratory-information-management-system/dashboard-users-management.html#users-management)).
+Before you start adding records, make sure your workspace is ready. You may need to create additional [parameters](/laboratory-information-management-system/dashboard-parameters.html#create-parameter) and [locations](/laboratory-information-management-system/dashboard-locations.html#create-location) in the <mark>Dashboard</mark>. Access to the <mark>Dashboard</mark> is restricted to the [administrator](/laboratory-information-management-system/dashboard-users-management.html#users-management)).
 :::
 
 Creation of categories is not mandatory. However, when you add a new record you have to assign a category and/or a name.
@@ -11,39 +11,39 @@ To add new record(s):
 1. From your <mark>Team homepage</mark> select the <mark>Inventory</mark> where you want to add the record(s).
 
 ::: tip
-the button <mark>Add</mark> is also available directly from the <mark>Team homepage`. If you click it from this page, you will be prompted to select in which inventory you want to add th new record(s).
+the button <mark>Add</mark> is also available directly from the <mark>Team homepage</mark>. If you click it from this page, you will be prompted to select in which inventory you want to add th new record(s).
 :::
 2. Select (add icon) on top right of the page.
 3. Two options are available:
     - <mark>Simple add</mark> if you want to add on or several records with the same parameters.
     - <mark>Add with import</mark> if you want to add a bulk of records with different parameters. This [procedure](/laboratory-information-management-system/add-record.html#use-an-excel-file-to-import-records) require to fill an Excel file.  
-The following steps refer to <mark>Simple add`.   
+The following steps refer to <mark>Simple add</mark>:
 4. Set your record as [public or private](/laboratory-information-management-system/add-record.html#private-public-records). 
 5. Fill all the [mandatory parameters](/laboratory-information-management-system/dashboard-parameters.html#mandatory-parameters) (if any). Additional parameters you might want to enter for this record can be selected from the left panel.
-6. Enter the location. If the location is a box you need to select the spot(s). If it is not a box, simply add the quantity in the field provided. If you don’t know the location yet, you can save as draft. 
-7. [Optional] Add comment and/or attach files in <mark>Extra`.
+6. Enter the location. If the location is a box, you need to select the spot(s). If it is not a box, simply add the quantity in the field provided. If you don’t know the location yet, you can save as draft. 
+7. [Optional] Add comment and/or attach files in <mark>Extra</mark>.
 
 
 ## Use an Excel file to import records
 Use these option if you have a bulk of records to enter into the inventory.
-From the <mark>Inventory</mark> page or from any <mark>Listing`, click (add icon) on top right of the page and select <mark>Add with import`:
+From the <mark>Inventory</mark> page or from any <mark>Listing</mark>: click (add icon) on top right of the page and select <mark>Add with import</mark>:
 1. Tick the inventorie(s) in which you need to enter your new records.
 2. Click Download template.
 3. Open the file: one sheet per inventory is created.
-4. Fill all the fields (the location cannot be enter in the file, you have to allocate after the import). The mandatory parameters appear in red.
+4. Fill all the fields. The mandatory parameters appear in teal.
 
 ::: warning
 Make sure you enter the good value for the parameter set as “Select” in your workspace. To make the process easier, the ID of the options are referenced in a separate sheet. If your parameter is a “Select” type just enter the ID of the option (and note the name of the option).
 :::
 
-When your file is ready, go back to <mark>Add with import`, select the file to import in <mark>Choose file</mark> and click <mark>Import`.
+When your file is ready, go back to <mark>Add with import</mark>: select the file to import in <mark>Choose file</mark> and click <mark>Import</mark>:
 
 ::: warning
-In case of error, the details of the error appear. It can be a missing mandatory field, an record with the exact same details (you can force to add), a blank line...
+In case of error, the details of the error appear. It can be a missing mandatory field, a record with the exact same details (you can force to add), a blank line...
 :::
 
 Select the location for each new imported record.
-All imported records without location go into [Draft records](/laboratory-information-management-system/search-record.html#draft-records) in your <mark>Listing`. You can still edit their location later:
+All imported records without location go into [Draft records](/laboratory-information-management-system/search-record.html#draft-records) in your <mark>Listing</mark>. You can still edit their location later:
 1. Click (loupe icon).
 2. Select (edit location icon).
 3. Choose the location of your record and save.
@@ -52,7 +52,7 @@ All imported records without location go into [Draft records](/laboratory-inform
 Private records can be seen by your team only. If you switch for Public, your records are visible in the Public records listing (Global inventory/Public) by all the teams. The details of the record are visible for all but the location remains hidden. Users from other teams can contact you if they are interested in your record.
 
 ::: tip
-Your records are automatically set as private. You can switch to public when you enter a new record in the menu <mark>Simple add`: Switch the button from private to public under <mark>Status`.
+Your records are automatically set as private. You can switch to public when you enter a new record in the menu <mark>Simple add</mark>. Switch the button from private to public under <mark>Status</mark>.
 :::
 
 ## Pick location of the record
@@ -62,11 +62,11 @@ When you add a new record from the menu <mark>Simple add</mark> Simply select th
 * If you records are in multiple locations, select the additional location(s) from the dropdown menu.
 * If you don’t know the location yet, you can [save as draft](/laboratory-information-management-system/search-record.html#draft-records).
 
-When you add records from the menu <mark>Add with import`, the locations are allocated after the import on the same principle.
+When you add records from the menu <mark>Add with import</mark>: the locations are allocated after the import on the same principle.
 
 ## Add attachment(s)
 You can attach document(s) in several formats (pdf, xlsx, docx, pptx, images…)
-When you add a new record from the menu <mark>Simple add`, attach the documents in the panel <mark>Extras`. Click into the box to find into your computer the documents to attach.
+When you add a new record from the menu <mark>Simple add</mark>: attach the documents in the panel <mark>Extras</mark>: Click into the box to find into your computer the documents to attach.
 
 ::: tip
 You can also simply drag and drop into the box to attach your document.
@@ -85,18 +85,18 @@ To edit the location of your record:
 You record will be automatically transferred from the Draft records to the Listing.
 
 ## Mandatory fields
-If mandatory parameters are not filled, the button Add remains disabled. [Mandatory parameters](/laboratory-information-management-system/dashboard-parameters.html#mandatory-parameters) can be set from the <mark>Dashboard`.
+If mandatory parameters are not filled, the button Add remains disabled. [Mandatory parameters](/laboratory-information-management-system/dashboard-parameters.html#mandatory-parameters) can be set from the <mark>Dashboard</mark>.
 
 ::: tip
-When you add a new record from the menu <mark>Simple add`, you can add more optional parameters directly from the panel <mark>Parameters`
+When you add a new record from the menu <mark>Simple add</mark>: you can add more optional parameters directly from the panel <mark>Parameters</mark>
 1. Select the parameters in the list (use the search bar to find easily the parameters).
 2. Enter the value for the optional parameters.
 :::
 
-When you add records from the menu <mark>Add with import`, the mandatory parameters appear in red in the table.
+When you add records from the menu <mark>Add with import</mark>: the mandatory parameters appear in red in the table.
 
 ## Receive record from another team
-When you received records transferred from another team, a notification appears into the left panel of your <mark>Team homepage`.
+When you received records transferred from another team, a notification appears into the left panel of your <mark>Team homepage</mark>.
 All the records received are listed:
 1. Click <mark>Recover</mark> to add the record into your inventory.
 2. Select the Inventory where you want to store the received record.

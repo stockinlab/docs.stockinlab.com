@@ -15,7 +15,7 @@ In the overview of the record (loupe icon), you have a menu <mark>Link record</m
 3. Save the record.
 
 ## Link existing records
-From <mark>Listing`:
+From <mark>Listing</mark>:
 1. Select the records to link (you can select records from different inventories).
 2. Click <mark>Link records</mark> (link icon) in the left panel.
 
