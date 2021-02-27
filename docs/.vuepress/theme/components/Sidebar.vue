@@ -5,12 +5,12 @@
         </div>
 
         <nav class="pt-8 md:pt-0">
-            <div v-for="(item, index) in items" :key="index" class="mb-6">
-                <h3 v-if="item.children.length > 0" class="text-gray-900 text-uppercase font-bold text-sm px-4 mb-2">{{ item.title }}</h3>
+            <div v-for="(item, index) in items" :key="index" class="mt-8 first:mt-0">
+                <h3 v-if="item.children.length > 0" class="flex items-center text-xs font-semibold text-gray-600 uppercase tracking-wide">{{ item.title }}</h3>
 
-                <ul>
+                <ul class="mt-2 -mx-3 space-y-1">
                     <li v-for="(child, indexChild) in item.children" :key="`${index}${indexChild}`">
-                        <SidebarLink :item="child"/>
+                        <NewSidebarLink :item="child"/>
                     </li>
                 </ul>
             </div>
@@ -20,13 +20,13 @@
 
 <script>
 import NavLink from '@theme/components/NavLink';
-import SidebarLink from '@theme/components/SidebarLink';
+import NewSidebarLink from '@theme/components/NewSidebarLink';
 
 export default {
     name: 'Sidebar',
 
     components: {
-        SidebarLink,
+        NewSidebarLink,
         NavLink,
     },
 
@@ -36,6 +36,10 @@ export default {
         userNav() {
             return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
         },
+    },
+
+    created() {
+        console.log('called');
     },
 };
 </script>

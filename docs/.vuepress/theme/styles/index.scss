@@ -18,6 +18,10 @@
     @apply shadow-outline-teal;
 }
 
+.group:hover .group-hover\:translate-r-5px {
+    transform: translateX(5px);
+}
+
 .sidebar-open {
     .documentation-block {
         @apply hidden;

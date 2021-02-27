@@ -40,6 +40,7 @@ module.exports = {
     variants: {
         borderRadius: ['responsive', 'focus'],
         borderWidth: ['responsive', 'active', 'focus'],
+        margin: ['responsive', 'first'],
         width: ['responsive', 'focus'],
     },
 };

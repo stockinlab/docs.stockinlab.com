@@ -9,7 +9,7 @@
                 <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar"/>
 
                 <main class="flex-1 flex">
-                    <div class="lg:w-2/3 xl:w-3/4 documentation-block">
+                    <div class="xl:w-3/4 documentation-block">
                         <Content class="documentation-content pb-8"/>
 
                         <PageEdit/>
@@ -17,7 +17,7 @@
                         <PageNav v-bind="{ sidebarItems }"/>
                     </div>
 
-                    <div class="hidden text-sm lg:block lg:w-1/3 xl:w-1/4 ml-8">
+                    <div class="hidden text-sm xl:block xl:w-1/4 ml-8">
                         <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
                             <ContentTable class="mb-8"/>
                         </div>
