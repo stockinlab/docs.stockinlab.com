@@ -8,7 +8,7 @@
             <div v-for="(item, index) in items" :key="index" class="mt-8 first:mt-0">
                 <h3 v-if="item.children.length > 0" class="flex items-center text-xs font-semibold text-gray-600 uppercase tracking-wide">{{ item.title }}</h3>
 
-                <ul class="mt-2 -mx-3 space-y-1">
+                <ul class="mt-2 -mx-2 space-y-1">
                     <li v-for="(child, indexChild) in item.children" :key="`${index}${indexChild}`">
                         <NewSidebarLink :item="child"/>
                     </li>
