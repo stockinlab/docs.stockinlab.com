@@ -1,12 +1,12 @@
 # Import workspace
 
 ## Import with Excel file
-Instead of entering manually your categories, parameters and locations, you can use the Excel template provided:
-1. Under the menu <mark>Dashboard</mark> select <mark>Import workspace</mark>
-2. Click <mark>Download template</mark> on top right.
-3. Open the Excel file.
-4. Fill every sheets with the details of your <mark>Categories</mark> <mark>Parameters</mark> and <mark>Locations</mark>.
-5. Save the file.
-6. Go back to <mark>Dashboard > Import workspace</mark>.
-7. Click <mark>Select File</mark> to upload the Excel file.
-8. Click <mark>Import</mark>.
+Instead of entering manually your categories, parameters and locations, you can use the Excel template provided in Team > Dashboard > Import Workspace.
+
+1. Click Download template button on top right
+2. Open the Excel file
+3. Fill every sheets with the details of your categories, parameters and locations
+4. Save the file
+5. Go back to Team > Dashboard > Import Workspace
+6. Click  Choose File button to upload the Excel file
+7. Click Import button

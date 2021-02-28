@@ -187,7 +187,7 @@ function getLIMSSidebar(limsTitle, recordsTitle, storageTitle, dashboardTitle, s
                 'dashboard/parameters-management',
                 'dashboard/locations-management',
                 'dashboard/categories-management',
-                'dashboard/users-management',
+                'dashboard/members-management',
                 'dashboard/import-workspace',
                 'dashboard/audit-trail',
             ],

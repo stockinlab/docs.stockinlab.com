@@ -1,8 +1,8 @@
 # Audit trail
 
 ## Description
-All activities from every users (included the administrator) in your team are logged.
-The administrator can see the activities from his team in the menu <mark>Dashboard > Audit trail</mark>.
+All activities from every users (included the administrators) in your team are logged.
+The administrators can see the activities from the team in Team  > Dashboard > Audit trail
 
 ::: tip
 * Use the Filter <mark>Member</mark> to see the activities from a selected member.
@@ -10,4 +10,4 @@ The administrator can see the activities from his team in the menu <mark>Dashboa
 :::
 
 ## Audit trail access
-Only the administrators can access the audit trail menu of the team. the super-administrators can access the audit trail from every teams.
+Only the administrators can access the audit trail menu of the team. the [super-administrators](/general/super-administration/audit-trail.md) can access the audit trail from every teams.
