@@ -1,23 +1,23 @@
 # Edit record
-
+You need the correct [permission](/laboratory-information-management-system/records/add-record.html#change-access-permission-to-a-record) to edit a record. Contact an administrator to get it if required. 
 ## Edit one record
-From Inventory <mark>Listing</mark> :
-1. Click (view icon) to see the details of your record. 
-2. Select <mark>Edit</mark> in the left panel. You have the choice between: <mark>Edit parameters</mark> and <mark>Edit location</mark>.
+1. In Team > Inventory, Click View button on the right of the record 
+2. Select Edit in the panel Parameters
 3. Edit the information and save.
 
 ## Edit multiple records
-From <mark>Listing</mark>:
-1. Select the records you want to edit by ticking the boxes on the left.
-2. Select <mark>Export records for update</mark> in the left panel.
-3. Open the excel file created.
-4. Edit the information of your records directly into the file.
-5. Go back to the <mark>Listing</mark> page or to the <mark>Inventory</mark> page and select <mark>Update with import</mark> in the left panel.
-6. Click <mark>Choose file</mark> to select the excel files you have just updated.
-7. Click <mark>Import</mark>.
+1. Select the records to edit from the Listing by ticking the box on the left
+2. Click Bulk actions button which appeared on top right of the listing
+3. Select Export to update. An Excel file is downoloaded woth the information of the selected records.
+4. Edit the information of your records in the file.
+5. In Team, Click Import button on top right
+6. Select the file to upload
+
 
 ## Move record to another location
-From <mark>Listing</mark>:
-1. Click (loupe icon) for the record you want to change the location.
-2. Select <mark>Edit location</mark> in the left panel.
-3. Edit the location and save.
+The location containing the records can be moved by an administrator.
+in Team > Dashboard > Locations:
+1. Click Action button on the right of the location
+2. Select Edit
+3. Change the dependence in the dropdown menu 
+4. Click Update button
