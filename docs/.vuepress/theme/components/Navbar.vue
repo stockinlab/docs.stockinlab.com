@@ -1,19 +1,21 @@
 <template>
-    <header class="navbar bg-white shadow h-16">
-        <div class="container flex items-center max-w-8xl mx-auto px-6 md:px-8 py-4 h-full">
-            <div class="flex lg:w-56 mr-4 lg:mr-8">
-                <RouterLink :to="$localePath" aria-label="StockInLab" class="inline-flex items-center text-gray-800 duration-200 focus:outline-none focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500 text-2xl rounded-md home-link">
-                    <img src="/assets/images/logo.svg" class="h-10 rounded-md" alt="">
-                    <span class="hidden lg:block px-2">StockInLab</span>
-                </RouterLink>
-            </div>
+    <header class="relative navbar bg-white shadow h-16">
+        <div class="container flex items-center max-w-6xl mx-auto px-4 sm:px-6 py-4 h-full">
+            <button class="text-gray-600 lg:hidden focus:outline-none mr-2" @click="$emit('toggle-sidebar')">
+                <svg fill="none" viewBox="0 0 24 24" class="h-8 w-8 text-gray-500">
+                    <path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-width="2" stroke="currentColor"></path>
+                </svg>
+            </button>
 
-            <div class="flex flex-1 items-center">
-                <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-                <NavLinks class="can-hide"/>
-            </div>
+            <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
 
-            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+            <NavLinks class="can-hide"/>
+
+            <NavbarButton @toggle-navbar="$emit('toggle-navbar')"/>
+        </div>
+
+        <div class="hidden navbar-small z-50 absolute top-16 p-6 bg-white inset-x-0 shadow p-4 sm:px-6 border-t border-gray-200 transition duration-1000 ease-in">
+            <SmallNavLinks/>
         </div>
     </header>
 </template>
@@ -21,7 +23,8 @@
 <script>
 import NavLinks from '@theme/components/NavLinks';
 import SearchBox from '@theme/components/SearchBox';
-import SidebarButton from '@theme/components/SidebarButton';
+import NavbarButton from '@theme/components/NavbarButton';
+import SmallNavLinks from '@theme/components/SmallNavLinks';
 
 export default {
     name: 'Navbar',
@@ -29,7 +32,8 @@ export default {
     components: {
         NavLinks,
         SearchBox,
-        SidebarButton,
+        NavbarButton,
+        SmallNavLinks,
     },
 
     data() {
@@ -57,3 +61,9 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+.navbar-open .navbar-small {
+    @apply block;
+}
+</style>

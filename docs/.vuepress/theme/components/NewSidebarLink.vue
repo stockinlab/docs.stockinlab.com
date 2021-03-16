@@ -25,7 +25,7 @@ export default {
         classes() {
             return {
                 // 'group block px-3 py-2 rounded text-sm font-medium': true,
-                'group block px-2 py-1 rounded text-sm font-medium': true,
+                'group block px-3 py-2 rounded-lg text-sm font-medium': true,
                 'bg-teal-100 text-teal-900': this.isActive,
                 'text-gray-900 hover:bg-cool-gray-100': !this.isActive,
             };

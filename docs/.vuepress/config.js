@@ -22,11 +22,11 @@ module.exports = {
             title: 'StockInLab Documentation',
             description: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry',
         },
-        '/fr/': {
-            lang: 'fr-FR',
-            title: 'StockInLab Documentation',
-            description: 'StockInLab Documentation - LIMS & ELN pour faciliter vos recherches académiques ou industrielles',
-        },
+        // '/fr/': {
+        //     lang: 'fr-FR',
+        //     title: 'StockInLab Documentation',
+        //     description: 'StockInLab Documentation - LIMS & ELN pour faciliter vos recherches académiques ou industrielles',
+        // },
     },
     themeConfig: {
         logo: '/assets/images/small_logo.svg',
@@ -51,10 +51,10 @@ module.exports = {
                         text: 'LIMS',
                         link: '/laboratory-information-management-system/',
                     },
-                    {
-                        text: 'ELN',
-                        link: '/electronic-lab-notebook/',
-                    },
+                    // {
+                    //     text: 'ELN',
+                    //     link: '/electronic-lab-notebook/',
+                    // },
                     {
                         text: 'Tools',
                         link: '/tools/',
@@ -63,42 +63,42 @@ module.exports = {
                 sidebar: {
                     '/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
                     '/laboratory-information-management-system/': getLIMSSidebar('LIMS', 'Records', 'Storage', 'Dashboard', 'Super-administration'),
-                    '/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocols', 'Projects'),
+                    // '/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocols', 'Projects'),
                     '/tools/': getToolsSidebar('Tools'),
                 },
             },
-            '/fr/': {
-                label: 'Français',
-                searchPlaceholder: 'Rechercher...',
-                selectText: 'Langues',
-                ariaLabel: 'Sélectionner la langue',
-                editLinkText: 'Modifier la page sur GitHub',
-                lastUpdated: 'Dernière mise à jour',
-                nav: [
-                    {
-                        text: 'Général',
-                        link: '/fr/general/',
-                    },
-                    {
-                        text: 'LIMS',
-                        link: '/fr/laboratory-information-management-system/',
-                    },
-                    {
-                        text: 'ELN',
-                        link: '/fr/electronic-lab-notebook/',
-                    },
-                    {
-                        text: 'Outils',
-                        link: '/fr/tools/',
-                    },
-                ],
-                sidebar: {
-                    '/fr/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
-                    '/fr/laboratory-information-management-system/': getLIMSSidebar('LIMS', 'Éléments', 'Stockage', 'Tableau de bord', 'Super-administration'),
-                    '/fr/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocoles', 'Projects'),
-                    '/fr/tools/': getToolsSidebar('Tools'),
-                },
-            },
+            // '/fr/': {
+            //     label: 'Français',
+            //     searchPlaceholder: 'Rechercher...',
+            //     selectText: 'Langues',
+            //     ariaLabel: 'Sélectionner la langue',
+            //     editLinkText: 'Modifier la page sur GitHub',
+            //     lastUpdated: 'Dernière mise à jour',
+            //     nav: [
+            //         {
+            //             text: 'Général',
+            //             link: '/fr/general/',
+            //         },
+            //         {
+            //             text: 'LIMS',
+            //             link: '/fr/laboratory-information-management-system/',
+            //         },
+            //         {
+            //             text: 'ELN',
+            //             link: '/fr/electronic-lab-notebook/',
+            //         },
+            //         {
+            //             text: 'Outils',
+            //             link: '/fr/tools/',
+            //         },
+            //     ],
+            //     sidebar: {
+            //         '/fr/general/': getGeneralSidebar('Guide', 'Account', 'Super-administration'),
+            //         '/fr/laboratory-information-management-system/': getLIMSSidebar('LIMS', 'Éléments', 'Stockage', 'Tableau de bord', 'Super-administration'),
+            //         '/fr/electronic-lab-notebook/': getELNSidebar('ELN', 'Protocoles', 'Projects'),
+            //         '/fr/tools/': getToolsSidebar('Tools'),
+            //     },
+            // },
         },
     },
     postcss: {

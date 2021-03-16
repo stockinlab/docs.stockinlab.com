@@ -22,6 +22,16 @@
     transform: translateX(5px);
 }
 
+.-translate-x-full {
+    transform: translateX(-100%);
+}
+
+@screen lg {
+    .lg\:translate-x-0 {
+        transform: translateX(0);
+    }
+}
+
 .sidebar-open {
     .documentation-block {
         @apply hidden;

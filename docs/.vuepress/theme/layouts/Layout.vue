@@ -1,31 +1,66 @@
 <template>
-    <div :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
-        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+    <div :class="pageClasses">
+        <Sidebar
+            :items="sidebarItems"
+            :isSidebarOpen="isSidebarOpen"
+            @toggle-sidebar="toggleSidebar"
+        />
 
-        <div class="sidebar-mask" @click="toggleSidebar(false)"/>
+        <div class="flex-1 min-w-0 flex flex-col lg:ml-64">
+            <Navbar
+                v-if="shouldShowNavbar"
+                @toggle-sidebar="toggleSidebar"
+                @toggle-navbar="toggleNavbar"
+            />
 
-        <div class="relative container max-w-8xl mx-auto px-6 md:px-8 py-12">
-            <div class="flex flex-col lg:flex-row">
-                <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar"/>
+            <div class="sidebar-mask" @click="toggleNavbar(false)"/>
 
-                <main class="flex-1 flex">
-                    <div class="xl:w-3/4 documentation-block">
-                        <Content class="documentation-content pb-8"/>
+            <main class="flex container max-w-6xl mx-auto px-4 sm:px-6 py-8">
+                <div class="xl:w-3/4">
+                    <Content class="documentation-content pb-8"/>
 
-                        <PageEdit/>
+                    <PageEdit/>
 
-                        <PageNav v-bind="{ sidebarItems }"/>
+                    <PageNav v-bind="{ sidebarItems }"/>
+                </div>
+
+                <div class="hidden text-sm xl:block xl:w-1/4 ml-8">
+                    <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
+                        <ContentTable class="mb-8"/>
                     </div>
-
-                    <div class="hidden text-sm xl:block xl:w-1/4 ml-8">
-                        <div class="flex flex-col justify-between overflow-y-auto sticky top-8">
-                            <ContentTable class="mb-8"/>
-                        </div>
-                    </div>
-                </main>
-            </div>
+                </div>
+            </main>
         </div>
     </div>
+
+
+    <!--    <div :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">-->
+    <!--        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleNavbar"/>-->
+
+    <!--        <div class="sidebar-mask" @click="toggleNavbar(false)"/>-->
+
+    <!--        <div class="relative container max-w-8xl mx-auto px-6 md:px-8 py-12">-->
+    <!--            <div class="flex flex-col lg:flex-row">-->
+    <!--                <Sidebar :items="sidebarItems" @toggle-sidebar="toggleNavbar"/>-->
+
+    <!--                <main class="flex-1 flex">-->
+    <!--                    <div class="xl:w-3/4 documentation-block">-->
+    <!--                        <Content class="documentation-content pb-8"/>-->
+
+    <!--                        <PageEdit/>-->
+
+    <!--                        <PageNav v-bind="{ sidebarItems }"/>-->
+    <!--                    </div>-->
+
+    <!--                    <div class="hidden text-sm xl:block xl:w-1/4 ml-8">-->
+    <!--                        <div class="flex flex-col justify-between overflow-y-auto sticky top-8">-->
+    <!--                            <ContentTable class="mb-8"/>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </main>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </template>
 
 <script>
@@ -54,6 +89,7 @@ export default {
     data() {
         return {
             isSidebarOpen: false,
+            isNavbarOpen: false,
         };
     },
 
@@ -101,6 +137,7 @@ export default {
                 {
                     'no-navbar': !this.shouldShowNavbar,
                     'sidebar-open': this.isSidebarOpen,
+                    'navbar-open': this.isNavbarOpen,
                     'no-sidebar': !this.shouldShowSidebar
                 },
                 userPageClass,
@@ -109,8 +146,13 @@ export default {
     },
 
     methods: {
-        toggleSidebar(to) {
-            this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen;
+        toggleNavbar(to) {
+            this.isNavbarOpen = typeof to === 'boolean' ? to : !this.isNavbarOpen;
+            this.$emit('toggle-navbar', this.isSidebarOpen);
+        },
+
+        toggleSidebar() {
+            this.isSidebarOpen = !this.isSidebarOpen;
             this.$emit('toggle-sidebar', this.isSidebarOpen);
         },
 
@@ -128,9 +170,9 @@ export default {
 
             if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
                 if (dx > 0 && this.touchStart.x <= 80) {
-                    this.toggleSidebar(true);
+                    this.toggleNavbar(true);
                 } else {
-                    this.toggleSidebar(false);
+                    this.toggleNavbar(false);
                 }
             }
         },
@@ -139,6 +181,7 @@ export default {
     mounted() {
         this.$router.afterEach(() => {
             this.isSidebarOpen = false;
+            this.isNavbarOpen = false;
         });
     },
 };
