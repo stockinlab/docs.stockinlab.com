@@ -1,32 +1,42 @@
 # Reserve record
 
 ## Reserve one record
-From <mark>Listing</mark> click (locket icon) on the left of the record you want to reserve. You can only reserve record with a green locket (red locket are already reserved by another member).
+From the *Inventory Listing*:
+1. Click **Action** dot button on the left of the record
+2. Select **Reserve**
+
+::: warning
+You can only reserve record with a green locket (red locket are already reserved by another member).
+:::
 
 ::: tip
-In the overview (loupe icon) click (locket icon) in the left panel to reserve the record.
+From the overview of the record, click **Reserve** button on the top.
 :::
 
 ## Reserve multiple records
-From <mark>Listing</mark>:
-Select all the records you want to reserve by ticking the boxes on the left.
-Click <mark>Reserve records</mark> (reserve icon) in the left panel.
+From the *Inventory Listing*:
+1. Select all the records you want to reserve by ticking the boxes on the left
+2. Click **Bulk action** button which appears on top right
+3. Select **Reserve**
 
-::: tip
-The records can be released by the same process: select your records and click <mark>Cancel reservation</mark> (cancel icon) in the left panel.
-:::
+## Reserved record
+Reserved records are notified by a warning in the overview. 
+* If you reserved the record, you can cancel it by clicking Cancel reservation on the top.
+* If someone else reserved the record, you can't reserve it for you. You sould contact the person who reserved before taking any action.    
 
-## Lockets
-* records with a green locket (green locket icon) are free to reserve.
-* records with a red locket (red locket icon) are reserved by another member. See who reserved the record in the overview (loupe icon) or by clicking the red locket (red locket icon). 
-
-::: danger
-Contact the person who reserved the record before using it.
-:::
 
 ## Manage reservations
-From <mark>Listing</mark> tick the box <mark>My reservation</mark> on the top to see all your reserved records. 
+From the *Inventory Listing*, tick the box **My reservation** on the top to see all your reserved records. 
 
 ## Cancel or withdraw reservation
-From <mark>Listing</mark> or in the overview of the record (loupe icon) click on the red locket to withdraw/cancel [your reservation](/laboratory-information-management-system/reserve-record.html#manage-reservations).
-If you have multiple records to cancel the reservation, select the records in <mark>Listing</mark> by ticking the boxes on the left and select <mark>Cancel reservation</mark> (cancel icon) in the left panel.
+From the *Inventory Listing*:
+1. Click **Action** dot button on the left of the record
+2. Select **Cancel reservation**
+
+From the overview of the record:
+1. Click **Cancel reservation** button on the top
+
+If you have multiple records to cancel the reservation
+1. Select the records in the Inventory Listing by ticking the boxes on the left
+2. Click **Bulk action** button which appears on top right
+3. Select **Cancel reservation**

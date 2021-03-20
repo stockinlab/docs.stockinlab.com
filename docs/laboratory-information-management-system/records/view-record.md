@@ -1,26 +1,38 @@
 # View record
 
 ## See record details
-From <mark>Listing</mark>:
-* Use the dropdown menu <mark>Parameters in table</mark> and select your parameters of interest to display directly in the table.
+From the *Inventory Listing*:
+1. Click **Filter** button on top right of the table
+2. Select the parameters to display in the table 
+   
 **Or**
-* Click (loupe icon) on the left side of the record to access the overview with all details.
+
+1. Click **View** button on the right of the record of interest 
+2. All the details, including the location, are detailed here
 
 ## See location of the record
-From <mark>Listing</mark> click (loupe icon) on the left side of the record. The location is indicated into the panel <mark>Location</mark>:
+From the *Inventory listing*:
+1. Click **View** button on the right of the record of interest
+2. The location is indicated in the right panel 
 
 ## Select multiple records
-From <mark>Listing</mark> tick the boxes on the left of the records you want to select. Multiple actions are available in the left panel. records from different inventories can be selected at the same time.
+From the *Inventory Listing*:
+1. Tick the boxes on the left of the records you want to select
+2. Click **Bulk action** button which appears on top right
+3. Select the action to apply to the selected record 
 
 ::: tip
-Select <mark>View records</mark> (view icon) in the left panel to see all the records selected.
+You can select records from multiple inventories, the selection will remains active. To see the list of selected records:
+1. Click **Bulk action** button
+2. Select **View records**
+
+When you are done, select **Clear** in the **Bulk action** dropdown to cancel your selection.
 ::: 
 
 ## Public records
 When you add a record, you have the possibility to set the record as [Public](/laboratory-information-management-system/add-record.html#private-public-records) instead of Private. 
 
-* See the records from your team set as public by ticking the filter <mark>Public records</mark> in the <mark>Listing</mark>.
-* See Public records from the other team from the <mark>Homepage</mark>. Click <mark>Public</mark>
-under the menu <mark>Global inventory</mark> in the left panel.
+* See the records from your team set as public by ticking the filter <mark>Public records</mark> in the Inventory Listing.
+* See Public records from the other teams from the *LIMS Homepage*: Click **Search** button on top right. You can search into the public items from other teams.
 
-You can perform a [search into the public records](/laboratory-information-management-system/search-record.html#search-into-public-records).
+You can perform a [search into the public records](/laboratory-information-management-system/records/search.html#search-into-public-records).

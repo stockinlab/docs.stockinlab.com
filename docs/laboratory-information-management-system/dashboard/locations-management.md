@@ -1,8 +1,8 @@
 # Locations management
-Administrators can access the locations management in Team > Dashboard > Locations.
+Administrators can access the locations management in *Team > Dashboard > Locations*.
 
 ## Create location
-1. Click Add button on top right
+1. Click **Add** button on top right
 2. If the new location depends on another location, select the parent location in the Dependence dropdown
 3. Enter the name of your new location. 
 4. Select the Type of the location. The type *box* is set by default but many options are available.
@@ -19,35 +19,35 @@ Optional steps:
 
 ::: tip
 Add a sub-location directly from the overview of <mark>Locations</mark>.
-1. Click Action button on the right of the location
-2. Select Add
+1. Click **Action** dot button on the right of the location
+2. Select **Add**
 3. The Dependence is pre-filled, fill the other fields and save.
 :::
 
 ## Edit location
-1. Click Action button on the right of the location
-2. Select Edit
+1. Click **Action** dot button on the right of the location
+2. Select **Edit**
 3. Update the information 
-4. Click Update button
+4. Click **Update** button
 
 ::: danger
-If the location is a box which contains records (or which contained in the past), only the name and the dependency can be changed. If the box has never been used, the rows and lines settings can still be changed. 
+If the location is a box which contains records (or contained in the past), only the name and the dependency can be changed. If the box has never been used, the rows and lines settings can still be changed. 
 :::
 
 ## Create or edit box
-1. Click Add button on top right
-2. Select Box in Type
+1. Click **Add** button on top right
+2. Select **Box** in Type dropdown
 3. Enter the number of rows and columns to edit the [overview](/laboratory-information-management-system/storage-overview.html#overview) of the box. You can choose between numeric or alphabetic for the rows and columns name.
 
 ## Move a location with its content to another location
-1. Click Action button on the right of the location
-2. Select Edit
+1. Click **Action** dot button on the right of the location
+2. Select **Edit**
 3. Change the dependence in the dropdown menu 
-4. Click Update button
+4. Click **Update** button
 
 ## Delete location
-1. Click Action button on the right of the location
-2. Select delete
+1. Click **Action** dot button on the right of the location
+2. Select **Delete**
 
 ::: danger
 A location containing records cannot be deleted.

@@ -1,10 +1,10 @@
 # Inventories management
 
-Access the inventories management in Home > Super-administration Dashboard > LIMS > Inventories
+Access the inventories management in *Home > Super-administration Dashboard > LIMS > Inventories*
 
 ## Add new inventory
 
-1. Click Add button 
+1. Click **Add** button 
 2. Enter the name of your inventory
 3. Enter a Code for short identification of your inventory
 4. Choose a color 
@@ -14,17 +14,17 @@ Access the inventories management in Home > Super-administration Dashboard > LIM
 The parameters can also be added from the <mark>Dashboard</mark> to an existing inventory.
 :::
 
-## Edit inventor
+## Edit inventory
 
-1. Click Edit button on the right of the inventory
+1. Click **Edit** button on the right of the inventory
 2. Edit the name, the code, the color and/or the parameter required
-3. Click Update button
+3. Click **Update** button
    
 ## Inactivate inventory
 
-1. Click Edit button on the right of the inventory
+1. Click **Edit** button on the right of the inventory
 2. Switch the Activate/Inactivate button
-3. Click Update button
+3. Click **Update** button
 
 
 

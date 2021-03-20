@@ -1,24 +1,25 @@
 # Parameters management
-Administrators can access the parameters management in Team > Dashboard > Parameters.
+Administrators can access the parameters management in *Team > Dashboard > Parameters*.
 
 ## Create parameter
 
 ::: warning
 Always check the list of parameters before creating a new one to avoid dupliacte.
+
 The new parameter(s) created will apply only to your team.
 :::  
 
-1. Click Add button on top right.  
+1. Click **Add** button on top right.  
 2. Enter the Name of your new parameter and eventually a description
 3. Select the Type of your parameters in the dropdown
 4. Allocate the parameter to one or several inventory(ies).
-5. Click Create button
+5. Click **Create** button
 
 ## Edit parameter
-1. Click Action button on the right of the parameter
-2. Select Edit
+1. Click **Action** dot button on the right of the parameter
+2. Select **Edit**
 3. Update the information
-4. Click Update button 
+4. Click **Update** button 
 
 ::: danger
 If the parameter is already filled for one record it is impossible to delete it.
@@ -30,11 +31,11 @@ Global parameters are created by the super-administrator of your server and are 
 Global parameters are useful to search into [Public records](/laboratory-information-management-system/records/search.html#search-into-public-records). 
 
 ## Expiry date parameter
-If you want the parameter to be an expiry date, select Expiry date in *Type* when you create the parameter.  
+If you want the parameter to be an expiry date, select Expiry date in the **Type** dropdown when you create the parameter.  
 
 When you add a record into the inventory, specify the day of expiry. You will get a notification when the date of this record is expired.  
 
-Check the expired records by using the [filter](/laboratory-information-management-system/search-record.html#filters) *Expired* in the inventory.
+Check the expired records by using the [filter](/laboratory-information-management-system/search-record.html#filters) **Expired** in the inventory.
 
 ## Required parameters
 Required parameters can be associated to a [category](/laboratory-information-management-system/dashboard/categories-management.html#create-category). 

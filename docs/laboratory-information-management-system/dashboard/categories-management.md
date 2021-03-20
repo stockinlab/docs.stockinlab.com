@@ -1,43 +1,43 @@
 # Categories management
 
-Administrators can access the categories management in Team > Dashboard > Categories
+Administrators can access the categories management in *Team > Dashboard > Categories*
 
 ## Create category
-1. Click Add button
-2. Choose the inventory to assign the catagory
+1. Click **Add** button
+2. Choose the inventory to assign the category
 3. Enter the name of the category
 4. Choose the dependency if any
 5. If your category is related to clinical samples you may want to enter IRB reference and expiry (optional)
 6. Switch the required parameters for the category
-7. Click Create button 
+7. Click **Create** button 
 
 ::: tip
 Add a sub-category directly from the overview of <mark>Categories</mark>
-1. Click Action button on the right of the category
-2. Select Add
+1. Click **Action** button on the right of the category
+2. Select **Add**
 3. The dependency is pre-filled
 4. Enter the information as stated above
-5. Click Create button
+5. Click **Create** button
 :::
 
 ## Edit category
-1. Click Action button on the right of the category
-2. Select Edit
+1. Click **Action** dot button on the right of the category
+2. Select **Edit**
 3. Update the wanted field(s)
-4. Click Update button
+4. Click **Update** button
 
 ## Inactivate category
 Inactivation will hide all the records contained into this category to users. The category can be re-activate anytime.
 
-1. Click Action button on the right of the category
-2. Select Edit
+1. Click **Action** dot button on the right of the category
+2. Select **Edit**
 3. Switch the Active button
-4. Click Update button
+4. Click **Update** button
 
 ## Delete category
 
-1. Click Action button on the right of the category
-2. Select delete
+1. Click **Action** dot button on the right of the category
+2. Select **Delete**
 
 ::: danger
 A category containing records cannot be deleted. You may inactivate to hide to users in the inventory.
