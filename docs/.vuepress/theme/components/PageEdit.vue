@@ -1,8 +1,10 @@
 <template>
     <footer class="flex flex-wrap justify-between py-4">
         <div v-if="editLink" class="font-semibold text-sm mr-2">
-            <a :href="editLink" class="text-gray-700" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
-            <OutboundLink/>
+            <a :href="editLink" class="text-gray-700" target="_blank" rel="noopener noreferrer">
+                {{ editLinkText }}
+                <OutboundLink/>
+            </a>
         </div>
 
         <div v-if="lastUpdated" class="text-sm">

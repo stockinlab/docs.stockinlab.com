@@ -17,7 +17,7 @@
 
             <main class="flex container max-w-6xl mx-auto px-4 sm:px-6 py-8">
                 <div class="xl:w-3/4">
-                    <Content class="documentation-content pb-8"/>
+                    <Content class="prose max-w-none pb-4"/>
 
                     <PageEdit/>
 
@@ -32,35 +32,6 @@
             </main>
         </div>
     </div>
-
-
-    <!--    <div :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">-->
-    <!--        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleNavbar"/>-->
-
-    <!--        <div class="sidebar-mask" @click="toggleNavbar(false)"/>-->
-
-    <!--        <div class="relative container max-w-8xl mx-auto px-6 md:px-8 py-12">-->
-    <!--            <div class="flex flex-col lg:flex-row">-->
-    <!--                <Sidebar :items="sidebarItems" @toggle-sidebar="toggleNavbar"/>-->
-
-    <!--                <main class="flex-1 flex">-->
-    <!--                    <div class="xl:w-3/4 documentation-block">-->
-    <!--                        <Content class="documentation-content pb-8"/>-->
-
-    <!--                        <PageEdit/>-->
-
-    <!--                        <PageNav v-bind="{ sidebarItems }"/>-->
-    <!--                    </div>-->
-
-    <!--                    <div class="hidden text-sm xl:block xl:w-1/4 ml-8">-->
-    <!--                        <div class="flex flex-col justify-between overflow-y-auto sticky top-8">-->
-    <!--                            <ContentTable class="mb-8"/>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </main>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
 </template>
 
 <script>

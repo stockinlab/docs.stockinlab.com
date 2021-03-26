@@ -40,7 +40,7 @@ export default {
     methods: {
         getLinks() {
             this.try += 1;
-            this.titles = [...document.querySelectorAll('.documentation-content h2')];
+            this.titles = [...document.querySelectorAll('.prose h2')];
             // this.titles = [...document.querySelectorAll('.documentation-content h2, .documentation-content h3')];
             this.links = this.titles
                 .map(el => {

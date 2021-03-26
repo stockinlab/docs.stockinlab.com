@@ -35,6 +35,10 @@ module.exports = {
             maxWidth: {
                 '8xl': '88rem',
             },
+            top: {
+                '8': '2rem',
+                '12': '3rem',
+            },
         },
     },
     variants: {
@@ -43,4 +47,7 @@ module.exports = {
         margin: ['responsive', 'first'],
         width: ['responsive', 'focus'],
     },
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 };
