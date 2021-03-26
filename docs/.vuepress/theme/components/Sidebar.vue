@@ -1,6 +1,6 @@
 <template>
     <div class="fixed z-30 inset-y-0 left-0 w-64 p-8 bg-cool-gray-50 border-r border-gray-200 overflow-auto -translate-x-full lg:translate-x-0 ease-in duration-200" ref="sidebar">
-        <button class="absolute z-50 text-gray-600 lg:hidden focus:outline-none" style="top: 1rem; right: 1rem;" id="sidebar-button" @click="$emit('toggle-sidebar', false)">
+        <button class="absolute z-50 text-gray-600 lg:hidden focus:outline-none" style="top: 1rem; right: 1rem;" id="sidebar-button" aria-label="Sidebar menu" @click="$emit('toggle-sidebar', false)">
             <svg class="h-6 w-6">
                 <use href="/assets/images/sprite.svg#close"/>
             </svg>
