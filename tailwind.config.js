@@ -3,7 +3,8 @@ const colors = require('tailwindcss/colors');
 module.exports = {
     purge: {
         content: [
-            './docs/.vuepress/dist/**/*.@(js|md|html)',
+            './docs/.vuepress/dist/**/*.@(js|md|vue|html)',
+            './docs/.vuepress/**/*.@(js|md|vue|html)',
         ],
     },
     theme: {
