@@ -1,7 +1,12 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-    purge: false,
+    purge: {
+        content: [
+            './docs/.vuepress/dist/**/*.@(js|md|vue|html)',
+            './docs/.vuepress/**/*.@(js|md|vue|html)',
+        ],
+    },
     theme: {
         colors: {
             transparent: 'transparent',
