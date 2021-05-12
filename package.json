@@ -22,7 +22,7 @@
         "eslint-loader": "^4.0.2",
         "eslint-plugin-vue": "^7.5.0",
         "node-sass": "^5.0.0",
-        "postcss": "^7",
+        "postcss": "^8",
         "sass-loader": "^10.1.1",
         "vuepress": "^1.8.1",
         "vuepress-plugin-clean-urls": "^1.1.2",
