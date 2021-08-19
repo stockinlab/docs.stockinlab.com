@@ -1,6 +1,6 @@
 # Audit trail
 
-Access the Audt Trail in *Home > Super-administration dashboard > Activity > Audit Trail*
+Access the audit trail in *Home > Super-administration dashboard > Activity > Audit Trail*
 
 ## Track activity from a team
 

@@ -1,43 +1,45 @@
 # Parameters management
-Administrators can access the parameters management in *Team > Dashboard > Parameters*.
+
+Administrators can access the parameters' management in *Team > Dashboard > Parameters*.
 
 ## Create parameter
 
-::: warning
-Always check the list of parameters before creating a new one to avoid dupliacte.
+::: warning Always check the list of parameters before creating a new one to avoid duplicate.
 
 The new parameter(s) created will apply only to your team.
-:::  
 
-1. Click **Add** button on top right.  
+1. Click **Add** button on top right.
 2. Enter the Name of your new parameter and eventually a description
 3. Select the Type of your parameters in the dropdown
 4. Allocate the parameter to one or several inventory(ies).
 5. Click **Create** button
 
 ## Edit parameter
+
 1. Click **Action** dot button on the right of the parameter
 2. Select **Edit**
 3. Update the information
-4. Click **Update** button 
+4. Click **Update** button
 
 ::: danger
-If the parameter is already filled for one record it is impossible to delete it.
-The global parameters can be updated only by a [super-administrator](/laboratory-information-management-system/super-administration/global-parameters-management.html#edit-global-parameter)
+If the parameter is already filled for one record it is impossible to delete it. The global parameters can be updated only by a [super-administrator](/laboratory-information-management-system/super-administration/global-parameters-management.html#edit-global-parameter)
 :::
 
 ## Global parameters
-Global parameters are created by the super-administrator of your server and are common to all teams. 
-Global parameters are useful to search into [Public records](/laboratory-information-management-system/records/search.html#search-into-public-records). 
+
+Global parameters are created by the super-administrator of your server and are common to all teams. Global parameters are useful to search into [Public records](/laboratory-information-management-system/records/search.html#search-into-public-records).
 
 ## Expiry date parameter
-If you want the parameter to be an expiry date, select Expiry date in the **Type** dropdown when you create the parameter.  
 
-When you add a record into the inventory, specify the day of expiry. You will get a notification when the date of this record is expired.  
+If you want the parameter to be an expiry date, select Expiry date in the **Type** dropdown when you create the parameter.
+
+When you add a record into the inventory, specify the day of expiry. You will get a notification when the date of this record is expired.
 
 Check the expired records by using the [filter](/laboratory-information-management-system/search-record.html#filters) **Expired** in the inventory.
 
 ## Required parameters
-Required parameters can be associated to a [category](/laboratory-information-management-system/dashboard/categories-management.html#create-category). 
+
+Required parameters can be associated to a [category](/laboratory-information-management-system/dashboard/categories-management.html#create-category).
+
 1. If not existing, [create the parameter](/laboratory-information-management-system/dashboard/parameters-management.html#create-parameter)
 2. During the creation of a new category, switch the parameter that need to be required. If the category already exists, simply [edit the category](/laboratory-information-management-system/dashboard/categories-management.html#edit-category) to add the required parameter.
