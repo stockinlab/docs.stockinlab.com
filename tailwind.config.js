@@ -1,19 +1,17 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-    purge: {
-        content: [
-            './docs/.vuepress/dist/**/*.@(js|md|vue|html)',
-            './docs/.vuepress/**/*.@(js|md|vue|html)',
-        ],
-    },
+    content: [
+        './docs/.vuepress/dist/**/*.{js,ts,md,vue,html}',
+        './docs/.vuepress/**/*.{js,ts,md,vue,html}',
+    ],
     theme: {
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
             black: colors.black,
             white: colors.white,
-            gray: colors.coolGray,
+            gray: colors.gray,
             red: colors.red,
             orange: colors.orange,
             yellow: colors.amber,
@@ -34,7 +32,7 @@ module.exports = {
             indigo: colors.indigo,
             purple: colors.violet,
             pink: colors.pink,
-            'cool-gray': colors.blueGray,
+            'cool-gray': colors.slate,
         },
         extend: {
             maxWidth: {
@@ -47,10 +45,12 @@ module.exports = {
         },
     },
     variants: {
-        borderRadius: ['responsive', 'focus'],
-        borderWidth: ['responsive', 'active', 'focus'],
-        margin: ['responsive', 'first'],
-        width: ['responsive', 'focus'],
+        extend: {
+            borderRadius: ['focus'],
+            borderWidth: ['active', 'focus'],
+            margin: ['first'],
+            width: ['focus'],
+        },
     },
     plugins: [
         require('@tailwindcss/typography'),

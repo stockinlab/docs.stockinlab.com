@@ -1,7 +1,10 @@
 .idea/
 docs/.vuepress/dist
+docs/.vuepress/.cache
+docs/.vuepress/.temp
 node_modules
 .DS_Store
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+*.log

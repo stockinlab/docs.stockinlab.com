@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+    --nprogress-color: #0694a2;
+    --nprogress-z-index: 1031;
+}
+
+.shadow-outline-teal {
+    box-shadow: 0 0 0 3px rgba(126, 220, 226, .45);
+}
+
+.focus\:shadow-outline-teal:focus {
+    @apply shadow-outline-teal;
+}
+
+.group:hover .group-hover\:translate-r-5px {
+    transform: translateX(5px);
+}
+
+.-translate-x-full {
+    transform: translateX(-100%);
+}
+
+@screen lg {
+    .lg\:translate-x-0 {
+        transform: translateX(0);
+    }
+}
+
+.sidebar-open .sidebar {
+    @apply absolute block left-0 right-0 px-6 py-8;
+    top: 2px;
+}
+
+.home-link:focus img {
+    @apply shadow-outline-teal;
+}
+
+@screen md {
+    .sidebar-open .sidebar {
+        @apply px-8;
+    }
+}
+
+@screen lg {
+    .home-link:focus img {
+        box-shadow: none;
+    }
+
+    .sidebar-open .sidebar {
+        @apply w-56 px-0 py-0;
+        position: initial;
+        top: initial;
+        right: initial;
+        left: initial;
+    }
+}
+
+.prose {
+    a {
+        @apply text-teal-500;
+    }
+
+    a:hover {
+        @apply text-teal-700
+    }
+
+    a.header-anchor {
+        @apply hidden;
+        font-size: 0.85em;
+        float: left;
+        margin-left: -0.80em;
+        padding-right: 0.17em;
+        opacity: 0;
+    }
+
+    h1:hover a.header-anchor,
+    h2:hover a.header-anchor,
+    h3:hover a.header-anchor,
+    h4:hover a.header-anchor,
+    h5:hover a.header-anchor,
+    h6:hover a.header-anchor {
+        opacity: 1;
+        display: block;
+    }
+
+    h2:before {
+        @apply block border-t border-gray-200 mb-4;
+        content: '';
+    }
+
+    ol > li > *:first-child {
+        @apply my-1;
+    }
+
+    p + ul, p + ol {
+        @apply mb-2;
+    }
+
+    a .icon.outbound {
+        @apply ml-1;
+    }
+
+    code {
+        @apply bg-cool-gray-100 font-sans px-1 rounded text-gray-800;
+    }
+
+    mark {
+        @apply bg-teal-50 rounded text-teal-800;
+        padding: .125rem .25rem;
+    }
+}
+
+.alert {
+    @apply p-4 border-b-4 border-cool-gray-500 rounded my-4 bg-cool-gray-50 text-cool-gray-800 shadow items-start;
+
+    .alert-title {
+        @apply mt-0 font-bold flex items-center hidden;
+    }
+
+    .alert-content {
+        @apply w-full;
+    }
+
+    .alert-content > *:last-child {
+        @apply mb-0;
+    }
+
+    .alert-content > *:first-child {
+        @apply mt-0;
+    }
+}
+
+@screen sm {
+    .alert {
+        @apply flex p-6 -mx-2;
+    }
+
+    .alert .alert-title {
+        @apply mb-0 px-2 block;
+    }
+
+    .alert .alert-content {
+        @apply flex-1 px-2;
+    }
+}
+
+.alert.alert-tip {
+    @apply border-green-500;
+
+    .alert-title {
+        @apply text-green-900;
+    }
+}
+
+.alert.alert-warning {
+    @apply border-orange-500;
+
+    .alert-title {
+        @apply text-orange-900;
+    }
+}
+
+.alert.alert-danger {
+    @apply border-red-500;
+
+    .alert-title {
+        @apply text-red-900;
+    }
+}
+
+.fade-slide-y-enter-active {
+    transition: all 0.3s ease;
+}
+
+.fade-slide-y-leave-active {
+    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.fade-slide-y-enter-from,
+.fade-slide-y-leave-to {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.sidebar-mask {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.sidebar-open .sidebar-mask {
+    display: block;
+}
+
+@tailwind utilities;
