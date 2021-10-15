@@ -33,6 +33,7 @@ const titles = ref<Array<Element>>([]);
 const links = ref<Array<TableLink>>([]);
 const retry = ref<number>(0);
 const currentViewId = ref<string>('');
+const isEventRegistered = ref<boolean>(false);
 
 const followFirstVisibleId = () => {
     let currentViewedId = '';
@@ -76,8 +77,9 @@ const getLinks = () => {
 
     if (links.value.length === 0 && retry.value < 10) {
         requestAnimationFrame(getLinks);
-    } else {
+    } else if(isEventRegistered.value === false) {
         document.addEventListener('scroll', followFirstVisibleId);
+        isEventRegistered.value = true;
         // document.addEventListener('scroll', this.animationFrame);
         // document.addEventListener('scroll', () => {
         //     this.followFirstVisibleId()
@@ -93,11 +95,12 @@ watch(
         links.value = [];
         retry.value = 0;
         getLinks();
-    },
-    {immediate: true}
+    }
 );
 
-onMounted(() => getLinks());
+onMounted(() => {
+    getLinks();
+});
 onUnmounted(() => {
     document.removeEventListener('scroll', followFirstVisibleId);
 });
