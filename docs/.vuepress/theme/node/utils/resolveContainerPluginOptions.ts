@@ -26,11 +26,6 @@ export const resolveContainerPluginOptions = (
         {}
     );
 
-    const color = {
-        danger: 'red',
-        tip: 'green',
-        warning: 'orange',
-    };
     const icon = {
         danger: 'error',
         tip: 'bulb',
@@ -40,7 +35,7 @@ export const resolveContainerPluginOptions = (
     return {
         type,
         locales,
-        before: () => `<div class="alert alert-${type}"><div class="alert-title"><svg class="h-8 w-8 text-${color[type]}-500"><use href="/assets/images/icons.svg#${icon[type]}"/></svg></div><div class="alert-content">\n`,
+        before: () => `<div class="alert alert-${type}"><div class="alert-title"><svg class="h-8 w-8"><use href="/assets/images/icons.svg#${icon[type]}"/></svg></div><div class="alert-content">\n`,
         after: () => '</div></div>\n',
     };
 };

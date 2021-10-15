@@ -8,7 +8,7 @@
         </div>
 
         <div v-if="lastUpdated" class="text-sm">
-            <span class="font-semibold text-gray-700">{{ themeLocale.lastUpdatedText }}:</span>
+            <span class="font-semibold text-gray-700">{{ themeLocale.lastUpdatedText }}: </span>
             <span class="text-gray-500 font-light">{{ lastUpdated }}</span>
         </div>
     </footer>

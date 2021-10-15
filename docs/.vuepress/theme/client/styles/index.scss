@@ -149,24 +149,24 @@
 .alert.alert-tip {
     @apply border-green-500;
 
-    .alert-title {
-        @apply text-green-900;
+    .alert-title svg {
+        @apply text-green-500;
     }
 }
 
 .alert.alert-warning {
     @apply border-orange-500;
 
-    .alert-title {
-        @apply text-orange-900;
+    .alert-title svg {
+        @apply text-orange-500;
     }
 }
 
 .alert.alert-danger {
     @apply border-red-500;
 
-    .alert-title {
-        @apply text-red-900;
+    .alert-title svg {
+        @apply text-red-500;
     }
 }
 
