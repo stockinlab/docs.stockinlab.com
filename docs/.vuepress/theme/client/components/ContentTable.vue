@@ -21,16 +21,16 @@
 import {onMounted, onUnmounted, ref, watch} from 'vue';
 import {useRoute} from 'vue-router';
 
-interface TableLink {
+type TableLink = {
     id: string,
     text: string,
     level: number,
-}
+};
 
 const route = useRoute();
 
-const titles = ref<Array<Element>>([]);
-const links = ref<Array<TableLink>>([]);
+const titles = ref<HTMLHeadingElement[]>([]);
+const links = ref<TableLink[]>([]);
 const retry = ref<number>(0);
 const currentViewId = ref<string>('');
 const isEventRegistered = ref<boolean>(false);
@@ -51,40 +51,24 @@ const followFirstVisibleId = () => {
     currentViewId.value = currentViewedId;
 };
 
-// const animationFrame = () => {
-//     requestAnimationFrame(followFirstVisibleId);
-// };
-
 const getLinks = () => {
     retry.value += 1;
-    titles.value = [...document.querySelectorAll('.prose h2')];
-    // this.titles = [...document.querySelectorAll('.documentation-content h2, .documentation-content h3')];
+    titles.value = [...document.querySelectorAll<HTMLHeadingElement>('.prose h2')];
     links.value = titles.value
-        .map((el: Element) => {
-            if (el.id) {
-                return {
-                    id: el.id,
-                    text: el.innerText
-                        .replace('# ', '')
-                        .replace('#\n', ''),
-                    level: parseInt(el.tagName.replace('H', ''), 10) - 2,
-                };
-            }
-
-            return null;
-        })
-        .filter(el => el);
+        .filter((element: HTMLHeadingElement) => element.id)
+        .map((element: HTMLHeadingElement) => ({
+            id: element.id,
+            text: element.innerText
+                .replace('# ', '')
+                .replace('#\n', ''),
+            level: parseInt(element.tagName.replace('H', ''), 10) - 2,
+        }));
 
     if (links.value.length === 0 && retry.value < 10) {
         requestAnimationFrame(getLinks);
-    } else if(isEventRegistered.value === false) {
+    } else if (isEventRegistered.value === false) {
         document.addEventListener('scroll', followFirstVisibleId);
         isEventRegistered.value = true;
-        // document.addEventListener('scroll', this.animationFrame);
-        // document.addEventListener('scroll', () => {
-        //     this.followFirstVisibleId()
-        // requestAnimationFrame();
-        // });
     }
 };
 
