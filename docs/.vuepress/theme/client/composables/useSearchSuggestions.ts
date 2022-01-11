@@ -23,8 +23,6 @@ export const useSearchSuggestions = ({searchIndex, routeLocale, query, maxSugges
 
         const matchPageHeader = (searchIndexItem, header) => {
             if (isQueryMatched(searchStr, [header.title])) {
-                console.log('case 2', header);
-
                 suggestions.push({
                     link: `${searchIndexItem.path}#${header.slug}`,
                     title: searchIndexItem.title,
@@ -42,8 +40,6 @@ export const useSearchSuggestions = ({searchIndex, routeLocale, query, maxSugges
         };
 
         for (const searchIndexItem of localeSearchIndex.value) {
-            console.log(searchIndexItem);
-
             if (suggestions.length >= maxSuggestions.value) {
                 break;
             }
@@ -53,7 +49,6 @@ export const useSearchSuggestions = ({searchIndex, routeLocale, query, maxSugges
                 searchIndexItem.title,
                 ...searchIndexItem.extraFields,
             ])) {
-                console.log('case 1', searchIndexItem.title);
                 suggestions.push({
                     link: searchIndexItem.path,
                     title: searchIndexItem.title,

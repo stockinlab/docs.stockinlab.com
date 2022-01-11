@@ -5,7 +5,7 @@
                 ←
                 <a v-if="prevNavLink.type === 'external'" class="prev" :href="prevNavLink.link" target="_blank" rel="noopener noreferrer">
                     {{ prevNavLink.text || prevNavLink.link }}
-                    <OutboundLink/>
+                    <ExternalLinkIcon/>
                 </a>
 
                 <RouterLink v-else :to="prevNavLink.link" class="text-teal-500 font-medium no-underline hover:underline focus:underline">
@@ -18,7 +18,7 @@
             <p v-if="nextNavLink" class="next">
                 <a v-if="nextNavLink.type === 'external'" :href="nextNavLink.link" target="_blank" rel="noopener noreferrer">
                     {{ nextNavLink.text || nextNavLink.link }}
-                    <OutboundLink/>
+                    <ExternalLinkIcon/>
                 </a>
 
                 <RouterLink v-else :to="nextNavLink.link" class="text-teal-500 font-medium no-underline hover:underline focus:underline">
@@ -62,6 +62,7 @@ const resolveFromFrontmatterConfig = (conf: unknown): null | false | NavLinkType
  * Resolve `prev` or `next` config from sidebar items
  */
 const resolveFromSidebarItems = (sidebarItems: ResolvedSidebarItem[], currentPath: string, offset: number): null | NavLinkType => {
+
     const index = sidebarItems.findIndex((item) => item.link === currentPath);
 
     if (index !== -1) {

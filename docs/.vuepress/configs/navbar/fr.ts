@@ -1,4 +1,4 @@
-import type {NavbarConfig} from "../../theme/shared";
+import type {NavbarConfig} from '../../theme/shared';
 
 export const fr: NavbarConfig = [
     {

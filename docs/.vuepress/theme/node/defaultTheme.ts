@@ -1,6 +1,6 @@
-import type {Theme, ThemeConfig} from '@vuepress/core';
+import type {Page, Theme, ThemeConfig} from '@vuepress/core';
 import {path} from '@vuepress/utils';
-import type {DefaultThemeLocaleOptions, DefaultThemePluginsOptions,} from '../shared';
+import type {DefaultThemeLocaleOptions, DefaultThemePageData, DefaultThemePluginsOptions,} from '../shared';
 import {assignDefaultLocaleOptions, resolveActiveHeaderLinksPluginOptions, resolveContainerPluginOptions, resolveContainerPluginOptionsForCodeGroup, resolveContainerPluginOptionsForCodeGroupItem, resolveContainerPluginOptionsForDetails, resolveGitPluginOptions, resolveMediumZoomPluginOptions,} from './utils';
 
 export interface DefaultThemeOptions extends ThemeConfig, DefaultThemeLocaleOptions {
@@ -8,10 +8,24 @@ export interface DefaultThemeOptions extends ThemeConfig, DefaultThemeLocaleOpti
      * To avoid confusion with the root `plugins` option,
      * we use `themePlugins`
      */
-    themePlugins?: DefaultThemePluginsOptions,
+    themePlugins?: DefaultThemePluginsOptions
 }
 
-export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...localeOptions}) => {
+export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...localeOptions}, app) => {
+    if (app.options.bundler.endsWith('vite')) {
+        // eslint-disable-next-line import/no-extraneous-dependencies
+        app.options.bundlerConfig.viteOptions = require('vite').mergeConfig(
+            app.options.bundlerConfig.viteOptions,
+            {
+                css: {
+                    preprocessorOptions: {
+                        scss: {charset: false},
+                    },
+                },
+            }
+        );
+    }
+
     assignDefaultLocaleOptions(localeOptions);
 
     return {
@@ -19,12 +33,18 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...
 
         layouts: path.resolve(__dirname, '../client/layouts'),
 
+        // templateBuild: path.resolve(__dirname, '../../templates/index.build.html'),
+
         clientAppEnhanceFiles: path.resolve(__dirname, '../client/clientAppEnhance.js'),
 
         clientAppSetupFiles: path.resolve(__dirname, '../client/clientAppSetup.js'),
 
-        // use the relative file path to generate edit link
-        extendsPageData: ({filePathRelative}) => ({filePathRelative}),
+        extendsPage: (page: Page<DefaultThemePageData>) => {
+            // save relative file path into page data to generate edit link
+            page.data.filePathRelative = page.filePathRelative;
+            // save title into route meta to generate navbar and sidebar
+            page.routeMeta.title = page.title;
+        },
 
         plugins: [
             [
@@ -56,6 +76,7 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...
                 '@vuepress/container',
                 resolveContainerPluginOptionsForCodeGroupItem(themePlugins),
             ],
+            ['@vuepress/external-link-icon', themePlugins.externalLinkIcon !== false],
             ['@vuepress/git', resolveGitPluginOptions(themePlugins, localeOptions)],
             ['@vuepress/medium-zoom', resolveMediumZoomPluginOptions(themePlugins)],
             ['@vuepress/nprogress', themePlugins.nprogress !== false],

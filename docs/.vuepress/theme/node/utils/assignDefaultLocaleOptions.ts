@@ -1,6 +1,6 @@
 import type {DefaultThemeLocaleData, DefaultThemeLocaleOptions,} from '../../shared';
 
-const defaultLocaleOptions: DefaultThemeLocaleOptions = {
+export const DEFAULT_LOCALE_OPTIONS: DefaultThemeLocaleOptions = {
     // navbar
     navbar: [],
     logo: null,
@@ -36,7 +36,7 @@ const defaultLocaleOptions: DefaultThemeLocaleOptions = {
     toggleSidebar: 'toggle sidebar',
 };
 
-const defaultLocaleData: DefaultThemeLocaleData = {
+export const DEFAULT_LOCALE_DATA: DefaultThemeLocaleData = {
     // navbar
     selectLanguageName: 'English',
 };
@@ -54,12 +54,12 @@ export const assignDefaultLocaleOptions = (localeOptions: DefaultThemeLocaleOpti
     }
 
     Object.assign(localeOptions, {
-        ...defaultLocaleOptions,
+        ...DEFAULT_LOCALE_OPTIONS,
         ...localeOptions,
     });
 
     Object.assign(localeOptions.locales['/'], {
-        ...defaultLocaleData,
+        ...DEFAULT_LOCALE_DATA,
         ...localeOptions.locales['/'],
     });
 };

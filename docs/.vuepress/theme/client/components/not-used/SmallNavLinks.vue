@@ -13,7 +13,7 @@
             rel="noopener noreferrer"
         >
             {{ repoLabel }}
-            <OutboundLink/>
+            <ExternalLinkIcon/>
         </a>
     </nav>
 </template>

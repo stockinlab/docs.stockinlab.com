@@ -18,7 +18,7 @@
         v-bind="$attrs"
     >
         {{ item.text }}
-        <OutboundLink v-if="isBlankTarget" />
+        <ExternalLinkIcon v-if="isBlankTarget" />
     </a>
 </template>
 
@@ -29,7 +29,6 @@ import { useRoute } from 'vue-router';
 import { useSiteData } from '@vuepress/client';
 import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared';
 import {NavLink} from '../../shared';
-import OutboundLink from './global/OutboundLink';
 
 const props = defineProps({
     item: {

@@ -1,6 +1,6 @@
 import {Theme} from '@vuepress/core';
 import {path} from '@vuepress/utils';
-import {assignDefaultLocaleOptions, DefaultThemeOptions, resolveActiveHeaderLinksPluginOptions, resolveContainerPluginOptions, resolveGitPluginOptions, resolveMediumZoomPluginOptions} from './node';
+import {assignDefaultLocaleOptions, DefaultThemeOptions, DefaultThemePageData, resolveActiveHeaderLinksPluginOptions, resolveContainerPluginOptions, resolveGitPluginOptions, resolveMediumZoomPluginOptions} from './node';
 import {Page} from 'vuepress';
 
 export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...localeOptions}) => {
@@ -15,10 +15,17 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...
             404: path.resolve(__dirname, './client/layouts/404.vue'),
         },
 
+        // templateBuild: path.resolve(__dirname, '../../templates/index.build.html'),
+
         clientAppEnhanceFiles: path.resolve(__dirname, './client/clientAppEnhance.ts'),
         clientAppSetupFiles: path.resolve(__dirname, './client/clientAppSetup.ts'),
 
-        extendsPageData: ({filePathRelative}) => ({filePathRelative}),
+        extendsPage: (page: Page<DefaultThemePageData>) => {
+            // save relative file path into page data to generate edit link
+            page.data.filePathRelative = page.filePathRelative;
+            // save title into route meta to generate navbar and sidebar
+            page.routeMeta.title = page.title;
+        },
 
         plugins: [
             ['@vuepress/active-header-links', resolveActiveHeaderLinksPluginOptions(themePlugins)],

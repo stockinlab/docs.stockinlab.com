@@ -3,7 +3,7 @@
         <div v-if="editNavLink" class="font-semibold text-sm mr-2">
             <a :href="editNavLink.link" class="text-gray-700" target="_blank" rel="noopener noreferrer">
                 {{ editNavLink.text }}
-                <OutboundLink/>
+                <ExternalLinkIcon/>
             </a>
         </div>
 

@@ -4,9 +4,7 @@ import type {DefaultThemePluginsOptions} from '../../shared';
 /**
  * Resolve options for @vuepress/plugin-active-header-links
  */
-export const resolveActiveHeaderLinksPluginOptions = (
-    themePlugins: DefaultThemePluginsOptions
-): ActiveHeaderLinksPluginOptions | boolean => {
+export const resolveActiveHeaderLinksPluginOptions = (themePlugins: DefaultThemePluginsOptions): ActiveHeaderLinksPluginOptions | boolean => {
     if (themePlugins?.activeHeaderLinks === false) {
         return false;
     }
