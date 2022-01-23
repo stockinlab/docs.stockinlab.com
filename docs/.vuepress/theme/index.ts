@@ -1,7 +1,7 @@
 import {Theme} from '@vuepress/core';
 import {path} from '@vuepress/utils';
 import {assignDefaultLocaleOptions, DefaultThemeOptions, DefaultThemePageData, resolveActiveHeaderLinksPluginOptions, resolveContainerPluginOptions, resolveGitPluginOptions, resolveMediumZoomPluginOptions} from './node';
-import {Page} from 'vuepress';
+import {Page} from 'vuepress-webpack';
 
 export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...localeOptions}) => {
     assignDefaultLocaleOptions(localeOptions);

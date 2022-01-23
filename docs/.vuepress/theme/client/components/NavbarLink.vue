@@ -18,17 +18,18 @@
         v-bind="$attrs"
     >
         {{ item.text }}
-        <ExternalLinkIcon v-if="isBlankTarget" />
+        <ExternalLinkIcon v-if="isBlankTarget"/>
     </a>
 </template>
 
 <script setup lang="ts">
+import type {PropType} from 'vue';
 import {computed, defineProps, toRefs} from 'vue';
-import type { PropType } from 'vue';
-import { useRoute } from 'vue-router';
-import { useSiteData } from '@vuepress/client';
-import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared';
+import {useRoute} from 'vue-router';
+import {useSiteData} from '@vuepress/client';
+import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
 import {NavLink} from '../../shared';
+import ExternalLinkIcon from './global/ExternalLinkIcon.vue';
 
 const props = defineProps({
     item: {
@@ -39,7 +40,7 @@ const props = defineProps({
 
 const route = useRoute();
 const site = useSiteData();
-const { item } = toRefs(props);
+const {item} = toRefs(props);
 
 // if the link has http protocol
 const hasHttpProtocol = computed(() => isLinkHttp(item.value.link));

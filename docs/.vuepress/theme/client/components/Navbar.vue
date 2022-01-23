@@ -1,9 +1,14 @@
 <template>
-    <header ref="navbar" class="relative navbar bg-white shadow h-16">
+    <header ref="navbar" class="relative navbar bg-white shadow h-16" :class="{'navbar-open': isNavbarOpen}">
         <div class="container flex items-center max-w-6xl mx-auto px-4 sm:px-6 py-4 h-full">
-            <button v-if="route.path !== '/'" class="text-gray-600 lg:hidden focus:outline-none mr-2" @click="$emit('toggle-sidebar')">
+            <button v-if="route.path !== '/'" class="text-gray-600 lg:hidden focus:outline-none mr-2" @click="emit('toggle-sidebar')">
                 <svg fill="none" viewBox="0 0 24 24" class="h-8 w-8 text-gray-500">
-                    <path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-width="2" stroke="currentColor"></path>
+                    <path
+                        d="M4 6h16M4 12h16M4 18h7"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                        stroke="currentColor"
+                    />
                 </svg>
             </button>
 
@@ -25,14 +30,15 @@
             :class="{
                 'navbar-small z-50 absolute top-16 p-6 bg-white inset-x-0 shadow p-4 sm:px-6 border-t border-gray-200 transition duration-1000 ease-in': true,
                 'hidden': !isNavbarOpen,
-            }">
+            }"
+        >
             <NavbarLinks class="space-y-2"/>
         </div>
     </header>
 </template>
 
 <script setup lang="ts">
-import {onMounted, onUnmounted, ref} from 'vue';
+import {defineEmits, onMounted, onUnmounted, ref} from 'vue';
 import {useRoute, useRouter} from 'vue-router';
 import NavbarLinks from './NavbarLinks.vue';
 import CustomSearchBox from './CustomSearchBox.vue';
@@ -41,6 +47,8 @@ import NavbarButton from './NavbarButton.vue';
 
 const navbar = ref<HTMLElement | null>(null);
 const route = useRoute();
+
+const emit = defineEmits(['toggle-sidebar']);
 
 // navbar
 const isNavbarOpen = ref(false);

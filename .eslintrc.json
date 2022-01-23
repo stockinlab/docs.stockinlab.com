@@ -7,7 +7,7 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:vue/vue3-essential",
+        "plugin:vue/vue3-recommended",
         "@vue/typescript/recommended"
     ],
     "globals": {
@@ -16,7 +16,7 @@
     },
     "parser": "vue-eslint-parser",
     "parserOptions": {
-        "ecmaVersion": 2020,
+        "ecmaVersion": 2021,
         "sourceType": "module"
     },
     "plugins": [
@@ -24,24 +24,48 @@
     ],
     "rules": {
         "indent": [
-            "error",
+            "warn",
             4,
             {
                 "SwitchCase": 1
             }
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "always"
         ],
+        "vue/html-closing-bracket-spacing": [
+            "warn",
+            {
+                "startTag": "never",
+                "endTag": "never",
+                "selfClosingTag": "never"
+            }
+        ],
+        "vue/html-indent": [
+            "warn",
+            4
+        ],
+        "vue/max-attributes-per-line": [
+            "warn",
+            {
+                "singleline": {
+                    "max": 3
+                },
+                "multiline": {
+                    "max": 1
+                }
+            }
+        ],
+        "vue/multi-word-component-names": "off",
         "@typescript-eslint/ban-ts-comment": "off"
     }
 }

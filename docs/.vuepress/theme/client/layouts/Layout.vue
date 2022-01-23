@@ -6,7 +6,7 @@
     >
         <Sidebar
             :items="sidebarItems"
-            :isSidebarOpen="isSidebarOpen"
+            :is-sidebar-open="isSidebarOpen"
             @toggle-sidebar="toggleSidebar"
         />
 
@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
+import {usePageFrontmatter} from '@vuepress/client';
 import {computed, onMounted, onUnmounted, ref} from 'vue';
 import {useRouter} from 'vue-router';
 import {useScrollPromise, useSidebarItems, useThemeLocaleData,} from '../composables';
@@ -58,7 +58,6 @@ import PageMeta from '../components/PageMeta.vue';
 import PageNav from '../components/PageNav.vue';
 import Sidebar from '../components/Sidebar.vue';
 
-const page = usePageData();
 const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>();
 const themeLocale = useThemeLocaleData();
 
@@ -74,11 +73,11 @@ const toggleSidebar = (to?: boolean): void => {
     isSidebarOpen.value = typeof to === 'boolean' ? to : !isSidebarOpen.value;
 };
 const touchStart = {x: 0, y: 0};
-const onTouchStart = (e): void => {
+const onTouchStart = (e: TouchEvent): void => {
     touchStart.x = e.changedTouches[0].clientX;
     touchStart.y = e.changedTouches[0].clientY;
 };
-const onTouchEnd = (e): void => {
+const onTouchEnd = (e: TouchEvent): void => {
     const dx = e.changedTouches[0].clientX - touchStart.x;
     const dy = e.changedTouches[0].clientY - touchStart.y;
 

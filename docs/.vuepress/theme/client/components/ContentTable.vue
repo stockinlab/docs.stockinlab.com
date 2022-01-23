@@ -9,7 +9,16 @@
 
         <ul class="overflow-x-hidden -ml-px flex flex-col">
             <li v-for="(link, index) in links" :key="index">
-                <a :href="`#${link.id}`" class="block text-gray-600 hover:text-teal-500 focus:text-teal-500 font-light text-sm pl-4 py-1 border-l-2" :class="{'border-teal-500 text-teal-500': currentViewId === link.id, 'border-transparent': currentViewId !== link.id, 'pl-4': link.level === 0, 'pl-8': link.level === 1}">
+                <a
+                    :href="`#${link.id}`"
+                    :class="{
+                        'block text-gray-600 hover:text-teal-500 focus:text-teal-500 font-light text-sm pl-4 py-1 border-l-2': true,
+                        'border-teal-500 text-teal-500': currentViewId === link.id,
+                        'border-transparent': currentViewId !== link.id,
+                        'pl-4': link.level === 0,
+                        'pl-8': link.level === 1,
+                    }"
+                >
                     {{ link.text }}
                 </a>
             </li>

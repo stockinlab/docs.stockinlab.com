@@ -3,7 +3,13 @@
         <div class="float-left mr-4">
             <p v-if="prevNavLink">
                 ←
-                <a v-if="prevNavLink.type === 'external'" class="prev" :href="prevNavLink.link" target="_blank" rel="noopener noreferrer">
+                <a
+                    v-if="prevNavLink.type === 'external'"
+                    class="prev"
+                    :href="prevNavLink.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {{ prevNavLink.text || prevNavLink.link }}
                     <ExternalLinkIcon/>
                 </a>
@@ -16,7 +22,12 @@
 
         <div class="float-right">
             <p v-if="nextNavLink" class="next">
-                <a v-if="nextNavLink.type === 'external'" :href="nextNavLink.link" target="_blank" rel="noopener noreferrer">
+                <a
+                    v-if="nextNavLink.type === 'external'"
+                    :href="nextNavLink.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {{ nextNavLink.text || nextNavLink.link }}
                     <ExternalLinkIcon/>
                 </a>
@@ -37,7 +48,7 @@ import {usePageFrontmatter} from '@vuepress/client';
 import {isPlainObject, isString} from '@vuepress/shared';
 import type {NavLink as NavLinkType, ResolvedSidebarItem} from '../../shared';
 import {useNavLink, useSidebarItems} from '../composables';
-// import NavLink from './NavLink.vue';
+import ExternalLinkIcon from './global/ExternalLinkIcon.vue';
 
 /**
  * Resolve `prev` or `next` config from frontmatter

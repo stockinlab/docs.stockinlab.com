@@ -4,11 +4,11 @@
         :class="{'-translate-x-full': !isSidebarOpen}"
     >
         <button
+            id="sidebar-button"
             class="absolute z-50 text-gray-600 lg:hidden focus:outline-none"
             style="top: 1rem; right: 1rem;"
-            id="sidebar-button"
             aria-label="Sidebar menu"
-            @click="$emit('toggle-sidebar', false)"
+            @click="emit('toggle-sidebar', false)"
         >
             <svg class="h-6 w-6">
                 <use href="/assets/images/sprite.svg#close"/>
@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from 'vue';
+import {defineEmits, defineProps} from 'vue';
 import {useSidebarItems, useThemeLocaleData} from '../composables';
 import SidebarLink from './SidebarLink.vue';
 
@@ -53,6 +53,8 @@ defineProps({
         default: false,
     },
 });
+
+const emit = defineEmits(['toggle-sidebar']);
 
 const sidebarItems = useSidebarItems();
 const themeLocale = useThemeLocaleData();

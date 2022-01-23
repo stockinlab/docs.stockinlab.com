@@ -1,7 +1,8 @@
 import type {ComputedRef} from 'vue';
 import {computed, Ref} from 'vue';
-import {isQueryMatched, SearchSuggestion} from '@vuepress/plugin-search/lib/client';
+import {isQueryMatched, SearchIndexItem, SearchSuggestion} from '@vuepress/plugin-search/lib/client';
 import {SearchIndex} from '@vuepress/plugin-search/lib/shared';
+import {PageHeader} from '@vuepress/client';
 
 export const useSearchSuggestions = ({searchIndex, routeLocale, query, maxSuggestions,}: {
     searchIndex: Ref<SearchIndex>;
@@ -21,7 +22,7 @@ export const useSearchSuggestions = ({searchIndex, routeLocale, query, maxSugges
 
         const suggestions: Array<SearchSuggestion> = [];
 
-        const matchPageHeader = (searchIndexItem, header) => {
+        const matchPageHeader = (searchIndexItem: SearchIndexItem, header: PageHeader) => {
             if (isQueryMatched(searchStr, [header.title])) {
                 suggestions.push({
                     link: `${searchIndexItem.path}#${header.slug}`,

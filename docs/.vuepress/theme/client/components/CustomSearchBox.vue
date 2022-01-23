@@ -3,7 +3,7 @@
         <div class="w-full relative">
             <div class="pointer-events-none absolute inset-y-0 left-0 pl-4 flex items-center">
                 <svg class="fill-current pointer-events-none text-gray-700 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
+                    <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
                 </svg>
             </div>
             <input
@@ -34,7 +34,7 @@
                 @mousedown="goTo(index)"
                 @mouseenter="focusIndex = index"
             >
-                <a :href="suggestion.link" @click.prevent="" class="block focus:bg-gray-100 focus:outline-none focus:text-teal-500 font-light hover:bg-gray-100 hover:text-teal-500 leading-none leading-none px-4 py-2 text-gray-600">
+                <a :href="suggestion.link" class="block focus:bg-gray-100 focus:outline-none focus:text-teal-500 font-light hover:bg-gray-100 hover:text-teal-500 leading-none leading-none px-4 py-2 text-gray-600" @click.prevent="">
                     <!--                    <span v-if="s.section" class="page-section font-medium has-arrow">{{ s.section }}</span>-->
                     <!--                    <span class="page-title" :class="{'has-arrow': s.header}">{{ s.title || s.path }}</span>-->
                     <!--                    <span v-if="s.header" class="header text-sm">{{ s.header.title }}</span>-->

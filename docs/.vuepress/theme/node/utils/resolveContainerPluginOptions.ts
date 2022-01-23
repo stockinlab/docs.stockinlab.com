@@ -1,3 +1,4 @@
+import type {LocaleData} from '@vuepress/shared';
 import type {ContainerPluginOptions} from '@vuepress/plugin-container';
 import type {DefaultThemeData, DefaultThemePluginsOptions} from '../../shared';
 
@@ -16,7 +17,7 @@ export const resolveContainerPluginOptions = (
     }
 
     const locales = Object.entries(localeOptions.locales || {}).reduce(
-        (result, [key, value]) => {
+        (result: LocaleData, [key, value]) => {
             result[key] = {
                 defaultInfo: value?.[type] ?? localeOptions[type],
             };
