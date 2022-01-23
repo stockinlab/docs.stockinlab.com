@@ -44,7 +44,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         logo: '/assets/images/small_logo.svg',
         docsRepo: 'stockinlab/docs.stockinlab.com',
         docsDir: 'docs',
-        docsBranch: 'master',
+        docsBranch: 'main',
         repo: null,
         darkMode: false,
         sidebarDepth: 2,
