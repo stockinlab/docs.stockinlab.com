@@ -1,13 +1,14 @@
 import {defineUserConfig} from '@vuepress/cli';
-import {path} from '@vuepress/utils';
-import type {DefaultThemeOptions} from './theme/node';
 import {navbar, sidebar} from './configs';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-export default defineUserConfig<DefaultThemeOptions>({
-    theme: path.resolve(__dirname, './theme'),
+/* eslint-disable */
+const {defaultTheme} = require('./theme');
+const {webpackBundler} = require('@vuepress/bundler-webpack');
+/* eslint-enable */
 
+export default defineUserConfig({
     base: '/',
     title: 'StockInLab',
     description: 'StockInLab Documentation - LIMS & ELN for researchers in academia or industry',
@@ -40,7 +41,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         },
     },
 
-    themeConfig: {
+    theme: defaultTheme({
         logo: '/assets/images/small_logo.svg',
         docsRepo: 'stockinlab/docs.stockinlab.com',
         docsDir: 'docs',
@@ -48,7 +49,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         repo: null,
         darkMode: false,
         sidebarDepth: 2,
-        // temporary disable edit link because filePathRelative doest not exists
         editLink: true,
         lastUpdated: true,
         contributors: false,
@@ -79,7 +79,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 
                 // a11y
                 openInNewWindow: 'open in new window',
-                toggleDarkMode: 'toggle dark mode',
+                toggleColorMode: 'toggle dark mode',
                 toggleSidebar: 'toggle sidebar',
             },
             '/fr/': {
@@ -107,7 +107,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 
                 // a11y
                 openInNewWindow: 'ouvrir dans un nouvel onglet',
-                toggleDarkMode: 'active/désactive le mode nuit',
+                toggleColorMode: 'active/désactive le mode nuit',
                 toggleSidebar: 'ouvrir/fermer la sidebar',
             },
         },
@@ -115,9 +115,9 @@ export default defineUserConfig<DefaultThemeOptions>({
         themePlugins: {
             git: isProd,
         }
-    },
+    }),
 
-    bundlerConfig: {
+    bundler: webpackBundler({
         postcss: {
             postcssOptions: {
                 plugins: [
@@ -125,6 +125,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                     require('autoprefixer'),
                 ],
             },
-        },
-    },
+        }
+    }),
 });

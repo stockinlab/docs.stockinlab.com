@@ -1,120 +1,109 @@
-import type {SidebarConfig} from "../../theme/shared";
+import type {SidebarConfig} from '../../theme/shared';
 
 export const fr: SidebarConfig = {
-    '/general': [
+    '/fr/general': [
         {
-            title: 'Guide',
-            collapsable: false,
+            text: 'Guide',
             children: [
-                '',
+                '/fr/general/',
             ],
         },
         {
-            title: 'Compte',
-            collapsable: false,
+            text: 'Compte',
             children: [
-                'account/settings',
-                'account/preferences',
-                'account/security',
-                'account/teams-management',
+                '/fr/general/account/settings',
+                '/fr/general/account/preferences',
+                '/fr/general/account/security',
+                '/fr/general/account/teams-management',
             ],
         },
         {
-            title: 'Super-administration',
-            collapsable: false,
+            text: 'Super-administration',
             children: [
-                'super-administration/server-configuration',
-                'super-administration/teams-management',
-                'super-administration/users-management',
-                'super-administration/super-administrator-management',
-                'super-administration/audit-trail',
-                'super-administration/backups',
+                '/fr/general/super-administration/server-configuration',
+                '/fr/general/super-administration/teams-management',
+                '/fr/general/super-administration/users-management',
+                '/fr/general/super-administration/super-administrator-management',
+                '/fr/general/super-administration/audit-trail',
+                '/fr/general/super-administration/backups',
             ],
         },
     ],
-    '/laboratory-information-management-system/': [
+    '/fr/laboratory-information-management-system/': [
         {
-            title: 'LIMS',
-            collapsable: false,
+            text: 'LIMS',
             children: [
-                '',
+                '/fr/laboratory-information-management-system/',
             ],
         },
         {
-            title: 'Enregistrements',
-            collapsable: false,
+            text: 'Enregistrements',
             children: [
-                'records/add-record',
-                'records/remove-record',
-                'records/link-records',
-                'records/label',
-                'records/edit-record',
-                'records/reserve-record',
-                'records/search',
-                'records/view-record',
-                'records/history',
-                'records/track-sample-consumption',
+                '/fr/laboratory-information-management-system/records/add-record',
+                '/fr/laboratory-information-management-system/records/import-record',
+                '/fr/laboratory-information-management-system/records/remove-record',
+                '/fr/laboratory-information-management-system/records/link-records',
+                '/fr/laboratory-information-management-system/records/label',
+                '/fr/laboratory-information-management-system/records/edit-record',
+                '/fr/laboratory-information-management-system/records/reserve-record',
+                '/fr/laboratory-information-management-system/records/search',
+                '/fr/laboratory-information-management-system/records/view-record',
+                '/fr/laboratory-information-management-system/records/history',
+                '/fr/laboratory-information-management-system/records/track-sample-consumption',
             ],
         },
         {
-            title: 'Stockage',
-            collapsable: false,
+            text: 'Stockage',
             children: [
-                'storage/stock',
-                'storage/overview',
-                'storage/capacity',
+                '/fr/laboratory-information-management-system/storage/stock',
+                '/fr/laboratory-information-management-system/storage/overview',
+                '/fr/laboratory-information-management-system/storage/capacity',
             ],
         },
         {
-            title: 'Tableau de bord',
-            collapsable: false,
+            text: 'Tableau de bord',
             children: [
-                'dashboard/parameters-management',
-                'dashboard/locations-management',
-                'dashboard/categories-management',
-                'dashboard/members-management',
-                'dashboard/import-workspace',
-                'dashboard/audit-trail',
+                '/fr/laboratory-information-management-system/dashboard/parameters-management',
+                '/fr/laboratory-information-management-system/dashboard/locations-management',
+                '/fr/laboratory-information-management-system/dashboard/categories-management',
+                '/fr/laboratory-information-management-system/dashboard/members-management',
+                '/fr/laboratory-information-management-system/dashboard/import-workspace',
+                '/fr/laboratory-information-management-system/dashboard/audit-trail',
             ],
         },
         {
-            title: 'Super-administration',
-            collapsable: false,
+            text: 'Super-administration',
             children: [
-                'super-administration/inventories-management',
-                'super-administration/global-parameters-management',
+                '/fr/laboratory-information-management-system/super-administration/inventories-management',
+                '/fr/laboratory-information-management-system/super-administration/global-parameters-management',
             ],
         },
     ],
-    '/electronic-lab-notebook/': [
+    '/fr/electronic-lab-notebook/': [
         {
-            title: 'ELN',
-            collapsable: false,
+            text: 'ELN',
             children: [
-                '',
+                '/fr/electronic-lab-notebook/',
             ],
         },
         {
-            title: 'Protocoles',
-            collapsable: false,
+            text: 'Protocoles',
             children: [
-                'protocols/',
+                '/fr/electronic-lab-notebook/protocols/',
             ],
         },
         {
-            title: 'Projets',
-            collapsable: false,
+            text: 'Projets',
             children: [
-                'projects/',
+                '/fr/electronic-lab-notebook/projects/',
             ],
         },
     ],
-    '/tools/': [
+    '/fr/tools/': [
         {
-            title: 'Outils',
-            collapsable: false,
+            text: 'Outils',
             children: [
-                'serial-dilution-calculator',
+                '/fr/tools/serial-dilution-calculator',
             ],
         },
     ],

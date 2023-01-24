@@ -44,14 +44,6 @@ module.exports = {
             },
         },
     },
-    variants: {
-        extend: {
-            borderRadius: ['focus'],
-            borderWidth: ['active', 'focus'],
-            margin: ['first'],
-            width: ['focus'],
-        },
-    },
     plugins: [
         require('@tailwindcss/typography'),
     ],

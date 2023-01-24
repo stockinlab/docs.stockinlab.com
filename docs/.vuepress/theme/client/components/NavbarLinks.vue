@@ -50,12 +50,10 @@ const navbarLinks = computed(() => [
     }
 }
 
-@media (min-width: 640px) {
-    .nav-links {
-        .nav-item,
-        .repo-link {
-            @apply ml-2;
-        }
+@screen sm {
+    .nav-links .nav-item,
+    .nav-links .repo-link {
+        @apply ml-2;
     }
 }
 </style>

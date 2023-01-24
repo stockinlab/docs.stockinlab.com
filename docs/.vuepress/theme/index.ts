@@ -1,9 +1,19 @@
 import {Theme} from '@vuepress/core';
-import {path} from '@vuepress/utils';
-import {assignDefaultLocaleOptions, DefaultThemeOptions, DefaultThemePageData, resolveActiveHeaderLinksPluginOptions, resolveContainerPluginOptions, resolveGitPluginOptions, resolveMediumZoomPluginOptions} from './node';
+import {fs, path} from '@vuepress/utils';
+import {assignDefaultLocaleOptions, DefaultThemeOptions, DefaultThemePageData, resolveContainerPluginOptions} from './node';
 import {Page} from 'vuepress-webpack';
 
-export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...localeOptions}) => {
+/* eslint-disable */
+const {activeHeaderLinksPlugin} = require('@vuepress/plugin-active-header-links');
+const {containerPlugin} = require('@vuepress/plugin-container');
+const {gitPlugin} = require('@vuepress/plugin-git');
+const {mediumZoomPlugin} = require('@vuepress/plugin-medium-zoom');
+const {nprogressPlugin} = require('@vuepress/plugin-nprogress');
+const {searchPlugin} = require('@vuepress/plugin-search');
+const {themeDataPlugin} = require('@vuepress/plugin-theme-data');
+/* eslint-enable */
+
+export const defaultTheme = ({themePlugins = {}, ...localeOptions}: DefaultThemeOptions = {}): Theme => {
     assignDefaultLocaleOptions(localeOptions);
 
     return {
@@ -17,10 +27,19 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...
 
         // templateBuild: path.resolve(__dirname, '../../templates/index.build.html'),
 
-        clientAppEnhanceFiles: path.resolve(__dirname, './client/clientAppEnhance.ts'),
-        clientAppSetupFiles: path.resolve(__dirname, './client/clientAppSetup.ts'),
+        alias: Object.fromEntries(
+            fs
+                .readdirSync(path.resolve(__dirname, './client/components'))
+                .filter((file) => file.endsWith('.vue'))
+                .map((file) => [
+                    `@theme/${file}`,
+                    path.resolve(__dirname, './client/components', file),
+                ])
+        ),
 
-        extendsPage: (page: Page<DefaultThemePageData>) => {
+        clientConfigFile: path.resolve(__dirname, './client/config.ts'),
+
+        extendsPage: (page: Page<Partial<DefaultThemePageData>>) => {
             // save relative file path into page data to generate edit link
             page.data.filePathRelative = page.filePathRelative;
             // save title into route meta to generate navbar and sidebar
@@ -28,28 +47,53 @@ export const defaultTheme: Theme<DefaultThemeOptions> = ({themePlugins = {}, ...
         },
 
         plugins: [
-            ['@vuepress/active-header-links', resolveActiveHeaderLinksPluginOptions(themePlugins)],
-            ['@vuepress/container', resolveContainerPluginOptions(themePlugins, localeOptions, 'danger')],
-            ['@vuepress/container', resolveContainerPluginOptions(themePlugins, localeOptions, 'tip')],
-            ['@vuepress/container', resolveContainerPluginOptions(themePlugins, localeOptions, 'warning')],
-            ['@vuepress/git', resolveGitPluginOptions(themePlugins, localeOptions)],
-            ['@vuepress/medium-zoom', resolveMediumZoomPluginOptions(themePlugins)],
-            ['@vuepress/nprogress'],
-            [
-                '@vuepress/plugin-search',
-                {
-                    locales: {
-                        '/': {
-                            placeholder: 'Search',
-                        },
-                        '/fr/': {
-                            placeholder: 'Rechercher',
-                        },
+            // @vuepress/plugin-active-header-link
+            activeHeaderLinksPlugin({
+                headerLinkSelector: 'a.sidebar-item',
+                headerAnchorSelector: '.header-anchor',
+                // should greater than page transition duration
+                delay: 300,
+            }),
+
+            // @vuepress/plugin-container
+            containerPlugin(resolveContainerPluginOptions(localeOptions, 'tip')),
+            containerPlugin(resolveContainerPluginOptions(localeOptions, 'warning')),
+            containerPlugin(resolveContainerPluginOptions(localeOptions, 'danger')),
+
+            // @vuepress/plugin-git
+            gitPlugin({
+                createdTime: false,
+                updatedTime: localeOptions.lastUpdated !== false,
+                contributors: localeOptions.contributors !== false,
+            }),
+
+            // @vuepress/plugin-medium-zoom
+            mediumZoomPlugin({
+                selector:
+                    '.theme-default-content > img, .theme-default-content :not(a) > img',
+                zoomOptions: {},
+                // should greater than page transition duration
+                delay: 300,
+            }),
+
+            // @vuepress/plugin-nprogress
+            nprogressPlugin(),
+
+            // @vuepress/plugin-search
+            searchPlugin({
+                locales: {
+                    '/': {
+                        placeholder: 'Search',
                     },
-                    isSearchable: (page: Page) => page.path !== '/',
+                    '/fr/': {
+                        placeholder: 'Rechercher',
+                    },
                 },
-            ],
-            ['@vuepress/theme-data', {themeData: localeOptions}],
+                isSearchable: (page: Page) => page.path !== '/',
+            }),
+
+            // @vuepress/plugin-theme-data
+            themeDataPlugin({themeData: localeOptions}),
         ],
     };
 };

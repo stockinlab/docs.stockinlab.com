@@ -118,9 +118,9 @@ const isActiveInSubpath = computed(() => {
 
 const linkClass = computed(() => {
     return {
-        'block rounded px-4 py-1 truncate focus:outline-none': true,
-        'font-semibold bg-teal-500 text-white focus:shadow-outline-teal': isActiveInSubpath.value,
-        'text-gray-600 font-light hover:bg-gray-100 focus:bg-gray-100 hover:text-teal-500 focus:text-teal-500': !isActiveInSubpath.value,
+        'block rounded px-4 py-1 truncate focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-teal-500': true,
+        'font-semibold bg-teal-500 text-white': isActiveInSubpath.value,
+        'text-gray-600 font-light hover:bg-gray-100 hover:text-teal-500 focus:text-teal-500': !isActiveInSubpath.value,
     };
 });
 </script>

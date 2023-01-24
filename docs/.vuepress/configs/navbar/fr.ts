@@ -3,18 +3,18 @@ import type {NavbarConfig} from '../../theme/shared';
 export const fr: NavbarConfig = [
     {
         text: 'Général',
-        link: '/general/',
+        link: '/fr/general/',
     },
     {
         text: 'LIMS',
-        link: '/laboratory-information-management-system/',
+        link: '/fr/laboratory-information-management-system/',
     },
     {
         text: 'ELN',
-        link: '/electronic-lab-notebook/',
+        link: '/fr/electronic-lab-notebook/',
     },
     {
         text: 'Outils',
-        link: '/tools/',
+        link: '/fr/tools/',
     },
 ];

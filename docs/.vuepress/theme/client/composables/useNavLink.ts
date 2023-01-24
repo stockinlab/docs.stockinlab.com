@@ -15,7 +15,7 @@ declare module 'vue-router' {
  * - Output: { text: 'Home', link: '/' }
  */
 export const useNavLink = (item: string): NavLink => {
-    const resolved = useResolveRouteWithRedirect(item);
+    const resolved = useResolveRouteWithRedirect(encodeURI(item));
 
     return {
         text: resolved.meta.title || item,

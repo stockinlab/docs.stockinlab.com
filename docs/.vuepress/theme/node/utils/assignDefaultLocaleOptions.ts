@@ -1,10 +1,13 @@
 import type {DefaultThemeLocaleData, DefaultThemeLocaleOptions,} from '../../shared';
 
 export const DEFAULT_LOCALE_OPTIONS: DefaultThemeLocaleOptions = {
+    // color mode
+    colorMode: 'auto',
+    colorModeSwitch: true,
+
     // navbar
     navbar: [],
     logo: null,
-    darkMode: true,
     repo: null,
     selectLanguageText: 'Languages',
     selectLanguageAriaLabel: 'Select language',
@@ -32,7 +35,7 @@ export const DEFAULT_LOCALE_OPTIONS: DefaultThemeLocaleOptions = {
 
     // a11y
     openInNewWindow: 'open in new window',
-    toggleDarkMode: 'toggle dark mode',
+    toggleColorMode: 'toggle color mode',
     toggleSidebar: 'toggle sidebar',
 };
 
@@ -42,7 +45,7 @@ export const DEFAULT_LOCALE_DATA: DefaultThemeLocaleData = {
 };
 
 /**
- * Assign default options to `themeConfig`
+ * Assign default options
  */
 export const assignDefaultLocaleOptions = (localeOptions: DefaultThemeLocaleOptions): void => {
     if (!localeOptions.locales) {

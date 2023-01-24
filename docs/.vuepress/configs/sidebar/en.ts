@@ -40,6 +40,7 @@ export const en: SidebarConfig = {
             text: 'Records',
             children: [
                 '/laboratory-information-management-system/records/add-record',
+                '/laboratory-information-management-system/records/import-record',
                 '/laboratory-information-management-system/records/remove-record',
                 '/laboratory-information-management-system/records/link-records',
                 '/laboratory-information-management-system/records/label',
