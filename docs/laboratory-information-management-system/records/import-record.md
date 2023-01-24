@@ -1,0 +1,29 @@
+# Import records
+
+Use this option if you have a bulk of records to enter into the inventory.
+
+1. From the *Team Homepage* or *Team > Inventory Listing* click **Import** button on top right
+2. Tick the inventorie(s) in which you need to enter your new records
+3. Click **Download** button
+4. Open the file: one sheet per inventory is created
+5. Fill all the fields. The required parameters appear in teal
+
+::: warning
+Make sure you enter the good value for the parameter set as “Select” in your workspace!
+
+To make the process easier, the ID of the options are referenced in a separate sheet (Cheat sheet).
+
+If your parameter is a “Select” type just enter the ID of the option(s). Separate the ID with comma if there are multiple.
+:::
+
+The location can also be entered directly into this file:
+
+1. In the column **Location** select the location in the dropdown
+2. In the column **Stock** enter the quantity if the location is not a box. If it is a box, enter the spot number and the quantity will be calculated automatically during the import (if the record is located in spots 1, 2 and 3: enter 1,2,3 or 1-3).
+
+When the file is ready, go back to *Team > Import*
+
+1. Click **Choose file** button in the right panel
+2. Select your file and upload
+3. Revise the records imported with error (if any). It can be a missing mandatory field, a blank line...
+4. Add location when missing. All records without location go into draft items and can be [updated anytime](/laboratory-information-management-system/records/edit-record.html#add-location-to-draft-record).
