@@ -1,17 +1,16 @@
 import {Theme} from '@vuepress/core';
-import {fs, path} from '@vuepress/utils';
+import {fs, getDirname, path} from '@vuepress/utils';
+import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links';
+import {containerPlugin} from '@vuepress/plugin-container';
+import {gitPlugin} from '@vuepress/plugin-git';
+import {mediumZoomPlugin} from '@vuepress/plugin-medium-zoom';
+import {nprogressPlugin} from '@vuepress/plugin-nprogress';
+import {searchPlugin} from '@vuepress/plugin-search';
+import {themeDataPlugin} from '@vuepress/plugin-theme-data';
 import {assignDefaultLocaleOptions, DefaultThemeOptions, DefaultThemePageData, resolveContainerPluginOptions} from './node';
 import {Page} from 'vuepress-webpack';
 
-/* eslint-disable */
-const {activeHeaderLinksPlugin} = require('@vuepress/plugin-active-header-links');
-const {containerPlugin} = require('@vuepress/plugin-container');
-const {gitPlugin} = require('@vuepress/plugin-git');
-const {mediumZoomPlugin} = require('@vuepress/plugin-medium-zoom');
-const {nprogressPlugin} = require('@vuepress/plugin-nprogress');
-const {searchPlugin} = require('@vuepress/plugin-search');
-const {themeDataPlugin} = require('@vuepress/plugin-theme-data');
-/* eslint-enable */
+const __dirname = getDirname(import.meta.url);
 
 export const defaultTheme = ({themePlugins = {}, ...localeOptions}: DefaultThemeOptions = {}): Theme => {
     assignDefaultLocaleOptions(localeOptions);
@@ -20,24 +19,24 @@ export const defaultTheme = ({themePlugins = {}, ...localeOptions}: DefaultTheme
         name: 'vuepress-stockinlab',
 
         layouts: {
-            Home: path.resolve(__dirname, './client/layouts/Home.vue'),
-            Layout: path.resolve(__dirname, './client/layouts/Layout.vue'),
-            404: path.resolve(__dirname, './client/layouts/404.vue'),
+            Home: path.resolve(__dirname, './theme/client/layouts/Home.vue'),
+            Layout: path.resolve(__dirname, './theme/client/layouts/Layout.vue'),
+            404: path.resolve(__dirname, './theme/client/layouts/404.vue'),
         },
 
         // templateBuild: path.resolve(__dirname, '../../templates/index.build.html'),
 
         alias: Object.fromEntries(
             fs
-                .readdirSync(path.resolve(__dirname, './client/components'))
+                .readdirSync(path.resolve(__dirname, './theme/client/components'))
                 .filter((file) => file.endsWith('.vue'))
                 .map((file) => [
                     `@theme/${file}`,
-                    path.resolve(__dirname, './client/components', file),
+                    path.resolve(__dirname, './theme/client/components', file),
                 ])
         ),
 
-        clientConfigFile: path.resolve(__dirname, './client/config.ts'),
+        clientConfigFile: path.resolve(__dirname, './theme/client/config.ts'),
 
         extendsPage: (page: Page<Partial<DefaultThemePageData>>) => {
             // save relative file path into page data to generate edit link

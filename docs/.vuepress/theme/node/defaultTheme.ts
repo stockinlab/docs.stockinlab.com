@@ -9,9 +9,11 @@ import { nprogressPlugin } from '@vuepress/plugin-nprogress';
 import { palettePlugin } from '@vuepress/plugin-palette';
 import { prismjsPlugin } from '@vuepress/plugin-prismjs';
 import { themeDataPlugin } from '@vuepress/plugin-theme-data';
-import { fs, path } from '@vuepress/utils';
+import { fs, getDirname, path } from '@vuepress/utils';
 import type {DefaultThemeLocaleOptions, DefaultThemePageData, DefaultThemePluginsOptions} from '../shared';
 import {assignDefaultLocaleOptions, resolveContainerPluginOptions} from './utils';
+
+const __dirname = getDirname(import.meta.url);
 
 export interface DefaultThemeOptions extends DefaultThemeLocaleOptions {
     /**

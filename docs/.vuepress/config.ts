@@ -1,12 +1,11 @@
 import {defineUserConfig} from '@vuepress/cli';
+import {webpackBundler} from '@vuepress/bundler-webpack';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 import {navbar, sidebar} from './configs';
+import {defaultTheme}  from './theme';
 
 const isProd = process.env.NODE_ENV === 'production';
-
-/* eslint-disable */
-const {defaultTheme} = require('./theme');
-const {webpackBundler} = require('@vuepress/bundler-webpack');
-/* eslint-enable */
 
 export default defineUserConfig({
     base: '/',
@@ -47,7 +46,6 @@ export default defineUserConfig({
         docsDir: 'docs',
         docsBranch: 'main',
         repo: null,
-        darkMode: false,
         sidebarDepth: 2,
         editLink: true,
         lastUpdated: true,
@@ -121,8 +119,8 @@ export default defineUserConfig({
         postcss: {
             postcssOptions: {
                 plugins: [
-                    require('tailwindcss')('./tailwind.config.js'),
-                    require('autoprefixer'),
+                    tailwindcss('./tailwind.config.js'),
+                    autoprefixer,
                 ],
             },
         }
