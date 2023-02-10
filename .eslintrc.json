@@ -20,26 +20,27 @@
         "sourceType": "module"
     },
     "plugins": [
-        "vue"
+        "vue",
+        "nuxt"
     ],
     "rules": {
         "indent": [
-            "warn",
+            "error",
             4,
             {
                 "SwitchCase": 1
             }
         ],
         "linebreak-style": [
-            "warn",
+            "error",
             "unix"
         ],
         "quotes": [
-            "warn",
+            "error",
             "single"
         ],
         "semi": [
-            "warn",
+            "error",
             "always"
         ],
         "vue/html-closing-bracket-spacing": [
@@ -66,6 +67,8 @@
             }
         ],
         "vue/multi-word-component-names": "off",
+        "vue/no-reserved-component-names": "off",
+        "vue/v-on-event-hyphenation": "off",
         "@typescript-eslint/ban-ts-comment": "off"
     }
 }

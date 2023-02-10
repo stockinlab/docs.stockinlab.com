@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .prose :where(.prose > *):not(:where([class~="not-prose"] *)) {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @screen lg {
+        .prose :where(.prose > *):not(:where([class~="not-prose"] *)) {
+            width: 100%;
+            max-width: 50rem;
+            margin-left: calc(50% - min(50%, 33rem));
+            margin-right: calc(50% - min(50%, 33rem));
+        }
+    }
+}
